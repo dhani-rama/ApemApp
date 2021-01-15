@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ApemApp</string>
+    <string name="button_next">Button Next</string>
+    <string name="gambar_logo">Gambar Logo</string>
+    <string name="a_pem">A-PEM</string>
+    <string name="pemrograman_dasar">Pemrograman Dasar</string>
+    <string name="adaptive_mobile_learning">Adaptive Mobile Learning</string>
+    <string name="kelas">Untuk Siswa Kelas X</string>
+    <string name="jurusan">Multimedia SMK</string>
+</resources>
