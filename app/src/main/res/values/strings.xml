@@ -7,4 +7,10 @@
     <string name="adaptive_mobile_learning">Adaptive Mobile Learning</string>
     <string name="kelas">Untuk Siswa Kelas X</string>
     <string name="jurusan">Multimedia SMK</string>
+    <string name="selamat_datang">Selamat Datang !</string>
+    <string name="daftar">Daftar</string>
+    <string name="tidak_punya_akun">Tidak Punya Akun ?</string>
+    <string name="masuk">Masuk</string>
+    <string name="password">Password</string>
+    <string name="nis">NIS</string>
 </resources>

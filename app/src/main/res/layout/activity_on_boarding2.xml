@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".on_boarding2">
 
-
     <ImageButton
         android:id="@+id/btn_lanjut"
         android:layout_width="wrap_content"
