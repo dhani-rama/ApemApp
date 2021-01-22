@@ -13,14 +13,12 @@ class sign_in : AppCompatActivity() {
         setContentView(R.layout.activity_sign_in)
 
         tv_masuk.setOnClickListener {
-            val daftar = Intent(this@sign_in, sign_up::class.java)
-            startActivity(daftar)
+            startActivity(Intent(this@sign_in, sign_up::class.java))
             finish()
         }
 
         btn_lanjut.setOnClickListener {
-            val lanjut = Intent(this@sign_in, HomeActivity::class.java)
-            startActivity(lanjut)
+            startActivity(Intent(this@sign_in, HomeActivity::class.java))
             finish()
         }
     }

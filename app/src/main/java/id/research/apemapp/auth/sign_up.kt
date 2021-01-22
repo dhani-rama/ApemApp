@@ -12,8 +12,7 @@ class sign_up : AppCompatActivity() {
         setContentView(R.layout.activity_sign_up)
 
         tv_masuk.setOnClickListener {
-            val masuk = Intent(this@sign_up, sign_in::class.java)
-            startActivity(masuk)
+            startActivity(Intent(this@sign_up, sign_in::class.java))
             finish()
         }
     }

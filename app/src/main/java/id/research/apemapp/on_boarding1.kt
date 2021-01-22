@@ -13,11 +13,6 @@ class on_boarding1 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_on_boarding1)
 
-//        btn_lanjut.setOnClickListener {
-//            val lanjut = Intent(this@on_boarding1, on_boarding2::class.java)
-//            startActivity(lanjut)
-//        }
-
         Handler(Looper.getMainLooper()).postDelayed({
             val lanjut = Intent(this@on_boarding1, sign_in::class.java)
             startActivity(lanjut)
