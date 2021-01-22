@@ -3,6 +3,7 @@ package id.research.apemapp.auth
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import id.research.apemapp.HomeActivity
 import id.research.apemapp.R
 import kotlinx.android.synthetic.main.activity_sign_in.*
 
@@ -14,6 +15,12 @@ class sign_in : AppCompatActivity() {
         tv_masuk.setOnClickListener {
             val daftar = Intent(this@sign_in, sign_up::class.java)
             startActivity(daftar)
+            finish()
+        }
+
+        btn_lanjut.setOnClickListener {
+            val lanjut = Intent(this@sign_in, HomeActivity::class.java)
+            startActivity(lanjut)
             finish()
         }
     }

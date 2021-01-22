@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/berandaFragment"
+        android:icon="@drawable/ic_home"
+        android:title="Beranda" />
+    <item
+        android:id="@+id/materiFragment"
+        android:icon="@drawable/ic_materi"
+        android:title="Materi" />
+    <item
+        android:id="@+id/kuisFragment"
+        android:icon="@drawable/ic_kuis"
+        android:title="Kuis" />
+    <item
+        android:id="@+id/kamusFragment"
+        android:icon="@drawable/ic_kamus"
+        android:title="Kamus" />
+    <item
+        android:id="@+id/profilFragment"
+        android:icon="@drawable/ic_profil"
+        android:title="Profil" />
+</menu>
