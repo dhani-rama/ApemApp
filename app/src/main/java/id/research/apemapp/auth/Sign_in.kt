@@ -7,18 +7,18 @@ import id.research.apemapp.HomeActivity
 import id.research.apemapp.R
 import kotlinx.android.synthetic.main.activity_sign_in.*
 
-class sign_in : AppCompatActivity() {
+class Sign_in : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_in)
 
         tv_masuk.setOnClickListener {
-            startActivity(Intent(this@sign_in, sign_up::class.java))
+            startActivity(Intent(this@Sign_in, Sign_up::class.java))
             finish()
         }
 
         btn_lanjut.setOnClickListener {
-            startActivity(Intent(this@sign_in, HomeActivity::class.java))
+            startActivity(Intent(this@Sign_in, HomeActivity::class.java))
             finish()
         }
     }
