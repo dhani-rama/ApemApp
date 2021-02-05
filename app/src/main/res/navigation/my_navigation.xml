@@ -7,27 +7,27 @@
 
     <fragment
         android:id="@+id/berandaFragment"
-        android:name="id.research.apemapp.BerandaFragment"
+        android:name="id.research.apemapp.fragment.BerandaFragment"
         android:label="fragment_beranda"
         tools:layout="@layout/fragment_beranda" />
     <fragment
         android:id="@+id/kuisFragment"
-        android:name="id.research.apemapp.KuisFragment"
+        android:name="id.research.apemapp.fragment.KuisFragment"
         android:label="fragment_kuis"
         tools:layout="@layout/fragment_kuis" />
     <fragment
         android:id="@+id/kamusFragment"
-        android:name="id.research.apemapp.KamusFragment"
+        android:name="id.research.apemapp.fragment.KamusFragment"
         android:label="fragment_kamus"
         tools:layout="@layout/fragment_kamus" />
     <fragment
         android:id="@+id/materiFragment"
-        android:name="id.research.apemapp.MateriFragment"
+        android:name="id.research.apemapp.fragment.MateriFragment"
         android:label="fragment_materi"
         tools:layout="@layout/fragment_materi" />
     <fragment
         android:id="@+id/profilFragment"
-        android:name="id.research.apemapp.ProfilFragment"
+        android:name="id.research.apemapp.fragment.ProfilFragment"
         android:label="fragment_profil"
         tools:layout="@layout/fragment_profil" />
 </navigation>
