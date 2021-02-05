@@ -26,8 +26,8 @@
         android:label="fragment_materi"
         tools:layout="@layout/fragment_materi" />
     <fragment
-        android:id="@+id/profilFragment"
-        android:name="id.research.apemapp.fragment.ProfilFragment"
+        android:id="@+id/pengaturanFragment"
+        android:name="id.research.apemapp.fragment.PengaturanFragment"
         android:label="fragment_profil"
-        tools:layout="@layout/fragment_profil" />
+        tools:layout="@layout/fragment_pengaturan" />
 </navigation>

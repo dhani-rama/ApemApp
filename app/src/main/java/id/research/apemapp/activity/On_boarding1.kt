@@ -1,10 +1,11 @@
-package id.research.apemapp
+package id.research.apemapp.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import id.research.apemapp.R
 import id.research.apemapp.auth.Sign_in
 import kotlinx.android.synthetic.main.activity_on_boarding1.*
 

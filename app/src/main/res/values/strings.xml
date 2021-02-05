@@ -32,4 +32,6 @@
     <string name="judul_materi">Materi</string>
     <string name="kompetensi_dasar_3.9">Kompetensi Dasar 3.9</string>
     <string name="kompetensi_dasar_3.8">Kompetensi Dasar 3.8</string>
+    <string name="pengaturan">Pengaturan</string>
+    <string name="keluar">Keluar</string>
 </resources>

@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.google.firebase.database.*
-import id.research.apemapp.HomeActivity
+import id.research.apemapp.activity.HomeActivity
 import id.research.apemapp.R
 import id.research.apemapp.model.student
 import id.research.apemapp.util.MySharedPreferences
