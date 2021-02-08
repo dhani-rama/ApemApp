@@ -12,7 +12,6 @@
         android:background="@color/biru3"
         tools:context=".fragment.PengaturanFragment">
 
-
         <TextView
             android:id="@+id/tv_pengaturan"
             android:layout_width="wrap_content"
@@ -33,10 +32,11 @@
             android:layout_width="134dp"
             android:layout_height="134dp"
             android:layout_marginTop="64dp"
+            android:src="@drawable/ic_user"
             app:layout_constraintEnd_toEndOf="@+id/tv_pengaturan"
             app:layout_constraintStart_toStartOf="@+id/tv_pengaturan"
             app:layout_constraintTop_toBottomOf="@+id/tv_pengaturan"
-            tools:src="@android:color/darker_gray" />
+            />
 
         <TextView
             android:id="@+id/tv_nama"
@@ -66,8 +66,46 @@
             app:layout_constraintStart_toStartOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_alarm"
                 android:layout_width="match_parent"
-                android:layout_height="95dp">
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintAlarm"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/bg_ic_pengaturan"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_alarm"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="ContentDescription" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/tv_alarm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Atur Jam Belajar"
+                    android:textColor="@color/abu_abu4"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/constraintAlarm"
+                    app:layout_constraintStart_toEndOf="@+id/constraintAlarm"
+                    app:layout_constraintTop_toTopOf="@+id/constraintAlarm" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -75,23 +113,24 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/layout_logout"
                 android:layout_width="match_parent"
-                android:layout_height="95dp"
+                android:layout_height="wrap_content"
                 android:background="@drawable/bg_logout">
-
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/constraintLayout2"
-                    android:layout_width="76dp"
-                    android:layout_height="76dp"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
                     android:layout_marginStart="32dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
                     android:background="@drawable/bg_ic_pengaturan"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 
                     <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:src="@drawable/ic_logout"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"

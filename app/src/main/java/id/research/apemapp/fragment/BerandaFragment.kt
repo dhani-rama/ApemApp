@@ -39,7 +39,5 @@ class BerandaFragment : Fragment() {
 
         //mengambil data dari shared preferences
         tv_nama.text = myPreferences.getValue("nama")
-
     }
-
 }

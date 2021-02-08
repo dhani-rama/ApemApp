@@ -28,10 +28,11 @@
                 android:id="@+id/foto_user"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="40dp"
-                tools:src ="@android:color/darker_gray"
-                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                android:src="@drawable/ic_user"
+
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
@@ -78,30 +79,24 @@
                 app:layout_constraintStart_toStartOf="@+id/foto_user"
                 app:layout_constraintTop_toBottomOf="@+id/foto_user" />
 
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideline3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_begin="8dp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="40dp">
-
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/layout_kd1"
                 android:layout_width="160dp"
                 android:layout_height="165dp"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/ic_button_kd"
-                app:layout_constraintStart_toStartOf="@+id/guideline6"
-                app:layout_constraintTop_toBottomOf="@+id/tv_kd">
 
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_kd">
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/ic_array"
                     android:layout_width="31dp"
@@ -276,14 +271,14 @@
                 android:id="@+id/tv_kd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="24dp"
                 android:fontFamily="@font/montserrat"
                 android:text="@string/kompetensi_dasar"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="@+id/guideline6"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
@@ -299,12 +294,6 @@
                 app:layout_constraintStart_toStartOf="@+id/layout_kd1"
                 app:layout_constraintTop_toBottomOf="@+id/layout_kd1" />
 
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideline6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.02189781" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 </ScrollView>
