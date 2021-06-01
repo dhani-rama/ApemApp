@@ -34,4 +34,11 @@
     <string name="kompetensi_dasar_3.8">Kompetensi Dasar 3.8</string>
     <string name="pengaturan">Pengaturan</string>
     <string name="keluar">Keluar</string>
+    <string name="cari_kata">Cari Kata</string>
+    <string name="kamus">KAMUS</string>
+    <string name="kata">Kata</string>
+    <string name="penjelasan">Penjelasan</string>
+    <string name="istilah2">Contoh : Kamu dapat mencoba “OOP” atau “Integer”</string>
+    <string name="istilah1">Cari Kata, Tipe Data, Istilah...</string>
+    <string name="cari1">Cari</string>
 </resources>
