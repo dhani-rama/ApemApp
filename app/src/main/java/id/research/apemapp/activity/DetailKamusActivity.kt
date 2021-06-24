@@ -4,7 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
-import android.widget.SearchView
+import androidx.appcompat.widget.SearchView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
@@ -18,7 +18,7 @@ import id.research.apemapp.fragment.KamusFragment
 import id.research.apemapp.model.Koleksi
 import kotlinx.android.synthetic.main.activity_detail_kamus.*
 
-class DetailKamusActivity : AppCompatActivity() {
+class DetailKamusActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
 
     private lateinit var mDatabase: DatabaseReference
     private lateinit var mRecyclerView: RecyclerView
@@ -27,6 +27,11 @@ class DetailKamusActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_kamus)
+
+        //support custom toolbar
+        setSupportActionBar(toolbar_search)
+        //ganti app name
+        supportActionBar?.setTitle("Kamus A-PEM")
 
         mRecyclerView = findViewById(R.id.rv_list)
 
@@ -43,7 +48,8 @@ class DetailKamusActivity : AppCompatActivity() {
 
         mDatabase.addValueEventListener(object : ValueEventListener {
             override fun onCancelled(error: DatabaseError) {
-                Toast.makeText(this@DetailKamusActivity, "{$error.message}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@DetailKamusActivity, "{$error.message}", Toast.LENGTH_SHORT)
+                    .show()
             }
 
             override fun onDataChange(snapshot: DataSnapshot) {
@@ -56,9 +62,11 @@ class DetailKamusActivity : AppCompatActivity() {
                     val adapterKamus = KoleksiAdapter(mWord)
                     mRecyclerView.adapter = adapterKamus
 
-                    adapterKamus.setOnItemClickCallback(object : KoleksiAdapter.OnItemClickCallback {
+                    adapterKamus.setOnItemClickCallback(object :
+                        KoleksiAdapter.OnItemClickCallback {
                         override fun onItemClicked(data: Koleksi) {
-                            val intent = Intent(this@DetailKamusActivity, DetailListActivity::class.java)
+                            val intent =
+                                Intent(this@DetailKamusActivity, DetailListActivity::class.java)
                             intent.putExtra(DetailListActivity.EXTRA_KATA, data.kata)
                             intent.putExtra(DetailListActivity.EXTRA_ARTI, data.arti)
 
@@ -68,24 +76,77 @@ class DetailKamusActivity : AppCompatActivity() {
                 }
             }
         })
-
-        val fragmentKamus = KamusFragment()
-        val fragment = supportFragmentManager.findFragmentByTag(KamusFragment::class.java.simpleName)
-
-        btn_kembali.setOnClickListener {
-
-//            supportFragmentManager.beginTransaction()
-//                    .add(R.id.container, fragmentKamus, KamusFragment::class.java.simpleName)
-//                    .commit()
-
-        }
     }
-//    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-//        menuInflater.inflate(R.menu.menu_search, menu)
-//
-//        val search = menu?.findItem(R.id.search)
-//        val searchView = search?.actionView as? SearchView
-//        searchView?.isSubmitButtonEnabled = true
-//
-//    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_search, menu)
+
+        val search = menu!!.findItem(R.id.search)
+        val searchView = search?.actionView as? SearchView
+        searchView?.isSubmitButtonEnabled = true
+        searchView?.setOnQueryTextListener(this)
+
+        return true
+    }
+
+    override fun onQueryTextSubmit(query: String?): Boolean {
+        if (query != null) {
+            searchData(query)
+        }
+        return true
+    }
+
+    override fun onQueryTextChange(query: String?): Boolean {
+        if (query != null) {
+            searchData(query)
+        }
+        return true
+    }
+
+    private fun searchData(query: String) {
+
+        val queryUser = FirebaseDatabase.getInstance().reference
+            .child("Kamus")
+            .orderByChild("kata")
+            .startAt(query)
+            .endAt(query + "\uf8ff")
+
+
+        queryUser.addValueEventListener(object : ValueEventListener{
+            override fun onDataChange(snapshot: DataSnapshot) {
+
+                mWord.clear()
+
+                if (snapshot.exists()){
+                    for(item in snapshot.children){
+                        val koleksi = item.getValue(Koleksi::class.java)
+                        mWord.add(koleksi!!)
+                    }
+
+                    val adapterKamus = KoleksiAdapter(mWord)
+                    mRecyclerView.adapter = adapterKamus
+
+                    adapterKamus.setOnItemClickCallback(object : KoleksiAdapter.OnItemClickCallback{
+                        override fun onItemClicked(data: Koleksi) {
+                            val intent = Intent(this@DetailKamusActivity, DetailListActivity::class.java)
+
+                            intent.putExtra(DetailListActivity.EXTRA_KATA, data.kata)
+                            intent.putExtra(DetailListActivity.EXTRA_ARTI, data.arti)
+
+                            startActivity(intent)
+                        }
+                    })
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                Toast.makeText(this@DetailKamusActivity, "{$error.message}", Toast.LENGTH_SHORT)
+                    .show()
+            }
+
+        })
+
+    }
+
 }
+
