@@ -15,8 +15,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ApemApp.Terang">
-        <activity android:name=".activity.DetailListActivity"></activity>
-        <activity android:name=".activity.DetailKamusActivity" />
+        <activity android:name=".activity.DictionaryDetailListActivity">
+        </activity>
+        <activity android:name=".activity.DictionaryListActivity" />
         <activity android:name=".activity.HomeActivity" />
         <activity android:name=".activity.on_boarding1">
             <intent-filter>

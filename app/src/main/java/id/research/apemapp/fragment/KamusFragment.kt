@@ -7,15 +7,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.*
 import id.research.apemapp.R
-import id.research.apemapp.activity.DetailKamusActivity
-import id.research.apemapp.adapter.KoleksiAdapter
-import id.research.apemapp.model.Koleksi
-import id.research.apemapp.util.MySharedPreferences
+import id.research.apemapp.activity.DictionaryListActivity
+import id.research.apemapp.model.DictionaryItemEntity
 import kotlinx.android.synthetic.main.fragment_kamus.*
 
 
@@ -23,7 +19,7 @@ class KamusFragment : Fragment() {
 
     private lateinit var mDatabase: DatabaseReference
     private lateinit var mRecyclerview: RecyclerView
-    private lateinit var mWord: ArrayList<Koleksi>
+    private lateinit var mWord: ArrayList<DictionaryItemEntity>
     private lateinit var mLoading: ProgressDialog
 
     override fun onCreateView(
@@ -38,9 +34,8 @@ class KamusFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         btn_search.setOnClickListener {
-            val search = Intent(this@KamusFragment.requireContext(), DetailKamusActivity::class.java)
+            val search = Intent(this@KamusFragment.requireContext(), DictionaryListActivity::class.java)
             startActivity(search)
-            activity?.finish()
         }
 //
 //        mRecyclerview = requireActivity()!!.findViewById(R.id.rv_item)

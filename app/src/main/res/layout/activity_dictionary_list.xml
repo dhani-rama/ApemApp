@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.DetailKamusActivity">
+    tools:context=".activity.DictionaryListActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/layout_dictionary"
@@ -17,7 +17,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            
+
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar_search"
                 android:layout_width="match_parent"
@@ -29,6 +29,29 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
+<!--            <ImageButton-->
+<!--                android:id="@+id/btn_back"-->
+<!--                android:layout_width="36dp"-->
+<!--                android:layout_height="36dp"-->
+<!--                android:layout_marginStart="8dp"-->
+<!--                android:background="@drawable/ic_arrow_back"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/tv_name_dictionary"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:fontFamily="@font/montserrat"-->
+<!--                android:text="Kamus A-PEM"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="24sp"-->
+<!--                android:textStyle="bold"-->
+<!--                app:layout_constraintBottom_toBottomOf="@+id/btn_back"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="@+id/btn_back" />-->
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.appbar.AppBarLayout>
@@ -41,5 +64,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layout_dictionary"
-        tools:listitem="@layout/item_kamus"/>
+        tools:listitem="@layout/item_dictionary" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
