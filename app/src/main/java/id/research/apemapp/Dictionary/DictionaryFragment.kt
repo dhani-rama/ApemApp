@@ -1,4 +1,4 @@
-package id.research.apemapp.fragment
+package id.research.apemapp.Dictionary
 
 import android.app.ProgressDialog
 import android.content.Intent
@@ -10,12 +10,11 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.*
 import id.research.apemapp.R
-import id.research.apemapp.activity.DictionaryListActivity
-import id.research.apemapp.model.DictionaryItemEntity
-import kotlinx.android.synthetic.main.fragment_kamus.*
+import id.research.apemapp.Models.DictionaryItemEntity
+import kotlinx.android.synthetic.main.fragment_dictionary.*
 
 
-class KamusFragment : Fragment() {
+class DictionaryFragment : Fragment() {
 
     private lateinit var mDatabase: DatabaseReference
     private lateinit var mRecyclerview: RecyclerView
@@ -27,14 +26,14 @@ class KamusFragment : Fragment() {
             savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_kamus, container, false)
+        return inflater.inflate(R.layout.fragment_dictionary, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         btn_search.setOnClickListener {
-            val search = Intent(this@KamusFragment.requireContext(), DictionaryListActivity::class.java)
+            val search = Intent(this@DictionaryFragment.requireContext(), DictionaryListActivity::class.java)
             startActivity(search)
         }
 //

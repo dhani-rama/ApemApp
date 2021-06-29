@@ -1,19 +1,15 @@
-package id.research.apemapp.activity
+package id.research.apemapp.Dictionary
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
-import android.view.MenuItem
 import androidx.appcompat.widget.SearchView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.database.*
 import id.research.apemapp.R
-import id.research.apemapp.adapter.DictionaryListAdapter
 import id.research.apemapp.databinding.ActivityDictionaryListBinding
-import id.research.apemapp.fragment.KamusFragment
-import id.research.apemapp.model.DictionaryItemEntity
+import id.research.apemapp.Models.DictionaryItemEntity
 import id.research.apemapp.util.MySharedPreferences
 
 class DictionaryListActivity : AppCompatActivity(), SearchView.OnQueryTextListener {

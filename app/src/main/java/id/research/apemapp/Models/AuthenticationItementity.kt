@@ -1,6 +1,6 @@
-package id.research.apemapp.model
+package id.research.apemapp.Models
 
-class student (
+class AuthenticationItementity (
         val id: String = "",
         val nama: String = "",
         val nis: String = "",

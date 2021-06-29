@@ -10,10 +10,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        tools:context=".fragment.MateriFragment">
+        tools:context=".fragment.MaterialsFragment">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/background_judul"
+            android:id="@+id/layout_background_materials"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:background="@drawable/background"
@@ -23,7 +23,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/tv_judul"
+                android:id="@+id/tv_materials_header"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
@@ -33,12 +33,12 @@
                 android:textColor="@color/white"
                 android:textSize="30sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/gbr_materi"
-                app:layout_constraintStart_toStartOf="@+id/gbr_materi"
-                app:layout_constraintTop_toBottomOf="@+id/gbr_materi" />
+                app:layout_constraintEnd_toEndOf="@+id/img_materials"
+                app:layout_constraintStart_toStartOf="@+id/img_materials"
+                app:layout_constraintTop_toBottomOf="@+id/img_materials" />
 
             <ImageView
-                android:id="@+id/gbr_materi"
+                android:id="@+id/img_materials"
                 android:layout_width="64dp"
                 android:layout_height="64dp"
                 android:layout_marginStart="16dp"
@@ -73,7 +73,7 @@
                     android:background="@drawable/background_materi1">
 
                     <TextView
-                        android:id="@+id/tv_array1"
+                        android:id="@+id/tv_header_array"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
@@ -83,13 +83,13 @@
                         android:text="@string/array"
                         android:textColor="@color/white"
                         android:textSize="24sp"
-                        app:layout_constraintEnd_toStartOf="@+id/guideline"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline_array"
                         app:layout_constraintHorizontal_bias="0.266"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/tv_kd1"
+                        android:id="@+id/tv_array_basic_competence"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="72dp"
@@ -98,13 +98,13 @@
                         android:textColor="@color/white"
                         android:textSize="18sp"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="@+id/tv_array1"
+                        app:layout_constraintEnd_toEndOf="@+id/tv_header_array"
                         app:layout_constraintHorizontal_bias="0.0"
-                        app:layout_constraintStart_toStartOf="@+id/tv_array1"
-                        app:layout_constraintTop_toBottomOf="@+id/tv_array1" />
+                        app:layout_constraintStart_toStartOf="@+id/tv_header_array"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_header_array" />
 
                     <androidx.constraintlayout.widget.Guideline
-                        android:id="@+id/guideline"
+                        android:id="@+id/guideline_array"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
@@ -129,7 +129,7 @@
                     android:background="@drawable/background_materi2">
 
                     <TextView
-                        android:id="@+id/tv_fungsi1"
+                        android:id="@+id/tv_header_function"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
@@ -139,13 +139,13 @@
                         android:text="@string/fungsi"
                         android:textColor="@color/white"
                         android:textSize="24sp"
-                        app:layout_constraintEnd_toStartOf="@+id/guideline1"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline_function"
                         app:layout_constraintHorizontal_bias="0.266"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/tv_kd2"
+                        android:id="@+id/tv_function_basic_competense"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="72dp"
@@ -154,17 +154,17 @@
                         android:textColor="@color/white"
                         android:textSize="18sp"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="@+id/tv_fungsi1"
+                        app:layout_constraintEnd_toEndOf="@+id/tv_header_function"
                         app:layout_constraintHorizontal_bias="0.0"
-                        app:layout_constraintStart_toStartOf="@+id/tv_fungsi1"
-                        app:layout_constraintTop_toBottomOf="@+id/tv_fungsi1" />
+                        app:layout_constraintStart_toStartOf="@+id/tv_header_function"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_header_function" />
 
                     <androidx.constraintlayout.widget.Guideline
-                        android:id="@+id/guideline1"
+                        android:id="@+id/guideline_function"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        app:layout_constraintGuide_begin="124dp" />
+                        app:layout_constraintGuide_end="226dp" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>

@@ -7,7 +7,7 @@
     tools:context=".activity.on_boarding1">
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/img_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -21,7 +21,7 @@
         app:srcCompat="@drawable/rsz_asset1" />
 
     <TextView
-        android:id="@+id/tv_online1"
+        android:id="@+id/tv_apem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -34,10 +34,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintTop_toBottomOf="@+id/img_logo" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tv_adaptive"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -50,10 +50,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_online1" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_apem" />
 
     <TextView
-        android:id="@+id/tv_online3"
+        android:id="@+id/tv_basic_programming"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
@@ -62,10 +62,10 @@
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="@+id/tv_adaptive"
         app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="@+id/tv_adaptive"
+        app:layout_constraintTop_toBottomOf="@+id/tv_adaptive"
         app:layout_constraintVertical_bias="0.0" />
 
 

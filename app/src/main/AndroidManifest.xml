@@ -15,10 +15,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ApemApp.Terang">
-        <activity android:name=".activity.DictionaryDetailListActivity">
+        <activity android:name=".Dictionary.DictionaryDetailListActivity">
         </activity>
-        <activity android:name=".activity.DictionaryListActivity" />
-        <activity android:name=".activity.HomeActivity" />
+        <activity android:name=".Dictionary.DictionaryListActivity" />
+        <activity android:name=".HomeActivity" />
         <activity android:name=".activity.on_boarding1">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,8 +26,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".auth.Sign_up" />
-        <activity android:name=".auth.Sign_in" />
+        <activity android:name=".Auth.SignUpActivity" />
+        <activity android:name=".Auth.SignInActivity" />
 
         <meta-data
             android:name="preloaded_fonts"

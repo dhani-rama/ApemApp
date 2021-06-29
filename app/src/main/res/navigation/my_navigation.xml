@@ -3,31 +3,31 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/my_navigation"
-    app:startDestination="@id/berandaFragment">
+    app:startDestination="@id/home_fragment">
 
     <fragment
-        android:id="@+id/berandaFragment"
-        android:name="id.research.apemapp.fragment.BerandaFragment"
-        android:label="fragment_beranda"
-        tools:layout="@layout/fragment_beranda" />
+        android:id="@+id/home_fragment"
+        android:name="id.research.apemapp.Home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
     <fragment
-        android:id="@+id/kuisFragment"
-        android:name="id.research.apemapp.fragment.KuisFragment"
-        android:label="fragment_kuis"
-        tools:layout="@layout/fragment_kuis" />
+        android:id="@+id/quiz_fragment"
+        android:name="id.research.apemapp.Quiz.QuizFragment"
+        android:label="fragment_quiz"
+        tools:layout="@layout/fragment_quiz" />
     <fragment
-        android:id="@+id/kamusFragment"
-        android:name="id.research.apemapp.fragment.KamusFragment"
-        android:label="fragment_kamus"
-        tools:layout="@layout/fragment_kamus" />
+        android:id="@+id/dictionary_fragment"
+        android:name="id.research.apemapp.Dictionary.DictionaryFragment"
+        android:label="fragment_dictionary"
+        tools:layout="@layout/fragment_dictionary" />
     <fragment
-        android:id="@+id/materiFragment"
-        android:name="id.research.apemapp.fragment.MateriFragment"
-        android:label="fragment_materi"
-        tools:layout="@layout/fragment_materi" />
+        android:id="@+id/materials_fragment"
+        android:name="id.research.apemapp.Materials.MaterialsFragment"
+        android:label="fragment_materials"
+        tools:layout="@layout/fragment_materials" />
     <fragment
-        android:id="@+id/pengaturanFragment"
-        android:name="id.research.apemapp.fragment.PengaturanFragment"
-        android:label="fragment_profil"
-        tools:layout="@layout/fragment_pengaturan" />
+        android:id="@+id/settings_fragment"
+        android:name="id.research.apemapp.Settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
 </navigation>

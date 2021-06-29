@@ -6,16 +6,16 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import id.research.apemapp.R
-import id.research.apemapp.auth.Sign_in
-import kotlinx.android.synthetic.main.activity_on_boarding1.*
+import id.research.apemapp.Auth.SignInActivity
+import kotlinx.android.synthetic.main.activity_splash_screen.*
 
 class on_boarding1 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_on_boarding1)
+        setContentView(R.layout.activity_splash_screen)
 
         Handler(Looper.getMainLooper()).postDelayed({
-            val lanjut = Intent(this@on_boarding1, Sign_in::class.java)
+            val lanjut = Intent(this@on_boarding1, SignInActivity::class.java)
             startActivity(lanjut)
             finish()
         }, 3000)

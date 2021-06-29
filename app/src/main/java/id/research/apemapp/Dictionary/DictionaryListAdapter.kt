@@ -1,4 +1,4 @@
-package id.research.apemapp.adapter
+package id.research.apemapp.Dictionary
 
 import android.content.Intent
 import android.view.LayoutInflater
@@ -6,9 +6,8 @@ import android.view.ViewGroup
 import android.widget.Filter
 import android.widget.Filterable
 import androidx.recyclerview.widget.RecyclerView
-import id.research.apemapp.activity.DictionaryDetailListActivity
 import id.research.apemapp.databinding.ItemDictionaryBinding
-import id.research.apemapp.model.DictionaryItemEntity
+import id.research.apemapp.Models.DictionaryItemEntity
 import java.util.*
 import kotlin.collections.ArrayList
 

@@ -1,6 +1,5 @@
-package id.research.apemapp.activity
+package id.research.apemapp.Dictionary
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import id.research.apemapp.databinding.ActivityDictionaryDetailListBinding

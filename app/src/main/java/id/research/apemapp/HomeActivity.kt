@@ -1,4 +1,4 @@
-package id.research.apemapp.activity
+package id.research.apemapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

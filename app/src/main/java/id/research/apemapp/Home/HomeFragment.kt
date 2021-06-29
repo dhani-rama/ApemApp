@@ -1,4 +1,4 @@
-package id.research.apemapp.fragment
+package id.research.apemapp.Home
 
 import android.app.ProgressDialog
 import android.os.Bundle
@@ -7,37 +7,41 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.google.firebase.database.DatabaseReference
-import id.research.apemapp.R
+import id.research.apemapp.databinding.FragmentHomeBinding
 import id.research.apemapp.util.MySharedPreferences
-import kotlinx.android.synthetic.main.fragment_beranda.*
+import kotlinx.android.synthetic.main.fragment_home.*
 
 
-class BerandaFragment : Fragment() {
+class HomeFragment : Fragment() {
 
+    private lateinit var homeBinding: FragmentHomeBinding
     private lateinit var mLoading: ProgressDialog
     private lateinit var mDatabase: DatabaseReference
     private lateinit var myPreferences: MySharedPreferences
     private lateinit var muridId: String
 
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_beranda, container, false)
+        homeBinding = FragmentHomeBinding.inflate(inflater, container, false)
+        return homeBinding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         //inialisasi variabel
-        mLoading = ProgressDialog(this@BerandaFragment.context)
+        mLoading = ProgressDialog(this@HomeFragment.context)
         mLoading.setCancelable(false)
         mLoading.setMessage("Loading...")
 
-        myPreferences = MySharedPreferences(this@BerandaFragment.requireContext())
+        myPreferences = MySharedPreferences(this@HomeFragment.requireContext())
         muridId = myPreferences.getValue("id")!!
 
         //mengambil data dari shared preferences
-        tv_nama.text = myPreferences.getValue("nama")
+        homeBinding.tvName.text = myPreferences.getValue("nama")
     }
 }
