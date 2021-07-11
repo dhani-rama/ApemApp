@@ -41,4 +41,8 @@
     <string name="istilah2">Contoh : Kamu dapat mencoba “OOP” atau “Integer”</string>
     <string name="istilah1">Cari Kata, Tipe Data, Istilah...</string>
     <string name="cari1">Cari</string>
+    <string name="question">Siapakah pencipta bahasa pemrograman pertama kali?</string>
+    <string name="number_question">1</string>
+    <string name="maxQuestion">dari 20</string>
+    <string name="option_answer_text">Dennis Ritchie</string>
 </resources>
