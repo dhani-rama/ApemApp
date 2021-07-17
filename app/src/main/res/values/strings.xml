@@ -45,4 +45,21 @@
     <string name="number_question">1</string>
     <string name="maxQuestion">dari 20</string>
     <string name="option_answer_text">Dennis Ritchie</string>
+    <string name="tv_quiz_time">WAKTUNYA KUIS !</string>
+    <string name="tv_quiz_information">Kuis ini berguna untuk membantu mengukur kemampuan kamu sejauh mana pemahaman kamu terhadap materi</string>
+    <string name="btn_next">Lanjut</string>
+    <string name="btn_finish">Selesai</string>
+    <string name="tv_rules_header">Petunjuk Pengerjaan Kuis</string>
+    <string name="tv_first_rule">Pastikan anda sudah memahami materi yang telah anda pelajari.</string>
+    <string name="tv_first_number_rule">1.</string>
+    <string name="tv_second_rule">Kuis ini disajikan dengan 20 soal dengan masing – masing soal terdapat 5 pilihan</string>
+    <string name="tv_second_number_rule">2.</string>
+    <string name="tv_third_rule">Bacalah soal kuis dengan seksama</string>
+    <string name="tv_third_number_rule">3.</string>
+    <string name="tv_fourth_rule">Pilih salah satu pilihan jawaban yang menurut anda benar</string>
+    <string name="tv_fourth_number_rule">4.</string>
+    <string name="tv_fifth_rule">Kemudian tekan tombol “Lanjut” untuk melanjutkan ke nomor soal berikutnya.</string>
+    <string name="tv_fifth_number_rule">5.</string>
+    <string name="tv_sixth_rule">Skor 5 untuk jawaban benar, Skor 0 untuk jawaban salah</string>
+    <string name="tv_sixth_number_rule">6.</string>
 </resources>

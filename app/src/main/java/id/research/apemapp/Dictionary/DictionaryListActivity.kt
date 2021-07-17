@@ -27,17 +27,10 @@ class DictionaryListActivity : AppCompatActivity(), SearchView.OnQueryTextListen
 
         setSupportActionBar(dictionaryListBinding.toolbarSearch)
 
-
-//        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
-
-
-
-//        dictionaryListBinding.btnBack.setOnClickListener(){
-//            super.onBackPressed()
-//        }
-
         supportActionBar?.setTitle("Kamus A-PEM")
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
 
         dictionaryListAdapter = DictionaryListAdapter()
 
@@ -47,14 +40,9 @@ class DictionaryListActivity : AppCompatActivity(), SearchView.OnQueryTextListen
 
     }
 
-    override fun onBackPressed() {
-        super.onBackPressed()
-    }
-
-
     private fun getDataWord(){
 
-        mDatabase = FirebaseDatabase.getInstance().getReference("Kamus")
+        mDatabase = FirebaseDatabase.getInstance().getReference("Dictionary")
 
         mDatabase.addValueEventListener(object : ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {

@@ -8,6 +8,7 @@ import android.widget.Filterable
 import androidx.recyclerview.widget.RecyclerView
 import id.research.apemapp.databinding.ItemDictionaryBinding
 import id.research.apemapp.Models.DictionaryItemEntity
+import id.research.apemapp.util.Constants
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -48,14 +49,14 @@ class DictionaryListAdapter : RecyclerView.Adapter<DictionaryListAdapter.listWor
         RecyclerView.ViewHolder(binding.root) {
         fun bind(wordItem: DictionaryItemEntity) {
             with(binding) {
-                tvWord.text = wordItem.kata
-                tvMeaning.text = wordItem.arti
+                tvWord.text = wordItem.word
+                tvMeaning.text = wordItem.meaning
 
                 itemView.setOnClickListener {
                     val intent = Intent(itemView.context, DictionaryDetailListActivity::class.java)
                         .apply {
-                            putExtra(DictionaryDetailListActivity.EXTRA_WORD, wordItem.kata)
-                            putExtra(DictionaryDetailListActivity.EXTRA_MEANING, wordItem.arti)
+                            putExtra(Constants.EXTRA_WORD, wordItem.word)
+                            putExtra(Constants.EXTRA_MEANING, wordItem.meaning)
                         }
                     itemView.context.startActivity(intent)
                 }
@@ -76,7 +77,7 @@ class DictionaryListAdapter : RecyclerView.Adapter<DictionaryListAdapter.listWor
                     val resultList = ArrayList<DictionaryItemEntity>()
 
                     for (row in listWordFilter) {
-                        if (row.kata.toLowerCase(Locale.getDefault()).contains(
+                        if (row.word.toLowerCase(Locale.getDefault()).contains(
                                 charSearch.toLowerCase(
                                     Locale.getDefault()
                                 )

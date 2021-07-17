@@ -16,10 +16,6 @@ import kotlinx.android.synthetic.main.fragment_dictionary.*
 
 class DictionaryFragment : Fragment() {
 
-    private lateinit var mDatabase: DatabaseReference
-    private lateinit var mRecyclerview: RecyclerView
-    private lateinit var mWord: ArrayList<DictionaryItemEntity>
-    private lateinit var mLoading: ProgressDialog
 
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
@@ -36,39 +32,5 @@ class DictionaryFragment : Fragment() {
             val search = Intent(this@DictionaryFragment.requireContext(), DictionaryListActivity::class.java)
             startActivity(search)
         }
-//
-//        mRecyclerview = requireActivity()!!.findViewById(R.id.rv_item)
-//
-//        mRecyclerview.layoutManager = LinearLayoutManager(this.requireContext())
-//        mRecyclerview.setHasFixedSize(true)
-//
-//        mWord = arrayListOf<Koleksi>()
-
-        //ambilData()
     }
-
-//    private fun ambilData() {
-//        mDatabase = FirebaseDatabase.getInstance().getReference("Kamus")
-//
-//        mDatabase.addValueEventListener(object : ValueEventListener {
-//            override fun onCancelled(error: DatabaseError) {
-//                mLoading.show()
-//                Toast.makeText(this@KamusFragment.requireContext(), "${error.message}", Toast.LENGTH_SHORT).show()
-//            }
-//
-//            override fun onDataChange(snapshot: DataSnapshot) {
-//               if(snapshot.exists()){
-//                   for(item in snapshot.children){
-//                       val koleksi = item.getValue(Koleksi::class.java)
-//                       mWord.add(koleksi!!)
-//                   }
-//
-//                   mRecyclerview.adapter = KoleksiAdapter(mWord)
-//
-//               }
-//            }
-//
-//        })
-//    }
-
 }
