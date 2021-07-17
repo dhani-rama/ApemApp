@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.google.firebase.database.DatabaseReference
 import id.research.apemapp.databinding.FragmentHomeBinding
+import id.research.apemapp.util.Constants
 import id.research.apemapp.util.MySharedPreferences
 import kotlinx.android.synthetic.main.fragment_home.*
 
@@ -18,7 +19,7 @@ class HomeFragment : Fragment() {
     private lateinit var mLoading: ProgressDialog
     private lateinit var mDatabase: DatabaseReference
     private lateinit var myPreferences: MySharedPreferences
-    private lateinit var muridId: String
+    private lateinit var studentId: String
 
 
     override fun onCreateView(
@@ -39,9 +40,9 @@ class HomeFragment : Fragment() {
         mLoading.setMessage("Loading...")
 
         myPreferences = MySharedPreferences(this@HomeFragment.requireContext())
-        muridId = myPreferences.getValue("id")!!
+        studentId= myPreferences.getValue(Constants.STUDENT_ID)!!
 
         //mengambil data dari shared preferences
-        homeBinding.tvName.text = myPreferences.getValue("nama")
+        homeBinding.tvName.text = myPreferences.getValue(Constants.STUDENT_NAME)
     }
 }
