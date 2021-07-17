@@ -12,6 +12,7 @@ import id.research.apemapp.HomeActivity
 import id.research.apemapp.R
 import id.research.apemapp.Models.AuthenticationItementity
 import id.research.apemapp.databinding.ActivitySignInBinding
+import id.research.apemapp.util.Constants
 import id.research.apemapp.util.MySharedPreferences
 
 class SignInActivity : AppCompatActivity() {
@@ -27,21 +28,17 @@ class SignInActivity : AppCompatActivity() {
         signInBinding = ActivitySignInBinding.inflate(layoutInflater)
         setContentView(signInBinding.root)
 
-//        with(mLoading){
-//            ProgressDialog(this@SignInActivity)
-//            setCancelable(false)
-//            setMessage("Loading....")
-//        }
+
         mLoading = ProgressDialog(this@SignInActivity)
         mLoading.setCancelable(false)
         mLoading.setMessage("Loading...")
 
-        mDatabase = FirebaseDatabase.getInstance().getReference("Murid")
+        mDatabase = FirebaseDatabase.getInstance().getReference("Student")
         myPreferences = MySharedPreferences(this@SignInActivity)
 
         //cek apakah murid sudah sign in atau belum
         //Jika sudah maka akan langsung Intent ke Home Activity
-        if (myPreferences.getValue("murid").equals("signIn")) {
+        if (myPreferences.getValue("student").equals("signIn")) {
             val goHome = Intent(this@SignInActivity, HomeActivity::class.java)
             startActivity(goHome)
             finish()
@@ -58,7 +55,7 @@ class SignInActivity : AppCompatActivity() {
                 val mNis = signInBinding.etNis.text.toString()
                 val mPassword = signInBinding.etPassword.text.toString()
 
-                cekDaftar(mNis, mPassword)
+                signUpCheck(mNis, mPassword)
             }
         }
     }
@@ -66,7 +63,7 @@ class SignInActivity : AppCompatActivity() {
     private fun validate(): Boolean {
         if (signInBinding.etNis.text.isEmpty()) {
 
-            with(signInBinding.etNis){
+            with(signInBinding.etNis) {
                 requestFocus()
                 error = "Masukkan NIS terlebih dahulu"
             }
@@ -76,7 +73,7 @@ class SignInActivity : AppCompatActivity() {
 
         if (signInBinding.etPassword.text.isEmpty()) {
 
-            with(signInBinding.etPassword){
+            with(signInBinding.etPassword) {
                 requestFocus()
                 error = "Masukkan Password terlebih dahulu"
             }
@@ -85,33 +82,45 @@ class SignInActivity : AppCompatActivity() {
         return true
     }
 
-    private fun cekDaftar(mNis: String, mPassword: String) {
+    private fun signUpCheck(mNis: String, mPassword: String) {
         //Menampilkan loading
         mLoading.show()
 
         //cek apakah nis sudah terdaftar atau belum
-        val cekNis = mDatabase.orderByChild("nis").equalTo(mNis)
+        val nisCheck = mDatabase.orderByChild("nis").equalTo(mNis)
 
-        cekNis.addListenerForSingleValueEvent(object : ValueEventListener {
+        nisCheck.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.value != null) {
-                    var murid: AuthenticationItementity? = null
+                    var student: AuthenticationItementity? = null
 
                     for (item in snapshot.children) {
                         //mengisi varaibel pada model student
-                        murid = item.getValue(AuthenticationItementity::class.java)
+                        student = item.getValue(AuthenticationItementity::class.java)
                     }
 
-                    if (murid!!.password == mPassword) {
+                    if (student!!.password == mPassword) {
                         //Menyimpan data ke shared preferences bahwa murid telah berhasil masuk
 
-                        myPreferences.setValue("murid", "signIn")
+                        myPreferences.setValue(Constants.STUDENT, Constants.LOGIN)
 
                         //Menyimpan data murid yang sudah masuk ke shared preferences
-                        myPreferences.setValue("id", murid.id)
-                        myPreferences.setValue("nama", murid.nama)
-                        myPreferences.setValue("nis", murid.nis)
-                        myPreferences.setValue("password", murid.password)
+                        myPreferences.setValue(Constants.STUDENT_ID, student.id)
+                        myPreferences.setValue(Constants.STUDENT_NAME, student.name)
+                        myPreferences.setValue(Constants.STUDENT_NIS, student.nis)
+                        myPreferences.setValue(Constants.STUDENT_PASSWORD, student.password)
+                        myPreferences.setValue(
+                            Constants.STUDENT_LOOPING_QUIZ_SCORE,
+                            student.looping_quiz_score
+                        )
+                        myPreferences.setValue(
+                            Constants.STUDENT_ARRAY_QUIZ_SCORE,
+                            student.array_quiz_score
+                        )
+                        myPreferences.setValue(
+                            Constants.STUDENT_FUNCTION_QUIZ_SCORE,
+                            student.function_quiz_score
+                        )
 
                         //Intent ke home activity
                         val goHome = Intent(this@SignInActivity, HomeActivity::class.java)
@@ -123,12 +132,14 @@ class SignInActivity : AppCompatActivity() {
                     } else {
                         //Menghilangkan loading
                         mLoading.dismiss()
-                        Toast.makeText(this@SignInActivity, "Password Salah", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@SignInActivity, "Password Salah", Toast.LENGTH_SHORT)
+                            .show()
                     }
                 } else {
                     //Menghilangkan loading
                     mLoading.dismiss()
-                    Toast.makeText(this@SignInActivity, "NIS belum terdaftar", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@SignInActivity, "NIS belum terdaftar", Toast.LENGTH_SHORT)
+                        .show()
                 }
             }
 

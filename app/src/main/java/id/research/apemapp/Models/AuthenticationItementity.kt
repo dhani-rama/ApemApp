@@ -1,8 +1,11 @@
 package id.research.apemapp.Models
 
-class AuthenticationItementity (
-        val id: String = "",
-        val nama: String = "",
-        val nis: String = "",
-        val password: String = ""
+data class AuthenticationItementity (
+        var id: String = "",
+        var name: String = "",
+        var nis: String = "",
+        var password: String = "",
+        var looping_quiz_score: String = "",
+        var array_quiz_score: String = "",
+        var function_quiz_score: String = ""
         )

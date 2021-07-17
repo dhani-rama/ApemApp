@@ -35,7 +35,7 @@ class SignUpActivity : AppCompatActivity() {
         mLoading.setCancelable(false)
         mLoading.setMessage("Loading...")
 
-        mDatabase = FirebaseDatabase.getInstance().getReference("Murid")
+        mDatabase = FirebaseDatabase.getInstance().getReference("Student")
         myPreferences = MySharedPreferences(this@SignUpActivity)
 
         //OnClick text (sudah punya akun ? masuk)
@@ -50,11 +50,11 @@ class SignUpActivity : AppCompatActivity() {
             //Mennjalankan program pada fungsi validate()
             //Jika form terisi semua, maka program pada 'sign_up()' akan dijalankan
             if (validate()) {
-                val mNamaLengkap = signUpBinding.etName.text.toString()
+                val mFullName = signUpBinding.etName.text.toString()
                 val mNis = signUpBinding.etNis.text.toString()
                 val mPaswword = signUpBinding.etPassword.text.toString()
 
-                daftar(mNamaLengkap, mNis, mPaswword)
+                signUp(mFullName, mNis, mPaswword)
             }
         }
     }
@@ -66,8 +66,6 @@ class SignUpActivity : AppCompatActivity() {
                 requestFocus()
                 error = "Masukkan nama lengkap terlebih dahulu"
             }
-//            et_nama.requestFocus()
-//            et_nama.error = "Masukkan nama lengkap terlebih dahulu"
             return false
         }
 
@@ -91,33 +89,25 @@ class SignUpActivity : AppCompatActivity() {
         return true
     }
 
-    private fun daftar(mNamaLengkap: String, mNis: String, mPassword: String) {
+    private fun signUp(mFullName: String, mNis: String, mPassword: String) {
         //Menampilkan loading
         mLoading.show()
 
         //Cek apakah nis sudah digunakan atau belum
-        val cekNis = mDatabase.orderByChild("nis").equalTo(mNis)
+        val nisCheck = mDatabase.orderByChild("nis").equalTo(mNis)
 
-        cekNis.addListenerForSingleValueEvent(object : ValueEventListener {
+        nisCheck.addListenerForSingleValueEvent(object : ValueEventListener {
 
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.value == null) {
                     //mengambil data tanggal dan jam daftar
                     val mCurrentTime = SimpleDateFormat("yyyyMMdd:HHmmss", Locale.getDefault()).format(Date())
 
-                    val murid = AuthenticationItementity(mCurrentTime, mNamaLengkap, mNis, mPassword)
+                    val student = AuthenticationItementity(mCurrentTime, mFullName, mNis, mPassword, "0", "0", "0")
 
                     //Mengisi variabel pada model student
-                    mDatabase.child(mCurrentTime).setValue(murid)
+                    mDatabase.child(mCurrentTime).setValue(student)
 
-//                    //Menyimpan data ke shared preferences bahwa murid telah berhasil masuk
-//                    myPreferences.setValue("murid", "signIn")
-//
-//                    //Menyimpan data siswa yang sudah masuk ke shared preferences
-//                    myPreferences.setValue("id", murid.id)
-//                    myPreferences.setValue("nama", murid.nama)
-//                    myPreferences.setValue("nis", murid.nis)
-//                    myPreferences.setValue("password", murid.password)
 
                     startActivity(Intent(this@SignUpActivity, SignInActivity::class.java))
                     finish()
