@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="15dp"
+    android:padding="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_rules_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:text="@string/tv_rules_header"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:fontFamily="@font/poppins"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_first_rule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="12"
+            android:maxLines="5"
+
+            android:text="@string/tv_first_rule"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:fontFamily="@font/poppins"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_rules_header" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_first_number_rule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_first_number_rule"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:fontFamily="@font/poppins"
+            app:layout_constraintBottom_toBottomOf="@id/tv_first_rule"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_first_rule" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_second_rule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="12"
+            android:maxLines="5"
+            android:text="@string/tv_second_rule"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:fontFamily="@font/poppins"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_first_rule" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_second_number_rule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_second_number_rule"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:fontFamily="@font/poppins"
+            app:layout_constraintBottom_toBottomOf="@id/tv_second_rule"
+            app:layout_constraintEnd_toEndOf="@id/tv_first_number_rule"
+            app:layout_constraintStart_toStartOf="@id/tv_first_number_rule"
+            app:layout_constraintTop_toTopOf="@id/tv_second_rule" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_third_rule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="12"
+            android:maxLines="5"
+            android:text="@string/tv_third_rule"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:fontFamily="@font/poppins"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_second_rule"
+
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_third_number_rule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_third_number_rule"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:fontFamily="@font/poppins"
+            app:layout_constraintBottom_toBottomOf="@id/tv_third_rule"
+            app:layout_constraintEnd_toEndOf="@id/tv_second_number_rule"
+            app:layout_constraintStart_toStartOf="@id/tv_second_number_rule"
+            app:layout_constraintTop_toTopOf="@id/tv_third_rule" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_fourth_rule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="12"
+            android:maxLines="5"
+            android:text="@string/tv_fourth_rule"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:fontFamily="@font/poppins"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_third_rule" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_fourth_number_rule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_fourth_number_rule"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:fontFamily="@font/poppins"
+            app:layout_constraintBottom_toBottomOf="@id/tv_fourth_rule"
+            app:layout_constraintEnd_toEndOf="@id/tv_third_number_rule"
+            app:layout_constraintStart_toStartOf="@id/tv_third_number_rule"
+            app:layout_constraintTop_toTopOf="@id/tv_fourth_rule" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_fifth_rule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="12"
+            android:maxLines="5"
+            android:text="@string/tv_fifth_rule"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:fontFamily="@font/poppins"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_fourth_rule"
+
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_fifth_number_rule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_fifth_number_rule"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:fontFamily="@font/poppins"
+            app:layout_constraintBottom_toBottomOf="@id/tv_fifth_rule"
+            app:layout_constraintEnd_toEndOf="@id/tv_fourth_number_rule"
+            app:layout_constraintStart_toStartOf="@id/tv_fourth_number_rule"
+            app:layout_constraintTop_toTopOf="@id/tv_fifth_rule" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_sixth_rule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="12"
+            android:maxLines="5"
+            android:text="@string/tv_sixth_rule"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:fontFamily="@font/poppins"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_fifth_rule" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_sixth_number_rule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_sixth_number_rule"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:fontFamily="@font/poppins"
+            app:layout_constraintBottom_toBottomOf="@id/tv_sixth_rule"
+            app:layout_constraintEnd_toEndOf="@id/tv_fifth_number_rule"
+            app:layout_constraintStart_toStartOf="@id/tv_fifth_number_rule"
+            app:layout_constraintTop_toTopOf="@id/tv_sixth_rule" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_next_rule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:clickable="true"
+            android:elevation="4dp"
+            android:focusable="true"
+            android:fontFamily="@font/poppins"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="8dp"
+            android:text="@string/btn_next"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:backgroundTint="#F2328D"
+            app:cornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_sixth_rule"
+            app:rippleColor="#F997C5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
+
+    <!--    <?xml version="1.0" encoding="utf-8"?>-->
+    <!--    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--        xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent">-->
+
+    <!--        <androidx.cardview.widget.CardView-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            app:cardBackgroundColor="@color/white"-->
+    <!--            app:cardCornerRadius="15dp"-->
+    <!--            app:cardElevation="2dp"-->
+    <!--            app:cardUseCompatPadding="true">-->
+
+    <!--            <LinearLayout-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:gravity="center"-->
+    <!--                android:orientation="vertical"-->
+    <!--                android:padding="16dp">-->
+
+    <!--                <com.google.android.material.textview.MaterialTextView-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_marginTop="16dp"-->
+    <!--                    android:gravity="center"-->
+    <!--                    android:text="@string/btn_next"-->
+    <!--                    android:textColor="#324B4A"-->
+    <!--                    android:textSize="20sp" />-->
+
+    <!--                <com.airbnb.lottie.LottieAnimationView-->
+    <!--                    android:layout_width="150dp"-->
+    <!--                    android:layout_height="150dp"-->
+    <!--                    app:lottie_autoPlay="true"-->
+    <!--                    app:lottie_rawRes="@raw/quiz_bump"-->
+    <!--                    app:lottie_speed="1.25" />-->
+
+
+    <!--                <com.google.android.material.button.MaterialButton-->
+    <!--                    android:id="@+id/btn_finish_payment_dialog"-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_marginTop="32dp"-->
+    <!--                    android:paddingHorizontal="64dp"-->
+    <!--                    android:paddingVertical="15dp"-->
+    <!--                    android:text="@string/btn_finish"-->
+    <!--                    android:textSize="16sp"-->
+    <!--                    android:textStyle="bold"-->
+    <!--                    android:textAllCaps="false"-->
+    <!--                    app:cornerRadius="30dp" />-->
+    <!--            </LinearLayout>-->
+
+    <!--        </androidx.cardview.widget.CardView>-->
+
+    <!--    </RelativeLayout>-->
