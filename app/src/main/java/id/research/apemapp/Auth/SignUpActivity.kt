@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.google.firebase.database.*
+import es.dmoral.toasty.Toasty
 import id.research.apemapp.R
 import id.research.apemapp.Models.AuthenticationItementity
 import id.research.apemapp.databinding.ActivitySignInBinding
@@ -116,14 +117,16 @@ class SignUpActivity : AppCompatActivity() {
                 } else {
                     //Menghilangkan Loading
                     mLoading.dismiss()
-                    Toast.makeText(this@SignUpActivity, "nis sudah digunakan", Toast.LENGTH_SHORT).show()
+                    Toasty.warning(this@SignUpActivity, "NIS sudah digunakan", Toast.LENGTH_SHORT).show()
+//                    Toast.makeText(this@SignUpActivity, "nis sudah digunakan", Toast.LENGTH_SHORT).show()
                 }
             }
 
             //menghilangkan Loading
             override fun onCancelled(error: DatabaseError) {
                 mLoading.dismiss()
-                Toast.makeText(this@SignUpActivity, error.message, Toast.LENGTH_SHORT).show()
+                Toasty.error(this@SignUpActivity, error.message, Toast.LENGTH_SHORT).show()
+//                Toast.makeText(this@SignUpActivity, error.message, Toast.LENGTH_SHORT).show()
             }
         })
     }

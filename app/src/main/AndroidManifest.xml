@@ -15,9 +15,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ApemApp.Terang">
-        <activity android:name=".Quiz.ArrayQuizListActivity"></activity>
-        <activity android:name=".Quiz.ResultQuizActivity"></activity>
-        <activity android:name=".Quiz.LoopingQuizListActivity"></activity>
+        <activity android:name=".Home.OnlineCompiler.ResultCodeActivity"></activity>
+        <activity
+            android:name=".Home.OnlineCompiler.OnlineCompilerActivity"
+            android:parentActivityName=".HomeActivity" />
+        <activity android:name=".Quiz.ArrayQuizListActivity" />
+        <activity android:name=".Quiz.ResultQuizActivity" />
+        <activity android:name=".Quiz.LoopingQuizListActivity" />
         <activity android:name=".Dictionary.DictionaryDetailListActivity" />
         <activity
             android:name=".Dictionary.DictionaryListActivity"

@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.google.firebase.database.*
+import es.dmoral.toasty.Toasty
 import id.research.apemapp.HomeActivity
 import id.research.apemapp.R
 import id.research.apemapp.Models.AuthenticationItementity
@@ -132,21 +133,24 @@ class SignInActivity : AppCompatActivity() {
                     } else {
                         //Menghilangkan loading
                         mLoading.dismiss()
-                        Toast.makeText(this@SignInActivity, "Password Salah", Toast.LENGTH_SHORT)
-                            .show()
+                        Toasty.error(this@SignInActivity, "Password Salah", Toast.LENGTH_SHORT).show()
+//                        Toast.makeText(this@SignInActivity, "Password Salah", Toast.LENGTH_SHORT)
+//                            .show()
                     }
                 } else {
                     //Menghilangkan loading
                     mLoading.dismiss()
-                    Toast.makeText(this@SignInActivity, "NIS belum terdaftar", Toast.LENGTH_SHORT)
-                        .show()
+                    Toasty.error(this@SignInActivity, "NIS belum terdaftar", Toast.LENGTH_SHORT).show()
+//                    Toast.makeText(this@SignInActivity, "NIS belum terdaftar", Toast.LENGTH_SHORT)
+//                        .show()
                 }
             }
 
             override fun onCancelled(error: DatabaseError) {
                 //Menghilangkan loading
                 mLoading.dismiss()
-                Toast.makeText(this@SignInActivity, error.message, Toast.LENGTH_SHORT).show()
+                Toasty.error(this@SignInActivity, error.message, Toast.LENGTH_SHORT).show()
+//                Toast.makeText(this@SignInActivity, error.message, Toast.LENGTH_SHORT).show()
             }
 
         })
