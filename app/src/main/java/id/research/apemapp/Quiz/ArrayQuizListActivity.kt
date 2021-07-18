@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Toast
 import com.google.firebase.database.*
+import es.dmoral.toasty.Toasty
 import id.research.apemapp.Models.QuestionListEntity
 import id.research.apemapp.databinding.ActivityArrayQuizListBinding
 import id.research.apemapp.util.Constants
@@ -61,11 +62,13 @@ class ArrayQuizListActivity : AppCompatActivity() {
                             setQuestion()
                             answerIndex++
                         } else {
-                            Toast.makeText(
-                                this@ArrayQuizListActivity,
-                                "Mohon isi jawabannya terlebih dahulu",
-                                Toast.LENGTH_SHORT
-                            ).show()
+                            Toasty.error(this@ArrayQuizListActivity, "Jawaban belum anda pilih", Toast.LENGTH_SHORT).show()
+
+//                            Toast.makeText(
+//                                this@ArrayQuizListActivity,
+//                                "Mohon isi jawabannya terlebih dahulu",
+//                                Toast.LENGTH_SHORT
+//                            ).show()
                         }
                     }
 
@@ -93,11 +96,12 @@ class ArrayQuizListActivity : AppCompatActivity() {
                             startActivity(intent)
                             finish()
                         } else {
-                            Toast.makeText(
-                                this@ArrayQuizListActivity,
-                                "Mohon isi jawabannya terlebih dahulu",
-                                Toast.LENGTH_SHORT
-                            ).show()
+                            Toasty.error(this@ArrayQuizListActivity, "Jawaban belum anda pilih", Toast.LENGTH_SHORT).show()
+//                            Toast.makeText(
+//                                this@ArrayQuizListActivity,
+//                                "Mohon isi jawabannya terlebih dahulu",
+//                                Toast.LENGTH_SHORT
+//                            ).show()
                         }
                     }
 
