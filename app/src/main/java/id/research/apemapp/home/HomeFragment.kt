@@ -1,4 +1,4 @@
-package id.research.apemapp.Home
+package id.research.apemapp.home
 
 import android.app.ProgressDialog
 import android.content.Intent
@@ -8,10 +8,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.google.firebase.database.DatabaseReference
-import id.research.apemapp.Home.OnlineCompiler.OnlineCompilerActivity
+import id.research.apemapp.home.OnlineCompiler.OnlineCompilerActivity
 import id.research.apemapp.databinding.FragmentHomeBinding
-import id.research.apemapp.util.Constants
-import id.research.apemapp.util.MySharedPreferences
+import id.research.apemapp.utils.Constants
+import id.research.apemapp.utils.MySharedPreferences
 import kotlinx.android.synthetic.main.fragment_home.*
 
 

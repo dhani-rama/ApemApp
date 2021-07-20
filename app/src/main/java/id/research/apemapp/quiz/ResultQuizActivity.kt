@@ -1,15 +1,13 @@
-package id.research.apemapp.Quiz
+package id.research.apemapp.quiz
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
 import id.research.apemapp.HomeActivity
 import id.research.apemapp.databinding.ActivityResultQuizBinding
-import id.research.apemapp.util.Constants
-import id.research.apemapp.util.MySharedPreferences
+import id.research.apemapp.utils.Constants
+import id.research.apemapp.utils.MySharedPreferences
 
 class ResultQuizActivity : AppCompatActivity() {
 

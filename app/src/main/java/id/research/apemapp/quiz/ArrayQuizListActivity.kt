@@ -1,4 +1,4 @@
-package id.research.apemapp.Quiz
+package id.research.apemapp.quiz
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -8,10 +8,10 @@ import android.view.View
 import android.widget.Toast
 import com.google.firebase.database.*
 import es.dmoral.toasty.Toasty
-import id.research.apemapp.Models.QuestionListEntity
+import id.research.apemapp.models.QuestionListEntity
 import id.research.apemapp.databinding.ActivityArrayQuizListBinding
-import id.research.apemapp.util.Constants
-import id.research.apemapp.util.MySharedPreferences
+import id.research.apemapp.utils.Constants
+import id.research.apemapp.utils.MySharedPreferences
 
 class ArrayQuizListActivity : AppCompatActivity() {
 

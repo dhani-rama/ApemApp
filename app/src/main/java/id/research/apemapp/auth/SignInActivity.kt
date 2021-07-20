@@ -1,6 +1,6 @@
 @file:Suppress("DEPRECATION")
 
-package id.research.apemapp.Auth
+package id.research.apemapp.auth
 
 import android.app.ProgressDialog
 import android.content.Intent
@@ -10,11 +10,10 @@ import android.widget.Toast
 import com.google.firebase.database.*
 import es.dmoral.toasty.Toasty
 import id.research.apemapp.HomeActivity
-import id.research.apemapp.R
-import id.research.apemapp.Models.AuthenticationItementity
+import id.research.apemapp.models.AuthenticationItementity
 import id.research.apemapp.databinding.ActivitySignInBinding
-import id.research.apemapp.util.Constants
-import id.research.apemapp.util.MySharedPreferences
+import id.research.apemapp.utils.Constants
+import id.research.apemapp.utils.MySharedPreferences
 
 class SignInActivity : AppCompatActivity() {
 

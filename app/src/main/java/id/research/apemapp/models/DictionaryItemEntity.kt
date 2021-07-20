@@ -1,4 +1,4 @@
-package id.research.apemapp.Models
+package id.research.apemapp.models
 
 data class DictionaryItemEntity(
         val word: String = "",

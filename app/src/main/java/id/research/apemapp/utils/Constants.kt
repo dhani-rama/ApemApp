@@ -1,4 +1,4 @@
-package id.research.apemapp.util
+package id.research.apemapp.utils
 
 object Constants {
     const val LOGIN = "signIn"
@@ -13,4 +13,9 @@ object Constants {
     const val STUDENT_FINAL_QUIZ_SCORE = "final_quiz_score"
     const val EXTRA_WORD = "word"
     const val EXTRA_MEANING = "meaning"
+    const val BASE_URL = "https://api.jdoodle.com/"
+    const val CLIENT_ID = "73abcac4cfe002c8e6f928a83adcd5c4"
+    const val CLIENT_SECRET = "5db10399dc318a0f2a96eb027b3635b3ba21a1dd8c003584108cf2eab6d7cc30"
+    const val LANGUAGE = "python3"
+    const val VERSION_INDEX = "3"
 }

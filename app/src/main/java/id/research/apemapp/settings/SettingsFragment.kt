@@ -1,4 +1,4 @@
-package id.research.apemapp.Settings
+package id.research.apemapp.settings
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,10 +6,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import id.research.apemapp.Auth.SignInActivity
+import id.research.apemapp.auth.SignInActivity
 import id.research.apemapp.databinding.FragmentSettingsBinding
-import id.research.apemapp.util.Constants
-import id.research.apemapp.util.MySharedPreferences
+import id.research.apemapp.utils.Constants
+import id.research.apemapp.utils.MySharedPreferences
 import kotlinx.android.synthetic.main.fragment_settings.*
 
 

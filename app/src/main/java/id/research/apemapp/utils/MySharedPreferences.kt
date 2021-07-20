@@ -1,4 +1,4 @@
-package id.research.apemapp.util
+package id.research.apemapp.utils
 
 import android.content.Context
 import android.content.SharedPreferences

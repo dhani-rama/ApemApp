@@ -15,16 +15,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ApemApp.Terang">
-        <activity android:name=".Home.OnlineCompiler.ResultCodeActivity"></activity>
+        <activity android:name=".home.OnlineCompiler.ResultCodeActivity"></activity>
         <activity
-            android:name=".Home.OnlineCompiler.OnlineCompilerActivity"
+            android:name=".home.OnlineCompiler.OnlineCompilerActivity"
             android:parentActivityName=".HomeActivity" />
-        <activity android:name=".Quiz.ArrayQuizListActivity" />
-        <activity android:name=".Quiz.ResultQuizActivity" />
-        <activity android:name=".Quiz.LoopingQuizListActivity" />
-        <activity android:name=".Dictionary.DictionaryDetailListActivity" />
+        <activity android:name=".quiz.ArrayQuizListActivity" />
+        <activity android:name=".quiz.ResultQuizActivity" />
+        <activity android:name=".quiz.LoopingQuizListActivity" />
+        <activity android:name=".dictionary.DictionaryDetailListActivity" />
         <activity
-            android:name=".Dictionary.DictionaryListActivity"
+            android:name=".dictionary.DictionaryListActivity"
             android:parentActivityName=".HomeActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".activity.on_boarding1">
@@ -34,8 +34,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Auth.SignUpActivity" />
-        <activity android:name=".Auth.SignInActivity" />
+        <activity android:name=".auth.SignUpActivity" />
+        <activity android:name=".auth.SignInActivity" />
 
         <meta-data
             android:name="preloaded_fonts"

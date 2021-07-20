@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        tools:context=".Home.HomeFragment">
+        tools:context=".home.HomeFragment">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layout_profile"
@@ -307,7 +307,7 @@
                 android:layout_marginTop="32dp"
                 android:fontFamily="@font/montserrat"
                 android:paddingVertical="8dp"
-                android:text="@string/compiler_online"
+                android:text="Compiler Online"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"

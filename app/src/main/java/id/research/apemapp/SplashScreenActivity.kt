@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import id.research.apemapp.R
-import id.research.apemapp.Auth.SignInActivity
+import id.research.apemapp.auth.SignInActivity
 import kotlinx.android.synthetic.main.activity_splash_screen.*
 
 class on_boarding1 : AppCompatActivity() {

@@ -1,4 +1,4 @@
-package id.research.apemapp.Models
+package id.research.apemapp.models
 
 data class QuestionListEntity(
     val Question: String = "",

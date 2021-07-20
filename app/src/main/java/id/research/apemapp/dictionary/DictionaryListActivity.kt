@@ -1,4 +1,4 @@
-package id.research.apemapp.Dictionary
+package id.research.apemapp.dictionary
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,8 +9,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.database.*
 import id.research.apemapp.R
 import id.research.apemapp.databinding.ActivityDictionaryListBinding
-import id.research.apemapp.Models.DictionaryItemEntity
-import id.research.apemapp.util.MySharedPreferences
+import id.research.apemapp.models.DictionaryItemEntity
+import id.research.apemapp.utils.MySharedPreferences
 
 class DictionaryListActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
 

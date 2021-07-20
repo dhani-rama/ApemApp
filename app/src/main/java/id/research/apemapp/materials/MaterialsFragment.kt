@@ -1,4 +1,4 @@
-package id.research.apemapp.Materials
+package id.research.apemapp.materials
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

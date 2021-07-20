@@ -1,10 +1,10 @@
-package id.research.apemapp.Dictionary
+package id.research.apemapp.dictionary
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import id.research.apemapp.databinding.ActivityDictionaryDetailListBinding
-import id.research.apemapp.util.Constants
+import id.research.apemapp.utils.Constants
 
 class DictionaryDetailListActivity : AppCompatActivity() {
 
