@@ -1,12 +1,17 @@
 package id.research.apemapp.home.OnlineCompiler
 
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.fragment.app.Fragment
+import androidx.navigation.NavController
+import androidx.navigation.findNavController
+import androidx.navigation.ui.setupActionBarWithNavController
 import es.dmoral.toasty.Toasty
+import id.research.apemapp.R
 import id.research.apemapp.databinding.ActivityOnlineCompilerBinding
-import id.research.apemapp.models.CodeResponseEntity
 import id.research.apemapp.retrofit.APIClient.Companion.instance
 import id.research.apemapp.utils.MySharedPreferences
 import org.json.JSONException
@@ -20,8 +25,7 @@ class OnlineCompilerActivity : AppCompatActivity() {
 
     private lateinit var onlineCompilerBinding: ActivityOnlineCompilerBinding
     private lateinit var myPreferences: MySharedPreferences
-    private lateinit var scriptCode: CodeResponseEntity
-    var api = instance
+    private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,48 +42,12 @@ class OnlineCompilerActivity : AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        onlineCompilerBinding.btnCheck.setOnClickListener {
-            compile()
-        }
-
+        navController = findNavController(R.id.nav_host_fragment)
+//        setupActionBarWithNavController(navController)
     }
 
-    private fun compile(){
-        val execute = api!!.aPI.execute(PostData(onlineCompilerBinding.etInputCode.text.toString()))
-
-        execute!!.enqueue(object : Callback<String?>{
-            override fun onResponse(call: Call<String?>, response: Response<String?>) {
-
-                try {
-                    if (response.isSuccessful){
-                        val jsonObject = JSONObject(response.body())
-                        val output = jsonObject.getString("output")
-                        val memory = jsonObject.getString("memory")
-                        val cpuTime = jsonObject.getString("cpuTime")
-
-
-                        val intent = Intent(this@OnlineCompilerActivity, ResultCodeActivity::class.java).apply {
-                            putExtra(ResultCodeActivity.EXTRA_OUTPUT, output)
-                            putExtra(ResultCodeActivity.EXTRA_MEMORY, memory)
-                            putExtra(ResultCodeActivity.EXTRA_CPU, cpuTime)
-                        }
-                        startActivity(intent)
-                        finish()
-                    }
-                    else{
-                        Toasty.error(this@OnlineCompilerActivity, response.errorBody().toString(), Toast.LENGTH_SHORT).show()
-                    }
-                }
-                catch (e: JSONException){
-                    e.printStackTrace()
-                    Toasty.error(this@OnlineCompilerActivity, response.errorBody().toString(), Toast.LENGTH_SHORT).show()
-                }
-            }
-
-            override fun onFailure(call: Call<String?>, t: Throwable) {
-                TODO("Not yet implemented")
-            }
-
-        })
+    override fun onSupportNavigateUp(): Boolean {
+        return  navController.navigateUp() || super.onSupportNavigateUp()
     }
+
 }

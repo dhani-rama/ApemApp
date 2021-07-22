@@ -15,8 +15,8 @@ class APIClient private constructor(builder: OkHttpClient.Builder) {
         private const val BASE_URL = "https://api.jdoodle.com/v1/"
         const val API_ID = "a822172d11e300b512cd3138d9542e8c"
         const val API_SECRET = "880e5ea8c48adc837be2cae9d9171260be5b0cba6cbe378624dc0d072d31a928"
-        const val LANGUAGE = "python3"
-        const val VERSION_INDEX = "3"
+        const val LANGUAGE = "cpp"
+        const val VERSION_INDEX = "4"
         private var mInstance: APIClient? = null
 
         @JvmStatic

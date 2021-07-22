@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/compiler_navigation"
+    app:startDestination="@id/editorCodeFragment">
+
+    <fragment
+        android:id="@+id/editorCodeFragment"
+        android:name="id.research.apemapp.home.OnlineCompiler.EditorCodeFragment"
+        android:label="fragment_editor_code"
+        tools:layout="@layout/fragment_editor_code" >
+        <action
+            android:id="@+id/action_editorCodeFragment_to_bottomSheetFragment"
+            app:destination="@id/bottomSheetFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/bottomSheetFragment"
+        android:name="id.research.apemapp.home.OnlineCompiler.BottomSheetFragment"
+        android:label="fragment_bottom_sheet"
+        tools:layout="@layout/fragment_bottom_sheet" >
+        <action
+            android:id="@+id/action_bottomSheetFragment_to_editorCodeFragment"
+            app:destination="@id/editorCodeFragment" />
+    </dialog>
+</navigation>

@@ -65,4 +65,9 @@
     <string name="tv_fifth_number_rule">5.</string>
     <string name="tv_sixth_rule">Skor 5 untuk jawaban benar, Skor 0 untuk jawaban salah</string>
     <string name="tv_sixth_number_rule">6.</string>
+    <string name="horizontal_line">- - - - - - - - - - - - - - - - - - - - - - - - - - -</string>
+    <string name="memory_use">Memori yang digunakan :</string>
+    <string name="time_compilatiion">Waktu Kompilasi :</string>
+    <string name="result_compilation">Hasil Kompilasi</string>
+
 </resources>

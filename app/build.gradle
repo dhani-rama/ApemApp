@@ -77,11 +77,11 @@ dependencies {
     implementation 'com.afollestad.material-dialogs:core:0.9.2.3'
 
     //editor code
-//    def codeEditorVersion = "v4.0.1"
-//    implementation("com.github.markusressel:KodeEditor:${codeEditorVersion}")
-//    implementation 'com.github.ahmadaghazadeh:CodeEditor:1.0.17'
+    def codeEditorVersion = "v4.0.1"
+    implementation("com.github.markusressel:KodeEditor:${codeEditorVersion}")
 
+    def codeHighlighterVersion = "v3.0.0"
+    implementation("com.github.markusressel.KodeHighlighter:core:${codeHighlighterVersion}")
 
-
-
+    implementation("com.github.markusressel.KodeHighlighter:java:${codeHighlighterVersion}")
 }

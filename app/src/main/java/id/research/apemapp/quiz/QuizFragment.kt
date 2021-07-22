@@ -13,7 +13,6 @@ import id.research.apemapp.databinding.FragmentQuizBinding
 class QuizFragment : Fragment() {
 
     private lateinit var quizBinding: FragmentQuizBinding
-    var WrapInScrollView: Boolean = true
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
