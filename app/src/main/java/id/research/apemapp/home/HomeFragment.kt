@@ -45,7 +45,7 @@ class HomeFragment : Fragment() {
         studentId= myPreferences.getValue(Constants.STUDENT_ID)!!
 
         //mengambil data dari shared preferences
-        homeBinding.tvName.text = myPreferences.getValue(Constants.STUDENT_NAME)
+        homeBinding.tvName.text = myPreferences.getValue(Constants.STUDENT_LAST_NAME)
 
         homeBinding.cardCodeEditor.setOnClickListener {
             startActivity(Intent(this.requireActivity(), OnlineCompilerActivity::class.java))
