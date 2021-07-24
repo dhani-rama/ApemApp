@@ -3,13 +3,13 @@ package id.research.apemapp.home
 import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.google.firebase.database.DatabaseReference
-import id.research.apemapp.home.OnlineCompiler.OnlineCompilerActivity
 import id.research.apemapp.databinding.FragmentHomeBinding
+import id.research.apemapp.home.OnlineCompiler.OnlineCompilerActivity
 import id.research.apemapp.utils.Constants
 import id.research.apemapp.utils.MySharedPreferences
 import kotlinx.android.synthetic.main.fragment_home.*
@@ -45,7 +45,7 @@ class HomeFragment : Fragment() {
         studentId= myPreferences.getValue(Constants.STUDENT_ID)!!
 
         //mengambil data dari shared preferences
-        homeBinding.tvName.text = myPreferences.getValue(Constants.STUDENT_LAST_NAME)
+        homeBinding.tvName.text = myPreferences.getValue(Constants.STUDENT_FIRST_NAME)
 
         homeBinding.cardCodeEditor.setOnClickListener {
             startActivity(Intent(this.requireActivity(), OnlineCompilerActivity::class.java))
