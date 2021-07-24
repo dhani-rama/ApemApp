@@ -4,13 +4,13 @@ package id.research.apemapp.auth
 
 import android.app.ProgressDialog
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.database.*
 import es.dmoral.toasty.Toasty
-import id.research.apemapp.models.AuthenticationItementity
 import id.research.apemapp.databinding.ActivitySignUpBinding
+import id.research.apemapp.models.AuthenticationItementity
 import id.research.apemapp.utils.MySharedPreferences
 import java.text.SimpleDateFormat
 import java.util.*
@@ -114,7 +114,8 @@ class SignUpActivity : AppCompatActivity() {
                 } else {
                     //Menghilangkan Loading
                     mLoading.dismiss()
-                    Toasty.warning(this@SignUpActivity, "NIS sudah digunakan", Toast.LENGTH_SHORT).show()
+                    Toasty.error(this@SignUpActivity, "NIS sudah digunakan", Toast.LENGTH_SHORT)
+                        .show()
 //                    Toast.makeText(this@SignUpActivity, "nis sudah digunakan", Toast.LENGTH_SHORT).show()
                 }
             }

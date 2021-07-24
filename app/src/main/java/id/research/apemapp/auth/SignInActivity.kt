@@ -4,14 +4,14 @@ package id.research.apemapp.auth
 
 import android.app.ProgressDialog
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.database.*
 import es.dmoral.toasty.Toasty
 import id.research.apemapp.HomeActivity
-import id.research.apemapp.models.AuthenticationItementity
 import id.research.apemapp.databinding.ActivitySignInBinding
+import id.research.apemapp.models.AuthenticationItementity
 import id.research.apemapp.utils.Constants
 import id.research.apemapp.utils.MySharedPreferences
 
@@ -101,8 +101,8 @@ class SignInActivity : AppCompatActivity() {
 
                         //Menyimpan data murid yang sudah masuk ke shared preferences
                         myPreferences.setValue(Constants.STUDENT_ID, student.id)
-                        myPreferences.setValue(Constants.STUDENT_FIRST_NAME, student.first_name)
-                        myPreferences.setValue(Constants.STUDENT_LAST_NAME, student.last_name)
+                        myPreferences.setValue(Constants.STUDENT_FIRST_NAME, student.firstName)
+                        myPreferences.setValue(Constants.STUDENT_LAST_NAME, student.lastName)
                         myPreferences.setValue(Constants.STUDENT_NIS, student.nis)
                         myPreferences.setValue(Constants.STUDENT_PASSWORD, student.password)
                         myPreferences.setValue(
