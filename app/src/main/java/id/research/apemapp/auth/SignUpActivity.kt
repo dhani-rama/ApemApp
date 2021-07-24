@@ -48,46 +48,46 @@ class SignUpActivity : AppCompatActivity() {
             //Mennjalankan program pada fungsi validate()
             //Jika form terisi semua, maka program pada 'sign_up()' akan dijalankan
             if (validate()) {
-                val mFullName = signUpBinding.etName.text.toString()
+                val mFirstName = signUpBinding.etFirstName.text.toString()
+                val mLastName = signUpBinding.etLastName.text.toString()
                 val mNis = signUpBinding.etNis.text.toString()
-                val mPaswword = signUpBinding.etPassword.text.toString()
+                val mPassword = signUpBinding.etPassword.text.toString()
 
-                signUp(mFullName, mNis, mPaswword)
+                signUp(mFirstName, mLastName, mNis, mPassword)
             }
         }
     }
 
     private fun validate(): Boolean {
         //cek apakah form sudah terisi atau belum
-        if (signUpBinding.etName.text.isEmpty()) {
-            with(signUpBinding.etName){
-                requestFocus()
-                error = "Masukkan nama lengkap terlebih dahulu"
-            }
-            return false
-        }
-
-        if (signUpBinding.etNis.text.isEmpty()) {
-
-            with(signUpBinding.etNis){
-                requestFocus()
-                error = "Masukkan NIS terlebih dahulu"
-            }
+        if (signUpBinding.etFirstName.text.toString() == "") {
+            signUpBinding.etFirstName.error = "Harap isi nama depan terlebih dahulu"
+            signUpBinding.etFirstName.requestFocus()
 
             return false
         }
+        else if(signUpBinding.etLastName.text.toString() == "") {
+            signUpBinding.etLastName.error = "Harap isi nama belakang terlebih dahulu"
+            signUpBinding.etLastName.requestFocus()
 
-        if (signUpBinding.etPassword.text.isEmpty()) {
-            with(signUpBinding.etPassword){
-                requestFocus()
-                error = "Masukkan password terlebih dahulu"
-            }
+            return false
+        }
+        else if(signUpBinding.etNis.text.toString() == "") {
+            signUpBinding.etNis.error = "Harap isi nomor telepon terlebih dahulu"
+            signUpBinding.etNis.requestFocus()
+
+            return false
+        }
+        else if(signUpBinding.etPassword.text.toString() == "") {
+            signUpBinding.etPassword.error = "Harap isi kata sandi terlebih dahulu"
+            signUpBinding.etPassword.requestFocus()
+
             return false
         }
         return true
     }
 
-    private fun signUp(mFullName: String, mNis: String, mPassword: String) {
+    private fun signUp(mFirstname: String, mLastName: String,  mNis: String, mPassword: String) {
         //Menampilkan loading
         mLoading.show()
 
@@ -101,7 +101,7 @@ class SignUpActivity : AppCompatActivity() {
                     //mengambil data tanggal dan jam daftar
                     val mCurrentTime = SimpleDateFormat("yyyyMMdd:HHmmss", Locale.getDefault()).format(Date())
 
-                    val student = AuthenticationItementity(mCurrentTime, mFullName, mNis, mPassword, "0", "0", "0")
+                    val student = AuthenticationItementity(mCurrentTime, mFirstname, mLastName, mNis, mPassword, "0", "0", "0")
 
                     //Mengisi variabel pada model student
                     mDatabase.child(mCurrentTime).setValue(student)

@@ -50,7 +50,7 @@ class SignInActivity : AppCompatActivity() {
             finish()
         }
 
-        signInBinding.btnLanjut.setOnClickListener {
+        signInBinding.btnForward.setOnClickListener {
             if (validate()) {
                 val mNis = signInBinding.etNis.text.toString()
                 val mPassword = signInBinding.etPassword.text.toString()
@@ -61,22 +61,17 @@ class SignInActivity : AppCompatActivity() {
     }
 
     private fun validate(): Boolean {
-        if (signInBinding.etNis.text.isEmpty()) {
 
-            with(signInBinding.etNis) {
-                requestFocus()
-                error = "Masukkan NIS terlebih dahulu"
-            }
+        if(signInBinding.etNis.text.toString() == "") {
+            signInBinding.etNis.error = "Harap isi nomor telepon terlebih dahulu"
+            signInBinding.etNis.requestFocus()
 
             return false
         }
+        else if(signInBinding.etPassword.text.toString() == "") {
+            signInBinding.etPassword.error = "Harap isi kata sandi terlebih dahulu"
+            signInBinding.etPassword.requestFocus()
 
-        if (signInBinding.etPassword.text.isEmpty()) {
-
-            with(signInBinding.etPassword) {
-                requestFocus()
-                error = "Masukkan Password terlebih dahulu"
-            }
             return false
         }
         return true
@@ -106,7 +101,8 @@ class SignInActivity : AppCompatActivity() {
 
                         //Menyimpan data murid yang sudah masuk ke shared preferences
                         myPreferences.setValue(Constants.STUDENT_ID, student.id)
-                        myPreferences.setValue(Constants.STUDENT_NAME, student.name)
+                        myPreferences.setValue(Constants.STUDENT_FIRST_NAME, student.first_name)
+                        myPreferences.setValue(Constants.STUDENT_LAST_NAME, student.last_name)
                         myPreferences.setValue(Constants.STUDENT_NIS, student.nis)
                         myPreferences.setValue(Constants.STUDENT_PASSWORD, student.password)
                         myPreferences.setValue(

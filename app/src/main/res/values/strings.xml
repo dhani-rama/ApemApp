@@ -21,7 +21,7 @@
     <string name="menu_materi">Menu Materi</string>
     <string name="sayang">Sayang</string>
     <string name="sudah_siap_belajar_hari_ini">Sudah Siap Belajar Hari Ini ?</string>
-    <string name="halo">Halo</string>
+    <string name="halo">Halo,</string>
     <string name="kompetensi_dasar">Kompetensi Dasar</string>
     <string name="output_compile">Output</string>
     <string name="status_compile">Status</string>
