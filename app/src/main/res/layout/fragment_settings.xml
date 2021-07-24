@@ -4,157 +4,277 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="8dp"
+    android:scrollbars="none"
     android:fillViewport="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/biru3"
         tools:context=".settings.SettingsFragment">
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tv_settings"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="64dp"
-            android:fontFamily="@font/montserrat"
-            android:text="@string/pengaturan"
-            android:textColor="@color/biru5"
-            android:textSize="18sp"
+            android:layout_marginTop="32dp"
+            android:padding="16dp"
+            android:text="Akun Saya"
+            android:textColor="@color/biru2"
+            android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/img_user"
-            android:layout_width="134dp"
-            android:layout_height="134dp"
-            android:layout_marginTop="64dp"
-            android:src="@drawable/ic_user"
-            app:layout_constraintEnd_toEndOf="@+id/tv_settings"
-            app:layout_constraintStart_toStartOf="@+id/tv_settings"
-            app:layout_constraintTop_toBottomOf="@+id/tv_settings"
-            />
+<!--        <de.hdodenhof.circleimageview.CircleImageView-->
+<!--            android:id="@+id/img_user"-->
+<!--            android:layout_width="150dp"-->
+<!--            android:layout_height="150dp"-->
+<!--            android:layout_marginTop="32dp"-->
+<!--            android:src="@drawable/ic_user"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/tv_settings"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            />-->
 
-        <TextView
-            android:id="@+id/tv_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="80dp"
-            android:fontFamily="@font/montserrat"
-            android:text="@string/sayang"
-            android:textColor="@color/black"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-            app:layout_constraintEnd_toEndOf="@+id/img_user"
-            app:layout_constraintHorizontal_bias="0.489"
-            app:layout_constraintStart_toStartOf="@+id/img_user"
-            app:layout_constraintTop_toBottomOf="@+id/img_user"
-            app:layout_constraintVertical_bias="0.315" />
+<!--        <TextView-->
+<!--            android:id="@+id/tv_name"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginBottom="80dp"-->
+<!--            android:fontFamily="@font/montserrat"-->
+<!--            android:text="@string/sayang"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:textColor="@color/biru2"-->
+<!--            android:textSize="24sp"-->
+<!--            android:textStyle="bold"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/img_user"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"/>-->
 
         <LinearLayout
-            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/bg_pengaturan"
             android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            android:layout_marginTop="48dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_settings"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/layout_alarm"
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_edit_profile"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                app:icon="@drawable/ic_person"
+                android:text="Ganti Profil"
+                android:textColor="@color/biru2"
+                android:textAllCaps="false"
+                android:textSize="15sp" />
+
+            <View
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="24dp"
+                android:background="@color/biru2" />
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/constraintAlarm"
-                    android:layout_width="56dp"
-                    android:layout_height="56dp"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:background="@drawable/bg_ic_pengaturan"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+<!--            <com.google.android.material.button.MaterialButton-->
+<!--                android:id="@+id/btn_edit_pass"-->
+<!--                style="@style/Widget.MaterialComponents.Button.TextButton"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="24dp"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                android:text="Ganti Password"-->
+<!--                android:textAllCaps="false"-->
+<!--                android:textSize="15sp" />-->
 
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:src="@drawable/ic_alarm"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:ignore="ContentDescription" />
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:layout_marginHorizontal="24dp"-->
+<!--                android:background="@color/biru2" />-->
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_alarm"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:text="Atur Alarm Belajar"
+                android:textAllCaps="false"
+                android:textSize="15sp" />
 
-                <TextView
-                    android:id="@+id/tv_alarm"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:fontFamily="@font/montserrat"
-                    android:text="Atur Jam Belajar"
-                    android:textColor="@color/abu_abu4"
-                    android:textSize="24sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/constraintAlarm"
-                    app:layout_constraintStart_toEndOf="@+id/constraintAlarm"
-                    app:layout_constraintTop_toTopOf="@+id/constraintAlarm" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="24dp"
+                android:background="@color/biru2" />
 
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_profil_developer"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                app:icon="@drawable/ic_developer"
+                android:text="Profil Pengembang"
+                android:textAllCaps="false"
+                android:textSize="15sp" />
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="24dp"
+                android:background="@color/biru2" />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/layout_logout"
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_instruction_used"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:text="Petunjuk Penggunaan"
+                app:icon="@drawable/ic_sticky_note"
+                android:textAllCaps="false"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="24dp"
+                android:background="@color/biru2" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_logout"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/bg_logout">
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/constraintLayout2"
-                    android:layout_width="56dp"
-                    android:layout_height="56dp"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:background="@drawable/bg_ic_pengaturan"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:src="@drawable/ic_logout"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:ignore="ContentDescription" />
+                android:layout_gravity="end"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:text="@string/keluar"
+                android:textAllCaps="false"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="15sp"
+                app:cornerRadius="20dp"
+                app:elevation="4dp"
+                app:rippleColor="@android:color/holo_red_dark"
+                app:strokeColor="@android:color/holo_red_dark" />
 
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <TextView
-                    android:id="@+id/tv_logout"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:fontFamily="@font/montserrat"
-                    android:text="@string/keluar"
-                    android:textColor="@color/abu_abu4"
-                    android:textSize="24sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/constraintLayout2"
-                    app:layout_constraintStart_toEndOf="@+id/constraintLayout2"
-                    app:layout_constraintTop_toTopOf="@+id/constraintLayout2" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
+
+
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/linearLayout"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@drawable/bg_pengaturan"-->
+<!--            android:orientation="vertical"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent">-->
+
+<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:id="@+id/layout_alarm"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content">-->
+
+<!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                    android:id="@+id/constraintAlarm"-->
+<!--                    android:layout_width="56dp"-->
+<!--                    android:layout_height="56dp"-->
+<!--                    android:layout_marginStart="32dp"-->
+<!--                    android:layout_marginTop="8dp"-->
+<!--                    android:layout_marginBottom="8dp"-->
+<!--                    android:background="@drawable/bg_ic_pengaturan"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="30dp"-->
+<!--                        android:layout_height="30dp"-->
+<!--                        android:src="@drawable/ic_alarm"-->
+<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent"-->
+<!--                        tools:ignore="ContentDescription" />-->
+
+<!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/tv_alarm"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="16dp"-->
+<!--                    android:fontFamily="@font/montserrat"-->
+<!--                    android:text="Atur Jam Belajar"-->
+<!--                    android:textColor="@color/abu_abu4"-->
+<!--                    android:textSize="24sp"-->
+<!--                    app:layout_constraintBottom_toBottomOf="@+id/constraintAlarm"-->
+<!--                    app:layout_constraintStart_toEndOf="@+id/constraintAlarm"-->
+<!--                    app:layout_constraintTop_toTopOf="@+id/constraintAlarm" />-->
+
+
+<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:id="@+id/layout_logout"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@drawable/bg_logout">-->
+
+<!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                    android:id="@+id/constraintLayout2"-->
+<!--                    android:layout_width="56dp"-->
+<!--                    android:layout_height="56dp"-->
+<!--                    android:layout_marginStart="32dp"-->
+<!--                    android:layout_marginTop="8dp"-->
+<!--                    android:layout_marginBottom="8dp"-->
+<!--                    android:background="@drawable/bg_ic_pengaturan"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="30dp"-->
+<!--                        android:layout_height="30dp"-->
+<!--                        android:src="@drawable/ic_logout"-->
+<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent"-->
+<!--                        tools:ignore="ContentDescription" />-->
+
+
+<!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/tv_logout"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="16dp"-->
+<!--                    android:fontFamily="@font/montserrat"-->
+<!--                    android:text="@string/keluar"-->
+<!--                    android:textColor="@color/abu_abu4"-->
+<!--                    android:textSize="24sp"-->
+<!--                    app:layout_constraintBottom_toBottomOf="@+id/constraintLayout2"-->
+<!--                    app:layout_constraintStart_toEndOf="@+id/constraintLayout2"-->
+<!--                    app:layout_constraintTop_toTopOf="@+id/constraintLayout2" />-->
+
+<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--        </LinearLayout>-->
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
