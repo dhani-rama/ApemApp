@@ -26,8 +26,8 @@
         android:label="fragment_materials"
         tools:layout="@layout/fragment_materials" />
     <fragment
-        android:id="@+id/settings_fragment"
-        android:name="id.research.apemapp.settings.SettingsFragment"
-        android:label="fragment_settings"
-        tools:layout="@layout/fragment_settings" />
+        android:id="@+id/profile_fragment"
+        android:name="id.research.apemapp.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
 </navigation>

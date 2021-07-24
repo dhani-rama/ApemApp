@@ -18,7 +18,7 @@
         android:icon="@drawable/ic_kamus"
         android:title="Kamus" />
     <item
-        android:id="@+id/settings_fragment"
+        android:id="@+id/profile_fragment"
         android:icon="@drawable/ic_person"
         android:title="Akun Saya" />
 </menu>

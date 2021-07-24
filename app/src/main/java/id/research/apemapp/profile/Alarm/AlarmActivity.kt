@@ -1,4 +1,4 @@
-package id.research.apemapp.settings.Alarm
+package id.research.apemapp.profile.Alarm
 
 import android.annotation.SuppressLint
 import android.app.AlarmManager
@@ -7,12 +7,11 @@ import android.app.NotificationManager
 import android.app.PendingIntent
 import android.content.Intent
 import android.media.MediaPlayer
-import android.media.RingtoneManager
 import android.net.Uri
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.timepicker.MaterialTimePicker
 import com.google.android.material.timepicker.TimeFormat
 import es.dmoral.toasty.Toasty

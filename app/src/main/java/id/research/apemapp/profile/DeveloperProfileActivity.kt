@@ -1,7 +1,7 @@
-package id.research.apemapp.settings
+package id.research.apemapp.profile
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import id.research.apemapp.databinding.ActivityDeveloperProfileBinding
 
 class DeveloperProfileActivity : AppCompatActivity() {

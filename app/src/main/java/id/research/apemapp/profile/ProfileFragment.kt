@@ -1,35 +1,34 @@
-package id.research.apemapp.settings
+package id.research.apemapp.profile
 
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import dev.shreyaspatil.MaterialDialog.MaterialDialog
 import es.dmoral.toasty.Toasty
 import id.research.apemapp.R
 import id.research.apemapp.auth.SignInActivity
-import id.research.apemapp.databinding.FragmentSettingsBinding
-import id.research.apemapp.settings.Alarm.AlarmActivity
+import id.research.apemapp.databinding.FragmentProfileBinding
+import id.research.apemapp.profile.Alarm.AlarmActivity
 import id.research.apemapp.utils.Constants
 import id.research.apemapp.utils.MySharedPreferences
-import kotlinx.android.synthetic.main.fragment_settings.*
 
 
-class SettingsFragment : Fragment() {
+class ProfileFragment : Fragment() {
 
-    private lateinit var myPreferences : MySharedPreferences
-    private lateinit var settingsBinding : FragmentSettingsBinding
+    private lateinit var myPreferences: MySharedPreferences
+    private lateinit var settingsBinding: FragmentProfileBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
-        settingsBinding = FragmentSettingsBinding.inflate(inflater, container, false)
+        settingsBinding = FragmentProfileBinding.inflate(inflater, container, false)
         return settingsBinding.root
 
     }
@@ -37,7 +36,7 @@ class SettingsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        myPreferences = MySharedPreferences(this@SettingsFragment.requireContext())
+        myPreferences = MySharedPreferences(this@ProfileFragment.requireContext())
 //        settingsBinding.tvName.text = myPreferences.getValue(Constants.STUDENT_NAME)
 
         settingsBinding.btnAlarm.setOnClickListener {
@@ -46,7 +45,8 @@ class SettingsFragment : Fragment() {
         }
 
         settingsBinding.btnEditProfile.setOnClickListener {
-            Toasty.info(this.requireActivity(), "Belum Aku Coding Sayang :)", Toast.LENGTH_LONG).show()
+            startActivity(Intent(this.requireActivity(), UpdateProfileActivity::class.java))
+//            Toasty.info(this.requireActivity(), "Belum Aku Coding Sayang :)", Toast.LENGTH_LONG).show()
         }
 
 //        settingsBinding.btnEditPass.setOnClickListener {
@@ -91,7 +91,7 @@ class SettingsFragment : Fragment() {
                     myPreferences.setValue(Constants.STUDENT_ARRAY_QUIZ_SCORE, " ")
                     myPreferences.setValue(Constants.STUDENT_FUNCTION_QUIZ_SCORE, " ")
 
-                    val goOut = Intent(this@SettingsFragment.context, SignInActivity::class.java)
+                    val goOut = Intent(this@ProfileFragment.context, SignInActivity::class.java)
                     startActivity(goOut)
                     getActivity()?.finish()
                 }

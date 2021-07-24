@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:padding="16dp"
     android:scrollbars="none"
-    tools:context=".settings.DeveloperProfileActivity">
+    tools:context=".profile.DeveloperProfileActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -14,9 +14,9 @@
 
         <ImageButton
             android:id="@+id/btn_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
             android:background="@drawable/ic_arrow_back"
             android:backgroundTint="@color/black"
             app:layout_constraintStart_toStartOf="parent"
@@ -146,7 +146,7 @@
                     <com.google.android.material.textview.MaterialTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:padding="4dp"
+                        android:paddingVertical="4dp"
                         android:text="196509161995121001"
                         android:textColor="@color/black"
                         android:textSize="18sp"
@@ -210,7 +210,7 @@
                     <com.google.android.material.textview.MaterialTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:padding="4dp"
+                        android:paddingVertical="4dp"
                         android:text="6400201419165"
                         android:textColor="@color/black"
                         android:textSize="18sp"

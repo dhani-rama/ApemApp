@@ -15,9 +15,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ApemApp.Terang">
-        <activity android:name=".settings.DeveloperProfileActivity"></activity>
-        <activity android:name=".settings.Alarm.DestinationActivity" />
-        <activity android:name=".settings.Alarm.AlarmActivity" />
+        <activity android:name=".profile.UpdateProfileActivity"></activity>
+        <activity android:name=".profile.DeveloperProfileActivity" />
+        <activity android:name=".profile.Alarm.DestinationActivity" />
+        <activity android:name=".profile.Alarm.AlarmActivity" />
         <activity
             android:name=".home.OnlineCompiler.OnlineCompilerActivity"
             android:parentActivityName=".HomeActivity" />
@@ -39,7 +40,7 @@
         <activity android:name=".auth.SignUpActivity" />
         <activity android:name=".auth.SignInActivity" />
 
-        <receiver android:name=".settings.Alarm.AlarmReceiver" />
+        <receiver android:name=".profile.Alarm.AlarmReceiver" />
 
         <meta-data
             android:name="preloaded_fonts"

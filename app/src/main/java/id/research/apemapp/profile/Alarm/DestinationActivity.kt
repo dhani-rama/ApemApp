@@ -1,7 +1,7 @@
-package id.research.apemapp.settings.Alarm
+package id.research.apemapp.profile.Alarm
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import id.research.apemapp.databinding.ActivityDestinationBinding
 
 class DestinationActivity : AppCompatActivity() {

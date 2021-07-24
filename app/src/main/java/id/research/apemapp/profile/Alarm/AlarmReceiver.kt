@@ -1,4 +1,4 @@
-package id.research.apemapp.settings.Alarm
+package id.research.apemapp.profile.Alarm
 
 import android.app.PendingIntent
 import android.content.BroadcastReceiver
