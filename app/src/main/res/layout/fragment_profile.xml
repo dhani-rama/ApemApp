@@ -38,11 +38,23 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_settings" />
 
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_change_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:text="Ganti Foto Profil"
+            android:textColor="#007DFE"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_user" />
+
         <TextView
             android:id="@+id/tv_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
             android:layout_marginBottom="80dp"
             android:fontFamily="@font/montserrat"
             android:text="@string/sayang"
@@ -51,7 +63,7 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/img_user" />
+            app:layout_constraintTop_toBottomOf="@id/tv_change_photo" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -82,35 +94,35 @@
                 android:background="@color/biru5" />
 
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btn_edit_password"
-                style="@style/Widget.MaterialComponents.Button.TextButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="16dp"
-                android:textColor="@color/biru5"
-                android:text="Ubah Password"
-                android:textAllCaps="false"
-                app:iconTint="@color/biru5"
-                android:textSize="15sp"
-                app:icon="@drawable/ic_password" />
+            <!--            <com.google.android.material.button.MaterialButton-->
+            <!--                android:id="@+id/btn_edit_password"-->
+            <!--                style="@style/Widget.MaterialComponents.Button.TextButton"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginStart="24dp"-->
+            <!--                android:layout_marginTop="16dp"-->
+            <!--                android:textColor="@color/biru5"-->
+            <!--                android:text="Ubah Password"-->
+            <!--                android:textAllCaps="false"-->
+            <!--                app:iconTint="@color/biru5"-->
+            <!--                android:textSize="15sp"-->
+            <!--                app:icon="@drawable/ic_password" />-->
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginHorizontal="24dp"
-                android:background="@color/biru5" />
+            <!--            <View-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="1dp"-->
+            <!--                android:layout_marginHorizontal="24dp"-->
+            <!--                android:background="@color/biru5" />-->
 
             <!--            <com.google.android.material.button.MaterialButton-->
             <!--                android:id="@+id/btn_edit_pass"-->
             <!--                style="@style/Widget.MaterialComponents.Button.TextButton"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginStart="24dp"-->
-<!--                android:layout_marginTop="16dp"-->
-<!--                android:text="Ganti Password"-->
-<!--                android:textAllCaps="false"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginStart="24dp"-->
+            <!--                android:layout_marginTop="16dp"-->
+            <!--                android:text="Ganti Password"-->
+            <!--                android:textAllCaps="false"-->
 <!--                android:textSize="15sp" />-->
 
 <!--            <View-->
