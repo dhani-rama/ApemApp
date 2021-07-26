@@ -6,6 +6,7 @@ data class AuthenticationItementity (
     var lastName: String = "",
     var nis: String = "",
     var password: String = "",
+    var image: String = "",
     var looping_quiz_score: String = "",
     var array_quiz_score: String = "",
     var function_quiz_score: String = ""

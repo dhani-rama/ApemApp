@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:scrollbars="none"
     android:fillViewport="true">
 
     <LinearLayout
@@ -17,27 +18,34 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:background="@drawable/background"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0">
+            app:layout_constraintTop_toTopOf="parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_user"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/ic_user"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tv_halo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="100dp"
                 android:paddingHorizontal="8dp"
+                android:layout_marginTop="16dp"
                 app:fontFamily="@font/montserrat"
                 android:text="@string/halo"
                 android:textColor="@color/white"
                 android:textStyle="bold"
-                android:textSize="28sp"
+                android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@id/img_user" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tv_name"
@@ -50,7 +58,7 @@
                 android:textStyle="bold"
                 app:fontFamily="@font/montserrat"
                 app:layout_constraintStart_toEndOf="@id/tv_halo"
-                android:textSize="28sp"
+                android:textSize="20sp"
                 android:textColor="@color/white"
                 />
 
@@ -59,7 +67,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/sudah_siap_belajar_hari_ini"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 app:fontFamily="@font/montserrat"
                 android:textStyle="bold"
                 android:textColor="@color/white"
@@ -68,15 +76,6 @@
                 android:layout_marginStart="8dp"
                 app:layout_constraintStart_toStartOf="parent"/>
 
-            <!--            <de.hdodenhof.circleimageview.CircleImageView-->
-            <!--                android:id="@+id/img_user"-->
-            <!--                android:layout_width="60dp"-->
-            <!--                android:layout_height="60dp"-->
-            <!--                android:layout_marginStart="16dp"-->
-            <!--                android:layout_marginTop="40dp"-->
-            <!--                android:src="@drawable/ic_user"-->
-            <!--                app:layout_constraintStart_toStartOf="parent"-->
-            <!--                app:layout_constraintTop_toTopOf="parent" />-->
 
             <!--            <com.google.android.material.textview.MaterialTextView-->
             <!--                android:id="@+id/tv_name"-->

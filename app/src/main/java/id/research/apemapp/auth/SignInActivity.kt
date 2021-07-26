@@ -118,6 +118,11 @@ class SignInActivity : AppCompatActivity() {
                             student.function_quiz_score
                         )
 
+                        Toasty.success(
+                            this@SignInActivity,
+                            "Anda Berhasil Masuk",
+                            Toast.LENGTH_SHORT
+                        ).show()
                         //Intent ke home activity
                         val goHome = Intent(this@SignInActivity, HomeActivity::class.java)
                         startActivity(goHome)

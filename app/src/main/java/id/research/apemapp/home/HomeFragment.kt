@@ -7,7 +7,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import com.google.firebase.database.DatabaseReference
+import id.research.apemapp.R
 import id.research.apemapp.databinding.FragmentHomeBinding
 import id.research.apemapp.home.OnlineCompiler.OnlineCompilerActivity
 import id.research.apemapp.utils.Constants
@@ -42,7 +45,16 @@ class HomeFragment : Fragment() {
         mLoading.setMessage("Loading...")
 
         myPreferences = MySharedPreferences(this@HomeFragment.requireContext())
-        studentId= myPreferences.getValue(Constants.STUDENT_ID)!!
+        studentId = myPreferences.getValue(Constants.STUDENT_ID)!!
+
+        val foto = myPreferences.getValue(Constants.STUDENT_PHOTO)
+
+        Glide.with(requireActivity())
+            .load(foto)
+            .apply(RequestOptions().override(250))
+            .placeholder(R.drawable.ic_user)
+            .error(R.drawable.ic_user)
+            .into(homeBinding.imgUser)
 
         //mengambil data dari shared preferences
         homeBinding.tvName.text = myPreferences.getValue(Constants.STUDENT_FIRST_NAME)

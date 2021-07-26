@@ -2,12 +2,11 @@ package id.research.apemapp.quiz
 
 
 import android.content.Intent
-
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import id.research.apemapp.databinding.FragmentQuizBinding
 
 class QuizFragment : Fragment() {
@@ -28,17 +27,13 @@ class QuizFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-
-
         quizBinding.cardArray.setOnClickListener {
-
-            startActivity(Intent(this.requireContext(), LoopingQuizListActivity::class.java ))
+            startActivity(Intent(this.requireActivity(), LoopingQuizListActivity::class.java))
             activity?.finish()
-
         }
 
         quizBinding.cardFunction.setOnClickListener {
-            startActivity(Intent(this.requireContext(), ArrayQuizListActivity::class.java ))
+            startActivity(Intent(this.requireActivity(), ArrayQuizListActivity::class.java))
             activity?.finish()
         }
     }

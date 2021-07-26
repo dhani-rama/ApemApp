@@ -106,6 +106,11 @@ class SignUpActivity : AppCompatActivity() {
                     //Mengisi variabel pada model student
                     mDatabase.child(mCurrentTime).setValue(student)
 
+                    Toasty.success(
+                        this@SignUpActivity,
+                        "Akun Anda Berhasil Didaftarkan",
+                        Toast.LENGTH_SHORT
+                    ).show()
 
                     startActivity(Intent(this@SignUpActivity, SignInActivity::class.java))
                     finish()
