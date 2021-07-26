@@ -1,15 +1,15 @@
 package id.research.apemapp.quiz
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.database.*
 import es.dmoral.toasty.Toasty
-import id.research.apemapp.models.QuestionListEntity
 import id.research.apemapp.databinding.ActivityArrayQuizListBinding
+import id.research.apemapp.models.QuestionListEntity
 import id.research.apemapp.utils.Constants
 import id.research.apemapp.utils.MySharedPreferences
 
@@ -62,13 +62,12 @@ class ArrayQuizListActivity : AppCompatActivity() {
                             setQuestion()
                             answerIndex++
                         } else {
-                            Toasty.error(this@ArrayQuizListActivity, "Jawaban belum anda pilih", Toast.LENGTH_SHORT).show()
+                            Toasty.error(
+                                this@ArrayQuizListActivity,
+                                "Jawaban Belum Anda Pilih",
+                                Toast.LENGTH_SHORT
+                            ).show()
 
-//                            Toast.makeText(
-//                                this@ArrayQuizListActivity,
-//                                "Mohon isi jawabannya terlebih dahulu",
-//                                Toast.LENGTH_SHORT
-//                            ).show()
                         }
                     }
 
@@ -96,12 +95,11 @@ class ArrayQuizListActivity : AppCompatActivity() {
                             startActivity(intent)
                             finish()
                         } else {
-                            Toasty.error(this@ArrayQuizListActivity, "Jawaban belum anda pilih", Toast.LENGTH_SHORT).show()
-//                            Toast.makeText(
-//                                this@ArrayQuizListActivity,
-//                                "Mohon isi jawabannya terlebih dahulu",
-//                                Toast.LENGTH_SHORT
-//                            ).show()
+                            Toasty.error(
+                                this@ArrayQuizListActivity,
+                                "Jawaban Belum Anda Pilih",
+                                Toast.LENGTH_SHORT
+                            ).show()
                         }
                     }
 

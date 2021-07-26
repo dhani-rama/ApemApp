@@ -22,7 +22,6 @@ import es.dmoral.toasty.Toasty
 import id.research.apemapp.R
 import id.research.apemapp.auth.SignInActivity
 import id.research.apemapp.databinding.FragmentProfileBinding
-import id.research.apemapp.profile.Alarm.AlarmActivity
 import id.research.apemapp.utils.Constants
 import id.research.apemapp.utils.MySharedPreferences
 import java.io.File
@@ -53,7 +52,6 @@ class ProfileFragment : Fragment() {
         settingsBinding.tvName.text = myPreferences.getValue(Constants.STUDENT_FIRST_NAME)
 
 
-
         mDatabaseReference = FirebaseDatabase.getInstance().getReference("Student")
         mStorageReference = FirebaseStorage.getInstance().getReference()
         studentId = myPreferences.getValue(Constants.STUDENT_ID)!!
@@ -71,10 +69,10 @@ class ProfileFragment : Fragment() {
             pictPhoto()
         }
 
-        settingsBinding.btnAlarm.setOnClickListener {
-            startActivity(Intent(this.requireActivity(), AlarmActivity::class.java))
+//        settingsBinding.btnAlarm.setOnClickListener {
+//            startActivity(Intent(this.requireActivity(), AlarmActivity::class.java))
 //            activity?.finish()
-        }
+//        }
 
         settingsBinding.btnEditProfile.setOnClickListener {
             startActivity(Intent(this.requireActivity(), UpdateProfileActivity::class.java))
@@ -87,13 +85,16 @@ class ProfileFragment : Fragment() {
 
         settingsBinding.btnProfilDeveloper.setOnClickListener {
             startActivity(Intent(this.requireActivity(), DeveloperProfileActivity::class.java))
-//            Toasty.info(this.requireActivity(), "Belum Aku Coding Sayang :)", Toast.LENGTH_LONG).show()
         }
 
         settingsBinding.btnInstructionUsed.setOnClickListener {
             Toasty.info(this.requireActivity(), "Belum Aku Coding Sayang :)", Toast.LENGTH_LONG)
                 .show()
         }
+
+//        settingsBinding.btnUploadImage.setOnClickListener {
+//            startActivity(Intent(this.requireActivity(), TestingUploadImageActivity::class.java))
+//        }
 
         settingsBinding.btnLogout.setOnClickListener {
 
@@ -103,13 +104,12 @@ class ProfileFragment : Fragment() {
                 .setCancelable(true)
                 .setPositiveButton(
                     "Tidak", R.drawable.ic_cancel
-                ){dialogInterface, which ->
+                ) { dialogInterface, which ->
                     dialogInterface.dismiss()
                 }
                 .setNegativeButton(
                     "Ya", R.drawable.ic_exit
-                ){
-                    dialogInterface, _ ->
+                ) { dialogInterface, _ ->
                     //Menyimpan data bahwa siswa telah berhasil masuk
                     myPreferences.setValue(Constants.STUDENT, "")
 
@@ -167,7 +167,7 @@ class ProfileFragment : Fragment() {
                     else -> {
                         Toasty.info(
                             this.requireActivity(),
-                            "Pilih foto Dibatalkan",
+                            "Pilih Foto Dibatalkan",
                             Toast.LENGTH_SHORT
                         ).show()
                     }
@@ -186,15 +186,20 @@ class ProfileFragment : Fragment() {
 
                 mDatabaseReference.child(studentId).child("image").setValue(uri.toString())
 
-                myPreferences.setValue(Constants.STUDENT_PHOTO, uri.toString())
-
                 Toasty.success(
                     this.requireActivity(),
-                    "Perubahan foto profil anda berhasil disimpan",
+                    "Berhasil Menyimpan Perubahan Foto Profil Anda",
                     Toast.LENGTH_SHORT
                 ).show()
 
+                myPreferences.setValue(Constants.STUDENT_PHOTO, uri.toString())
             }
+                .addOnFailureListener {
+                    Toasty.error(
+                        this.requireActivity(),
+                        "Gagal Menyimpan Perubahan Foto Profil Anda", Toast.LENGTH_SHORT
+                    ).show()
+                }
         }
     }
 
@@ -204,6 +209,4 @@ class ProfileFragment : Fragment() {
 
         return mime.getExtensionFromMimeType(mContentResolver.getType(mUri))
     }
-
-
 }

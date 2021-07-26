@@ -61,25 +61,25 @@ class SignUpActivity : AppCompatActivity() {
     private fun validate(): Boolean {
         //cek apakah form sudah terisi atau belum
         if (signUpBinding.etFirstName.text.toString() == "") {
-            signUpBinding.etFirstName.error = "Harap isi nama depan terlebih dahulu"
+            signUpBinding.etFirstName.error = "Harap Isi Nama Depan Terlebih Dahulu"
             signUpBinding.etFirstName.requestFocus()
 
             return false
         }
         else if(signUpBinding.etLastName.text.toString() == "") {
-            signUpBinding.etLastName.error = "Harap isi nama belakang terlebih dahulu"
+            signUpBinding.etLastName.error = "Harap Isi Nama Belakang Terlebih Dahulu"
             signUpBinding.etLastName.requestFocus()
 
             return false
         }
         else if(signUpBinding.etNis.text.toString() == "") {
-            signUpBinding.etNis.error = "Harap isi nomor telepon terlebih dahulu"
+            signUpBinding.etNis.error = "Harap Isi Nomor Telepon Terlebih Dahulu"
             signUpBinding.etNis.requestFocus()
 
             return false
         }
         else if(signUpBinding.etPassword.text.toString() == "") {
-            signUpBinding.etPassword.error = "Harap isi kata sandi terlebih dahulu"
+            signUpBinding.etPassword.error = "Harap Isi Kata Sandi Terlebih Dahulu"
             signUpBinding.etPassword.requestFocus()
 
             return false
@@ -129,9 +129,8 @@ class SignUpActivity : AppCompatActivity() {
                 } else {
                     //Menghilangkan Loading
                     mLoading.dismiss()
-                    Toasty.error(this@SignUpActivity, "NIS sudah digunakan", Toast.LENGTH_SHORT)
+                    Toasty.error(this@SignUpActivity, "NIS Sudah Digunakan", Toast.LENGTH_SHORT)
                         .show()
-//                    Toast.makeText(this@SignUpActivity, "nis sudah digunakan", Toast.LENGTH_SHORT).show()
                 }
             }
 
@@ -139,7 +138,6 @@ class SignUpActivity : AppCompatActivity() {
             override fun onCancelled(error: DatabaseError) {
                 mLoading.dismiss()
                 Toasty.error(this@SignUpActivity, error.message, Toast.LENGTH_SHORT).show()
-//                Toast.makeText(this@SignUpActivity, error.message, Toast.LENGTH_SHORT).show()
             }
         })
     }

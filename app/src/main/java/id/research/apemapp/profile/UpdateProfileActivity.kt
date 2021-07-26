@@ -13,7 +13,6 @@ import com.google.firebase.storage.StorageReference
 import es.dmoral.toasty.Toasty
 import id.research.apemapp.HomeActivity
 import id.research.apemapp.databinding.ActivityUpdateProfileBinding
-import id.research.apemapp.models.AuthenticationItementity
 import id.research.apemapp.utils.Constants
 import id.research.apemapp.utils.MySharedPreferences
 
@@ -85,14 +84,14 @@ class UpdateProfileActivity : AppCompatActivity() {
         mNis: String,
         mPassword: String
     ) {
-
         mLoading.show()
+//        val model = AuthenticationItementity(studentId, mFirstName, mLastName, mNis, mPassword)
+//        mDatabaseReference.child(studentId).setValue(model)
 
-        val model = AuthenticationItementity(studentId, mFirstName, mLastName, mNis, mPassword)
-
-        mDatabaseReference.child(studentId).setValue(model)
-
-
+        mDatabaseReference.child(studentId).child("firstName").setValue(mFirstName)
+        mDatabaseReference.child(studentId).child("lastName").setValue(mLastName)
+        mDatabaseReference.child(studentId).child("nis").setValue(mNis)
+        mDatabaseReference.child(studentId).child("password").setValue(mPassword)
 
         myPreferences.setValue(
             Constants.STUDENT_FIRST_NAME,
@@ -108,7 +107,12 @@ class UpdateProfileActivity : AppCompatActivity() {
             mUpdateProfileBinding.etNis.text.toString()
         )
 
-        Toasty.success(this, "Perubahan profil anda berhasil disimpan", Toast.LENGTH_SHORT).show()
+        myPreferences.setValue(
+            Constants.STUDENT_PASSWORD,
+            mUpdateProfileBinding.etPassword.text.toString()
+        )
+
+        Toasty.success(this, "Berhasil Menyimpan Perubahan Profil Anda", Toast.LENGTH_SHORT).show()
 
         val goHome = Intent(this, HomeActivity::class.java)
         startActivity(goHome)
@@ -118,26 +122,26 @@ class UpdateProfileActivity : AppCompatActivity() {
     private fun validate(): Boolean {
         //cek apakah form sudah terisi atau belum
         if (mUpdateProfileBinding.etFirstName.text.toString() == "") {
-            mUpdateProfileBinding.etFirstName.error = "Harap isi nama depan terlebih dahulu"
+            mUpdateProfileBinding.etFirstName.error = "Harap Isi Nama Depan Terlebih Dahulu"
             mUpdateProfileBinding.etFirstName.requestFocus()
 
             return false
         } else if (mUpdateProfileBinding.etLastName.text.toString() == "") {
-            mUpdateProfileBinding.etLastName.error = "Harap isi nama belakang terlebih dahulu"
+            mUpdateProfileBinding.etLastName.error = "Harap Isi Nama Belakang Terlebih Dahulu"
             mUpdateProfileBinding.etLastName.requestFocus()
 
             return false
         } else if (mUpdateProfileBinding.etNis.text.toString() == "") {
-            mUpdateProfileBinding.etNis.error = "Harap isi nomor telepon terlebih dahulu"
+            mUpdateProfileBinding.etNis.error = "Harap Isi Nomor Telepon Terlebih Dahulu"
             mUpdateProfileBinding.etNis.requestFocus()
 
             return false
         } else if (mUpdateProfileBinding.etPassword.text.toString() == "") {
-            mUpdateProfileBinding.etPassword.error = "Harap isi kata sandi terlebih dahulu"
+            mUpdateProfileBinding.etPassword.error = "Harap Isi Kata Sandi Terlebih Dahulu"
             mUpdateProfileBinding.etPassword.requestFocus()
             return false
         } else if (mUpdateProfileBinding.etPasswordAgain.text.toString() == "") {
-            mUpdateProfileBinding.etPasswordAgain.error = "Harap isi kata sandi lagi"
+            mUpdateProfileBinding.etPasswordAgain.error = "Harap Isi Kata Sandi Lagi"
             mUpdateProfileBinding.etPasswordAgain.requestFocus()
             return false
         }

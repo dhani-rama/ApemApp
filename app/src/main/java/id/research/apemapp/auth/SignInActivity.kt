@@ -63,13 +63,13 @@ class SignInActivity : AppCompatActivity() {
     private fun validate(): Boolean {
 
         if(signInBinding.etNis.text.toString() == "") {
-            signInBinding.etNis.error = "Harap isi nomor telepon terlebih dahulu"
+            signInBinding.etNis.error = "Harap Isi Nomor Telepon Terlebih Dahulu"
             signInBinding.etNis.requestFocus()
 
             return false
         }
         else if(signInBinding.etPassword.text.toString() == "") {
-            signInBinding.etPassword.error = "Harap isi kata sandi terlebih dahulu"
+            signInBinding.etPassword.error = "Harap Isi Kata Sandi Terlebih Dahulu"
             signInBinding.etPassword.requestFocus()
 
             return false
@@ -105,6 +105,7 @@ class SignInActivity : AppCompatActivity() {
                         myPreferences.setValue(Constants.STUDENT_LAST_NAME, student.lastName)
                         myPreferences.setValue(Constants.STUDENT_NIS, student.nis)
                         myPreferences.setValue(Constants.STUDENT_PASSWORD, student.password)
+                        myPreferences.setValue(Constants.STUDENT_PHOTO, student.image)
                         myPreferences.setValue(
                             Constants.STUDENT_LOOPING_QUIZ_SCORE,
                             student.looping_quiz_score
@@ -134,15 +135,11 @@ class SignInActivity : AppCompatActivity() {
                         //Menghilangkan loading
                         mLoading.dismiss()
                         Toasty.error(this@SignInActivity, "Password Salah", Toast.LENGTH_SHORT).show()
-//                        Toast.makeText(this@SignInActivity, "Password Salah", Toast.LENGTH_SHORT)
-//                            .show()
                     }
                 } else {
                     //Menghilangkan loading
                     mLoading.dismiss()
                     Toasty.error(this@SignInActivity, "NIS belum terdaftar", Toast.LENGTH_SHORT).show()
-//                    Toast.makeText(this@SignInActivity, "NIS belum terdaftar", Toast.LENGTH_SHORT)
-//                        .show()
                 }
             }
 
@@ -150,7 +147,6 @@ class SignInActivity : AppCompatActivity() {
                 //Menghilangkan loading
                 mLoading.dismiss()
                 Toasty.error(this@SignInActivity, error.message, Toast.LENGTH_SHORT).show()
-//                Toast.makeText(this@SignInActivity, error.message, Toast.LENGTH_SHORT).show()
             }
 
         })
