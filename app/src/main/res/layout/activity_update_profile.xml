@@ -114,75 +114,45 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!--        <com.google.android.material.textfield.TextInputLayout-->
-        <!--            android:id="@+id/layout_password"-->
-        <!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_marginTop="16dp"-->
-        <!--            app:endIconMode="password_toggle"-->
-        <!--            app:layout_constraintEnd_toEndOf="parent"-->
-        <!--            app:layout_constraintStart_toStartOf="parent"-->
-        <!--            app:layout_constraintTop_toBottomOf="@id/layout_nis"-->
-        <!--            app:startIconDrawable="@drawable/ic_password">-->
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_choose_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="16dp"
+            android:text="Pilih Foto"
+            android:textColor="@color/abu_abu4"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_nis" />
 
-        <!--            <com.google.android.material.textfield.TextInputEditText-->
-        <!--                android:id="@+id/et_password"-->
-        <!--                android:layout_width="match_parent"-->
-        <!--                android:layout_height="match_parent"-->
-        <!--                android:backgroundTint="@color/white"-->
-        <!--                android:hint="Kata Sandi"-->
-        <!--                android:inputType="textPassword" />-->
-        <!--        </com.google.android.material.textfield.TextInputLayout>-->
-
-        <!--        <com.google.android.material.textfield.TextInputLayout-->
-        <!--            android:id="@+id/layout_password_again"-->
-        <!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_marginTop="16dp"-->
-        <!--            app:endIconMode="password_toggle"-->
-        <!--            app:layout_constraintEnd_toEndOf="parent"-->
-        <!--            app:layout_constraintStart_toStartOf="parent"-->
-        <!--            app:layout_constraintTop_toBottomOf="@id/layout_password"-->
-        <!--            app:startIconDrawable="@drawable/ic_password">-->
-
-        <!--            <com.google.android.material.textfield.TextInputEditText-->
-        <!--                android:id="@+id/et_password_again"-->
-        <!--                android:layout_width="match_parent"-->
-        <!--                android:layout_height="match_parent"-->
-        <!--                android:backgroundTint="@color/white"-->
-        <!--                android:hint="Masukkan Kata Sandi Lagi"-->
-        <!--                android:inputType="textPassword" />-->
-        <!--        </com.google.android.material.textfield.TextInputLayout>-->
-
-
-        <RelativeLayout
+        <FrameLayout
             android:id="@+id/layout_upload_gambar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_height="180dp"
+            android:background="@drawable/bg_choose_photo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/layout_nis">
+            app:layout_constraintTop_toBottomOf="@id/tv_choose_image">
 
             <ImageView
                 android:id="@+id/img_user"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_alignParentStart="true"
-                android:src="@drawable/ic_person" />
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_choose_image"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:text="Pilih Gambar"
-                android:textSize="16sp" />
+                android:layout_width="88dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_baseline_photo_camera_24"
+                android:clickable="true"
+                android:focusable="true"
+                app:backgroundTint="@color/black"
+                app:rippleColor="#DBDBDB" />
 
-        </RelativeLayout>
+        </FrameLayout>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_next"

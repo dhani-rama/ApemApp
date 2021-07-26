@@ -101,7 +101,17 @@ class SignUpActivity : AppCompatActivity() {
                     //mengambil data tanggal dan jam daftar
                     val mCurrentTime = SimpleDateFormat("yyyyMMdd:HHmmss", Locale.getDefault()).format(Date())
 
-                    val student = AuthenticationItementity(mCurrentTime, mFirstname, mLastName, mNis, mPassword, "0", "0", "0")
+                    val student = AuthenticationItementity(
+                        mCurrentTime,
+                        mFirstname,
+                        mLastName,
+                        mNis,
+                        mPassword,
+                        "https://firebasestorage.googleapis.com/v0/b/apem-app-4591b.appspot.com/o/1627296898593.null?alt=media&token=69796e16-1d37-40ca-8c64-32fd3eeb9b9a",
+                        "0",
+                        "0",
+                        "0"
+                    )
 
                     //Mengisi variabel pada model student
                     mDatabase.child(mCurrentTime).setValue(student)

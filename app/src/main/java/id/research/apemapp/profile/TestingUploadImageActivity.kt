@@ -1,5 +1,6 @@
 package id.research.apemapp.profile
 
+import android.app.Activity
 import android.app.ProgressDialog
 import android.content.Intent
 import android.net.Uri
@@ -7,6 +8,7 @@ import android.os.Bundle
 import android.webkit.MimeTypeMap
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.github.dhaval2404.imagepicker.ImagePicker
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
@@ -16,8 +18,9 @@ import id.research.apemapp.HomeActivity
 import id.research.apemapp.databinding.ActivityUploadImageBinding
 import id.research.apemapp.utils.Constants
 import id.research.apemapp.utils.MySharedPreferences
+import java.io.File
 
-class UploadImageActivity : AppCompatActivity() {
+class TestingUploadImageActivity : AppCompatActivity() {
 
     private lateinit var mUploadImageBinding: ActivityUploadImageBinding
     private lateinit var mDatabaseReference: DatabaseReference
@@ -44,13 +47,45 @@ class UploadImageActivity : AppCompatActivity() {
 
 
         mUploadImageBinding.btnSelect.setOnClickListener {
-            selectImage()
+//            selectImage()
+            selectPhoto()
         }
 
         mUploadImageBinding.btnUpload.setOnClickListener {
             uploadImage(mImageUri)
             Toasty.success(this, "Gambar Berhasil Di Upload", Toast.LENGTH_LONG).show()
         }
+    }
+
+    private fun selectPhoto() {
+        ImagePicker.with(this)
+            .cropSquare()
+            .compress(1024)
+            .maxResultSize(720, 720)
+            .galleryMimeTypes(
+                mimeTypes = arrayOf(
+                    "image/png",
+                    "image/jpg",
+                    "image/jpeg"
+                )
+            )
+            .start { resultCode, data ->
+                when (resultCode) {
+                    Activity.RESULT_OK -> {
+                        val fileUri = data?.data
+                        this.mImageUri = fileUri!!
+                        mUploadImageBinding.imgUser.setImageURI(fileUri)
+                        val file: File? = ImagePicker.getFile(data)
+                        val filePath: String = ImagePicker.getFilePath(data).toString()
+                    }
+                    ImagePicker.RESULT_ERROR -> {
+                        Toast.makeText(this, ImagePicker.getError(data), Toast.LENGTH_SHORT).show()
+                    }
+                    else -> {
+                        Toast.makeText(this, "Task Cancelled", Toast.LENGTH_SHORT).show()
+                    }
+                }
+            }
     }
 
     private fun uploadImage(uri: Uri) {

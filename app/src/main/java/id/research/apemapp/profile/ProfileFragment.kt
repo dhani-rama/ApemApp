@@ -73,11 +73,6 @@ class ProfileFragment : Fragment() {
                 .show()
         }
 
-        settingsBinding.btnUploadImage.setOnClickListener {
-            startActivity(Intent(this.requireActivity(), UploadImageActivity::class.java))
-        }
-
-
         settingsBinding.btnLogout.setOnClickListener {
 
             val mDialog = MaterialDialog.Builder(requireContext() as Activity)
