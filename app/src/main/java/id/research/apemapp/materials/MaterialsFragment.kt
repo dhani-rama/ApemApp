@@ -1,11 +1,15 @@
 package id.research.apemapp.materials
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.fragment.app.Fragment
+import es.dmoral.toasty.Toasty
 import id.research.apemapp.databinding.FragmentMaterialsBinding
+import id.research.apemapp.materials.ArrayMaterials.ArrayDetailMaterialsActivity
 
 
 class MaterialsFragment: Fragment() {
@@ -23,6 +27,21 @@ class MaterialsFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        materialsBinding.cardArray.setOnClickListener {
+            startActivity(Intent(this.requireActivity(), ArrayDetailMaterialsActivity::class.java))
+//            Toasty.info(this.requireActivity(), "Belum Aku Coding Sayang :)", Toast.LENGTH_LONG).show()
+        }
+
+        materialsBinding.cardFungsi.setOnClickListener {
+            Toasty.info(this.requireActivity(), "Belum Aku Coding Sayang :)", Toast.LENGTH_LONG)
+                .show()
+        }
+
+        materialsBinding.cardLooping.setOnClickListener {
+            Toasty.info(this.requireActivity(), "Belum Aku Coding Sayang :)", Toast.LENGTH_LONG)
+                .show()
+        }
     }
 
 }
