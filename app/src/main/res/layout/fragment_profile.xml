@@ -28,38 +28,37 @@
             app:layout_constraintTop_toTopOf="parent" />
 
 
-<!--        <de.hdodenhof.circleimageview.CircleImageView-->
-<!--            android:id="@+id/img_user"-->
-<!--            android:layout_width="150dp"-->
-<!--            android:layout_height="150dp"-->
-<!--            android:layout_marginTop="32dp"-->
-<!--            android:src="@drawable/ic_user"-->
-<!--            app:layout_constraintTop_toBottomOf="@id/tv_settings"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            />-->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_user"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/ic_user"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_settings" />
 
-<!--        <TextView-->
-<!--            android:id="@+id/tv_name"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginBottom="80dp"-->
-<!--            android:fontFamily="@font/montserrat"-->
-<!--            android:text="@string/sayang"-->
-<!--            android:layout_marginTop="16dp"-->
-<!--            android:textColor="@color/biru2"-->
-<!--            android:textSize="24sp"-->
-<!--            android:textStyle="bold"-->
-<!--            app:layout_constraintTop_toBottomOf="@id/img_user"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"/>-->
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="80dp"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/sayang"
+            android:textColor="@color/biru2"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_user" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_marginTop="48dp"
-            app:layout_constraintTop_toBottomOf="@id/tv_settings"
+            app:layout_constraintTop_toBottomOf="@id/tv_name"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent">
 
@@ -81,9 +80,29 @@
                 android:layout_marginHorizontal="24dp"
                 android:background="@color/biru2" />
 
-<!--            <com.google.android.material.button.MaterialButton-->
-<!--                android:id="@+id/btn_edit_pass"-->
-<!--                style="@style/Widget.MaterialComponents.Button.TextButton"-->
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_edit_password"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:text="Ubah Password"
+                android:textAllCaps="false"
+                android:textColor="@color/biru2"
+                android:textSize="15sp"
+                app:icon="@drawable/ic_password" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="24dp"
+                android:background="@color/biru2" />
+
+            <!--            <com.google.android.material.button.MaterialButton-->
+            <!--                android:id="@+id/btn_edit_pass"-->
+            <!--                style="@style/Widget.MaterialComponents.Button.TextButton"-->
 <!--                android:layout_width="wrap_content"-->
 <!--                android:layout_height="wrap_content"-->
 <!--                android:layout_marginStart="24dp"-->
@@ -151,25 +170,43 @@
                 android:layout_marginHorizontal="24dp"
                 android:background="@color/biru2" />
 
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_upload_image"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:text="Coba Upload Image"
+                android:textAllCaps="false"
+                android:textSize="15sp"
+                app:icon="@drawable/ic_sticky_note" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="24dp"
+                android:background="@color/biru2" />
+
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_logout"
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="24dp"
                 android:layout_marginEnd="24dp"
+                android:layout_marginTop="24dp"
                 android:text="@string/keluar"
                 android:textAllCaps="false"
                 android:textColor="@android:color/holo_red_dark"
                 android:textSize="15sp"
                 app:cornerRadius="15dp"
+                android:paddingHorizontal="24dp"
+                android:paddingVertical="12dp"
                 app:elevation="4dp"
                 app:rippleColor="@android:color/holo_red_dark"
                 app:strokeColor="@android:color/holo_red_dark" />
-
-
 
         </LinearLayout>
 

@@ -15,7 +15,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ApemApp.Terang">
-        <activity android:name=".profile.UpdateProfileActivity"></activity>
+        <activity android:name=".profile.UpdatePasswordActivity"></activity>
+        <activity android:name=".profile.UploadImageActivity" />
+        <activity android:name=".materials.ArrayMaterials.ArrayDetailMaterialsActivity" />
+        <activity android:name=".profile.UpdateProfileActivity" />
         <activity android:name=".profile.DeveloperProfileActivity" />
         <activity android:name=".profile.Alarm.DestinationActivity" />
         <activity android:name=".profile.Alarm.AlarmActivity" />

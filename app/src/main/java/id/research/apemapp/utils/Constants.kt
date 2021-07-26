@@ -4,6 +4,7 @@ object Constants {
     const val LOGIN = "signIn"
     const val STUDENT = "student"
     const val STUDENT_ID = "id"
+    const val STUDENT_PHOTO = "photo"
     const val STUDENT_FIRST_NAME = "first name"
     const val STUDENT_LAST_NAME = "last name"
     const val STUDENT_NIS = "nis"

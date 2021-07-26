@@ -1,15 +1,17 @@
 package id.research.apemapp.profile
 
+import android.app.ProgressDialog
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
-import android.widget.Toast
+import android.webkit.MimeTypeMap
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import es.dmoral.toasty.Toasty
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageReference
 import id.research.apemapp.HomeActivity
 import id.research.apemapp.databinding.ActivityUpdateProfileBinding
-import id.research.apemapp.models.AuthenticationItementity
 import id.research.apemapp.utils.Constants
 import id.research.apemapp.utils.MySharedPreferences
 
@@ -18,7 +20,10 @@ class UpdateProfileActivity : AppCompatActivity() {
     private lateinit var mUpdateProfileBinding: ActivityUpdateProfileBinding
     private lateinit var myPreferences: MySharedPreferences
     private lateinit var mDatabaseReference: DatabaseReference
-    private lateinit var userId: String
+    private lateinit var studentId: String
+    private lateinit var mImageUri: Uri
+    private lateinit var mStorageReference: StorageReference
+    private lateinit var mLoading: ProgressDialog
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,9 +31,14 @@ class UpdateProfileActivity : AppCompatActivity() {
         mUpdateProfileBinding = ActivityUpdateProfileBinding.inflate(layoutInflater)
         setContentView(mUpdateProfileBinding.root)
 
+        mLoading = ProgressDialog(this)
+        mLoading.setCancelable(false)
+        mLoading.setMessage("Loading...")
+
         myPreferences = MySharedPreferences(this)
         mDatabaseReference = FirebaseDatabase.getInstance().getReference("Student")
-        userId = myPreferences.getValue("id")!!
+        mStorageReference = FirebaseStorage.getInstance().getReference()
+        studentId = myPreferences.getValue(Constants.STUDENT_ID)!!
 
         mUpdateProfileBinding.btnBack.setOnClickListener {
             onBackPressed()
@@ -42,55 +52,85 @@ class UpdateProfileActivity : AppCompatActivity() {
         mUpdateProfileBinding.etLastName.setText(mLastName)
         mUpdateProfileBinding.etNis.setText(mNis)
 
+
+        mUpdateProfileBinding.btnChooseImage.setOnClickListener {
+            selectImage()
+        }
+
         mUpdateProfileBinding.btnNext.setOnClickListener {
             if (validate()) {
                 val studentFirstName = mUpdateProfileBinding.etFirstName.text.toString()
                 val studentLastName = mUpdateProfileBinding.etLastName.text.toString()
                 val studentNis = mUpdateProfileBinding.etNis.text.toString()
-                val studentPassword = mUpdateProfileBinding.etPassword.text.toString()
-                val studentPasswordAgain = mUpdateProfileBinding.etPasswordAgain.text.toString()
 
-                if (studentPassword == studentPasswordAgain) {
-                    updateProfile(studentFirstName, studentLastName, studentNis, studentPassword)
-                } else {
-                    Toasty.error(
-                        this,
-                        "Kata Sandi Tidak Cocok, Silahkan Periksa Kembali",
-                        Toast.LENGTH_LONG
-                    ).show()
-                }
+                updateProfile(studentFirstName, studentLastName, studentNis, mImageUri)
             }
         }
 
     }
 
-    private fun updateProfile(
-        mFirstname: String,
-        mLastName: String,
-        mNis: String,
-        mPassword: String
-    ) {
+    private fun selectImage() {
+        val intent = Intent()
+        intent.type = "image/*"
+        intent.action = Intent.ACTION_GET_CONTENT
 
-        val update = AuthenticationItementity(userId, mFirstname, mLastName, mNis, mPassword)
-        mDatabaseReference.child(userId).setValue(update)
+        startActivityForResult(intent, 2)
+    }
 
-        myPreferences.setValue(
-            Constants.STUDENT_FIRST_NAME,
-            mUpdateProfileBinding.etFirstName.text.toString()
-        )
-        myPreferences.setValue(
-            Constants.STUDENT_LAST_NAME,
-            mUpdateProfileBinding.etLastName.text.toString()
-        )
-        myPreferences.setValue(Constants.STUDENT_NIS, mUpdateProfileBinding.etNis.text.toString())
-        myPreferences.setValue(
-            Constants.STUDENT_PASSWORD,
-            mUpdateProfileBinding.etPassword.text.toString()
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (requestCode == 2 && resultCode == RESULT_OK) {
+            mImageUri = data?.data!!
+            mUpdateProfileBinding.imgUser.setImageURI(mImageUri)
+        }
+    }
+
+    private fun getFileExtension(mUri: Uri): String? {
+        val mContentResolver = contentResolver
+        val mime = MimeTypeMap.getSingleton()
+
+        return mime.getExtensionFromMimeType(mContentResolver.getType(mUri))
+    }
+
+
+    private fun updateProfile(mFirstName: String, mLastName: String, mNis: String, uri: Uri) {
+
+        mLoading.show()
+
+        val fileRef = mStorageReference.child(
+            System.currentTimeMillis().toString() + "." + getFileExtension(uri)
         )
 
-        val goHome = Intent(this, HomeActivity::class.java)
-        startActivity(goHome)
-        finish()
+        fileRef.putFile(uri).addOnSuccessListener {
+            fileRef.downloadUrl.addOnSuccessListener { uri ->
+
+                mDatabaseReference.child(studentId).child("firstName").setValue(mFirstName)
+                mDatabaseReference.child(studentId).child("lastName").setValue(mLastName)
+                mDatabaseReference.child(studentId).child("nis").setValue(mNis)
+                mDatabaseReference.child(studentId).child("image").setValue(uri.toString())
+
+                myPreferences.setValue(
+                    Constants.STUDENT_FIRST_NAME,
+                    mUpdateProfileBinding.etFirstName.text.toString()
+                )
+                myPreferences.setValue(
+                    Constants.STUDENT_LAST_NAME,
+                    mUpdateProfileBinding.etLastName.text.toString()
+                )
+
+                myPreferences.setValue(
+                    Constants.STUDENT_NIS,
+                    mUpdateProfileBinding.etNis.text.toString()
+                )
+                myPreferences.setValue(Constants.STUDENT_PHOTO, uri.toString())
+
+
+                val goHome = Intent(this, HomeActivity::class.java)
+                startActivity(goHome)
+                finish()
+            }
+        }
     }
 
     private fun validate(): Boolean {
@@ -110,17 +150,8 @@ class UpdateProfileActivity : AppCompatActivity() {
             mUpdateProfileBinding.etNis.requestFocus()
 
             return false
-        } else if (mUpdateProfileBinding.etPassword.text.toString() == "") {
-            mUpdateProfileBinding.etPassword.error = "Harap isi kata sandi terlebih dahulu"
-            mUpdateProfileBinding.etPassword.requestFocus()
-
-            return false
-        } else if (mUpdateProfileBinding.etPasswordAgain.text.toString() == "") {
-            mUpdateProfileBinding.etPasswordAgain.error = "Harap isi kata sandi lagi"
-            mUpdateProfileBinding.etPasswordAgain.requestFocus()
-
-            return false
         }
+
         return true
     }
 }

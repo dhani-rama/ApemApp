@@ -8,6 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import dev.shreyaspatil.MaterialDialog.MaterialDialog
 import es.dmoral.toasty.Toasty
 import id.research.apemapp.R
@@ -30,14 +32,22 @@ class ProfileFragment : Fragment() {
 
         settingsBinding = FragmentProfileBinding.inflate(inflater, container, false)
         return settingsBinding.root
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         myPreferences = MySharedPreferences(this@ProfileFragment.requireContext())
-//        settingsBinding.tvName.text = myPreferences.getValue(Constants.STUDENT_NAME)
+        settingsBinding.tvName.text = myPreferences.getValue(Constants.STUDENT_FIRST_NAME)
+
+        val foto = myPreferences.getValue(Constants.STUDENT_PHOTO)
+
+        Glide.with(requireActivity())
+            .load(foto)
+            .apply(RequestOptions().override(250))
+            .placeholder(R.drawable.ic_user)
+            .error(R.drawable.ic_user)
+            .into(settingsBinding.imgUser)
 
         settingsBinding.btnAlarm.setOnClickListener {
             startActivity(Intent(this.requireActivity(), AlarmActivity::class.java))
@@ -49,9 +59,9 @@ class ProfileFragment : Fragment() {
 //            Toasty.info(this.requireActivity(), "Belum Aku Coding Sayang :)", Toast.LENGTH_LONG).show()
         }
 
-//        settingsBinding.btnEditPass.setOnClickListener {
-//            Toasty.info(this.requireActivity(), "Belum Aku Coding Sayang :)", Toast.LENGTH_LONG).show()
-//        }
+        settingsBinding.btnEditPassword.setOnClickListener {
+            startActivity(Intent(this.requireActivity(), UpdatePasswordActivity::class.java))
+        }
 
         settingsBinding.btnProfilDeveloper.setOnClickListener {
             startActivity(Intent(this.requireActivity(), DeveloperProfileActivity::class.java))
@@ -59,7 +69,12 @@ class ProfileFragment : Fragment() {
         }
 
         settingsBinding.btnInstructionUsed.setOnClickListener {
-            Toasty.info(this.requireActivity(), "Belum Aku Coding Sayang :)", Toast.LENGTH_LONG).show()
+            Toasty.info(this.requireActivity(), "Belum Aku Coding Sayang :)", Toast.LENGTH_LONG)
+                .show()
+        }
+
+        settingsBinding.btnUploadImage.setOnClickListener {
+            startActivity(Intent(this.requireActivity(), UploadImageActivity::class.java))
         }
 
 
@@ -87,6 +102,7 @@ class ProfileFragment : Fragment() {
                     myPreferences.setValue(Constants.STUDENT_LAST_NAME, " ")
                     myPreferences.setValue(Constants.STUDENT_NIS, " ")
                     myPreferences.setValue(Constants.STUDENT_PASSWORD, " ")
+                    myPreferences.setValue(Constants.STUDENT_PHOTO, " ")
                     myPreferences.setValue(Constants.STUDENT_LOOPING_QUIZ_SCORE, " ")
                     myPreferences.setValue(Constants.STUDENT_ARRAY_QUIZ_SCORE, " ")
                     myPreferences.setValue(Constants.STUDENT_FUNCTION_QUIZ_SCORE, " ")
