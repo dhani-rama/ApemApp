@@ -4,69 +4,69 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.on_boarding1">
+    android:padding="16dp"
+    tools:context=".activity.SplashScreenActivity">
 
-    <ImageView
+    <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/img_logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
         android:layout_marginTop="110dp"
-        android:layout_marginEnd="16dp"
-        android:contentDescription="@string/gambar_logo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.506"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/rsz_asset1" />
+        app:lottie_autoPlay="true"
+        app:lottie_loop="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:lottie_rawRes="@raw/logo_animation" />
 
-    <TextView
+    <!--    <ImageView-->
+    <!--        android:id="@+id/img_logo"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="16dp"-->
+    <!--        android:layout_marginTop="110dp"-->
+    <!--        android:layout_marginEnd="16dp"-->
+    <!--        android:contentDescription="@string/gambar_logo"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.506"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:srcCompat="@drawable/rsz_asset1" />-->
+
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tv_apem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="16dp"
         android:fontFamily="@font/montserrat"
         android:text="@string/a_pem"
         android:textSize="36sp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img_logo" />
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tv_adaptive"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="16dp"
         android:fontFamily="@font/montserrat"
         android:text="@string/adaptive_mobile_learning"
         android:textSize="24sp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_apem" />
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tv_basic_programming"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
         android:fontFamily="@font/montserrat"
         android:text="@string/pemrograman_dasar"
         android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/tv_adaptive"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="@+id/tv_adaptive"
-        app:layout_constraintTop_toBottomOf="@+id/tv_adaptive"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_adaptive" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
