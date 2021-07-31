@@ -76,7 +76,6 @@ class ProfileFragment : Fragment() {
 
         settingsBinding.btnEditProfile.setOnClickListener {
             startActivity(Intent(this.requireActivity(), UpdateProfileActivity::class.java))
-//            Toasty.info(this.requireActivity(), "Belum Aku Coding Sayang :)", Toast.LENGTH_LONG).show()
         }
 
 //        settingsBinding.btnEditPassword.setOnClickListener {

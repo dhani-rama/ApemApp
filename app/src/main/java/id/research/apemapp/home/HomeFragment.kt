@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.google.firebase.database.DatabaseReference
@@ -61,7 +62,10 @@ class HomeFragment : Fragment() {
 
         homeBinding.cardCodeEditor.setOnClickListener {
             startActivity(Intent(this.requireActivity(), OnlineCompilerActivity::class.java))
+        }
 
+        homeBinding.imgUser.setOnClickListener {
+            findNavController().navigate(R.id.action_home_fragment_to_profile_fragment)
         }
     }
 }
