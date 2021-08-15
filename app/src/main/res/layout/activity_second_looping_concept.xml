@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:scrollbars="none"
+    tools:context=".materials.LoopingMaterials.LoopingConceptMaterials.SecondLoopingConceptActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_header_concept_looping"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="16dp"
+            android:text="Konsep Perulangan"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:fontFamily="@font/montserrat"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_first_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:justificationMode="inter_word"
+            android:lineSpacingExtra="8dp"
+            android:text="Pada struktur perulangan, selalu disertai bagian inialisasi, terminasi, iterasi, dan statement yang diulang."
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_header_concept_looping"
+            tools:ignore="UnusedAttribute" />
+
+        <LinearLayout
+            android:id="@+id/layout_first_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="8dp"
+            android:weightSum="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_first_text">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1."
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:fontFamily="@font/montserrat" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="8dp"
+                android:paddingHorizontal="12dp"
+                android:text="Inialisasi merupakan nilai awal yang diberikan pada suatu variabel."
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:fontFamily="@font/montserrat"
+                tools:ignore="UnusedAttribute" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_second_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="8dp"
+            android:weightSum="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_first_line">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2."
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:fontFamily="@font/montserrat" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="8dp"
+                android:paddingHorizontal="8dp"
+                android:text="Terminasi merupakan kondisi untuk berhenti dari proses perulangan."
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:fontFamily="@font/montserrat"
+                tools:ignore="UnusedAttribute" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_third_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="8dp"
+            android:weightSum="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_second_line">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3."
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:fontFamily="@font/montserrat" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="8dp"
+                android:paddingHorizontal="8dp"
+                android:text="Iterasi merupakan kondisi pertambahan atau pengurangan agar proses perulangan dapat berjalan."
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:fontFamily="@font/montserrat"
+                tools:ignore="UnusedAttribute" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_fourth_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="8dp"
+            android:weightSum="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_third_line">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4."
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:fontFamily="@font/montserrat" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="8dp"
+                android:paddingHorizontal="8dp"
+                android:text="Statement yang diulang merupakan bagian yang berisi beberapa proses yang perlu dilakukan secara berulang – berulang."
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:fontFamily="@font/montserrat"
+                tools:ignore="UnusedAttribute" />
+
+        </LinearLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_second_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:justificationMode="inter_word"
+            android:lineSpacingExtra="8dp"
+            android:text="Beberapa bentuk struktur perulangan memiliki syarat dan karakteristik yang berbeda – beda. Ada beberapa bentuk perulangan yang dapat digunakan untuk studi kasus yang sama. Namun ada juga bentuk perulangan yang hanya cocok untuk kasus tertentu saja. Adapun contoh struktur perulangan sebagai berikut."
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:fontFamily="@font/montserrat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_fourth_line"
+            tools:ignore="UnusedAttribute" />
+
+        <FrameLayout
+            android:id="@+id/layout_img_first_concept"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_second_text">
+
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/img_first_concept"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_gravity="center_horizontal|top"
+                android:src="@drawable/img_second_looping_concept" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_info_first_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="16dp"
+                android:text="Gambar 1.2. Contoh Struktur Perulangan"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </FrameLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:clickable="true"
+            android:elevation="4dp"
+            android:focusable="true"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="8dp"
+            android:text="Kembali"
+            android:textSize="20sp"
+            app:cornerRadius="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_img_first_concept"
+            app:rippleColor="#DBDBDB" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:elevation="4dp"
+            android:focusable="true"
+            android:paddingHorizontal="28dp"
+            android:paddingVertical="8dp"
+            android:text="Lanjut"
+            android:textSize="20sp"
+            app:cornerRadius="15dp"
+            app:layout_constraintBottom_toBottomOf="@id/btn_back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/btn_back"
+            app:rippleColor="#DBDBDB" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:scrollbars="none"
+    tools:context=".materials.LoopingMaterials.LoopingConceptMaterials.FirstLoopingConceptActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_header_concept_looping"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="16dp"
+            android:text="Konsep Perulangan"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:fontFamily="@font/montserrat"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_first_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:justificationMode="inter_word"
+            android:lineSpacingExtra="8dp"
+            android:text="Perulangan atau yang biasa disebut dengan “Looping” merupakan salah satu fungsi operasi pada pemrograman yang digunakan untuk melakukan proses yang berulang – ulang sebanyak yang kita inginkan. Biasanya apabila dalam suatu proses perulangan tersebut tidak disertakan batas perulangannya maka syntax akan error karena proses tersebut akan menjadi tidak terhingga sementara variabel dalam komputer masih terbatas."
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_header_concept_looping"
+            tools:ignore="UnusedAttribute" />
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:id="@+id/img_first_concept"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/img_first_looping_concept"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_first_text" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_info_first_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gambar 1.1. Bentuk Perulangan"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_first_concept" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_link_first_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="Sumber : https://dc562.4shared.com/img/xycNNUSnca/s23/15f65cde040/ss3"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_info_first_image" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_second_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:justificationMode="inter_word"
+            android:lineSpacingExtra="8dp"
+            android:text="Konsep perulangan juga dapat dianalogikan dalam kehidupan kita sehari – hari. Pernahkah kalian mendapat sanksi dan diperintahkan oleh guru untuk menulis suatu kalimat “Saya berjanji tidak akan mengulanginya lagi” di buku tulis hingga 100 kali bahkan lebih ? Capek ya ? itu yang pertama kali terlintas di benak kalian pastinya. Dengan adanya bahasa pemrograman, kalian tidak perlu untuk melakukannya lagi secara manual."
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:fontFamily="@font/montserrat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_link_first_image"
+            tools:ignore="UnusedAttribute" />
+
+        <!--    <com.google.android.youtube.player.YouTubePlayerView-->
+        <!--        android:id="@+id/yt_video"-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--        app:layout_constraintEnd_toEndOf="parent"-->
+        <!--        app:layout_constraintStart_toStartOf="parent"-->
+        <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:clickable="true"
+            android:elevation="4dp"
+            android:focusable="true"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="8dp"
+            android:text="Kembali"
+            android:textSize="20sp"
+            app:cornerRadius="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_second_text"
+            app:rippleColor="#DBDBDB" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:elevation="4dp"
+            android:focusable="true"
+            android:paddingHorizontal="28dp"
+            android:paddingVertical="8dp"
+            android:text="Lanjut"
+            android:textSize="20sp"
+            app:cornerRadius="15dp"
+            app:layout_constraintBottom_toBottomOf="@id/btn_back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/btn_back"
+            app:rippleColor="#DBDBDB" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

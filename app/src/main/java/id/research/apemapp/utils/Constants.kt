@@ -15,4 +15,5 @@ object Constants {
     const val STUDENT_FINAL_QUIZ_SCORE = "final_quiz_score"
     const val EXTRA_WORD = "word"
     const val EXTRA_MEANING = "meaning"
+    const val API_YT_KEY = "AIzaSyCgxbhaKqLVioGyTk3yZrm8DlKXrmig1Vg"
 }
