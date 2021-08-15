@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".materials.LoopingMaterials.ForMaterials.ThirdForActivity">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_header_for_positive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingVertical="16dp"
+        android:text="Perulangan Positif"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:fontFamily="@font/montserrat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_first_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:justificationMode="inter_word"
+        android:lineSpacingExtra="8dp"
+        android:text="Perulangan positif merupakan perulangan dengan iterasi yang sifatnya menaik (increment). Jika kita menulis program perulangan dengan iterasi yang sifatnya menaik (increment) maka nilai awal dari variabel yang kita definisikan pada bagian inialisasi haruslah lebih kecil dari nilai akhir yang dituliskan pada bagian terminasi."
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_header_for_positive"
+        tools:ignore="UnusedAttribute" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_second_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:justificationMode="inter_word"
+        android:lineSpacingExtra="8dp"
+        android:paddingVertical="8dp"
+        android:text="Berikut ini contoh video yang menunjukkan program perulangan negatif dengan menggunakan struktur perulangan for."
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_first_text"
+        tools:ignore="UnusedAttribute" />
+
+    <com.google.android.youtube.player.YouTubePlayerView
+        android:id="@+id/video_first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_second_text" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:elevation="4dp"
+        android:focusable="true"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="8dp"
+        android:text="Kembali"
+        android:textSize="20sp"
+        app:cornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:rippleColor="#DBDBDB" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:elevation="4dp"
+        android:focusable="true"
+        android:paddingHorizontal="28dp"
+        android:paddingVertical="8dp"
+        android:text="Lanjut"
+        android:textSize="20sp"
+        app:cornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="@id/btn_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btn_back"
+        app:rippleColor="#DBDBDB" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
