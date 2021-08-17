@@ -1,4 +1,4 @@
-package id.research.apemapp.materials.LoopingMaterials.LoopingConceptMaterials
+package id.research.apemapp.materials.LoopingMaterials.LoopingConceptMaterial
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,7 +8,6 @@ import com.google.android.youtube.player.YouTubeInitializationResult
 import com.google.android.youtube.player.YouTubePlayer
 import es.dmoral.toasty.Toasty
 import id.research.apemapp.databinding.ActivityThirdLoopingConceptBinding
-import id.research.apemapp.materials.LoopingMaterials.LoopingDetailMaterialsActivity
 import id.research.apemapp.utils.Constants
 
 class ThirdLoopingConceptActivity : YouTubeBaseActivity() {
@@ -26,7 +25,7 @@ class ThirdLoopingConceptActivity : YouTubeBaseActivity() {
         }
 
         mThirdLoopingBinding.btnNext.setOnClickListener {
-            startActivity(Intent(this, LoopingDetailMaterialsActivity::class.java))
+            startActivity(Intent(this, FourthLoopingConceptActivity::class.java))
             finish()
         }
 

@@ -6,14 +6,14 @@
     android:layout_height="match_parent"
     android:padding="16dp"
     android:scrollbars="none"
-    tools:context=".materials.LoopingMaterials.ForMaterials.FirstForActivity">
+    tools:context=".materials.LoopingMaterials.ForMaterial.FirstForActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/tv_header_concept_looping"
+            android:id="@+id/tv_header_for"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingVertical="16dp"
@@ -36,11 +36,11 @@
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_header_concept_looping"
+            app:layout_constraintTop_toBottomOf="@id/tv_header_for"
             tools:ignore="UnusedAttribute" />
 
         <com.github.chrisbanes.photoview.PhotoView
-            android:id="@+id/img_first_concept"
+            android:id="@+id/img_first_for"
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:layout_marginTop="16dp"
@@ -59,7 +59,7 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/img_first_concept" />
+            app:layout_constraintTop_toBottomOf="@id/img_first_for" />
 
 
         <com.google.android.material.textview.MaterialTextView
@@ -85,6 +85,7 @@
             android:layout_marginTop="32dp"
             android:clickable="true"
             android:elevation="4dp"
+            android:textAllCaps="false"
             android:focusable="true"
             android:paddingHorizontal="20dp"
             android:paddingVertical="8dp"
@@ -102,6 +103,7 @@
             android:clickable="true"
             android:elevation="4dp"
             android:focusable="true"
+            android:textAllCaps="false"
             android:paddingHorizontal="28dp"
             android:paddingVertical="8dp"
             android:text="Lanjut"

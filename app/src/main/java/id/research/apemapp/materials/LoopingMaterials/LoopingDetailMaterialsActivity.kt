@@ -4,8 +4,10 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import id.research.apemapp.databinding.ActivityLoopingDetailMaterialsBinding
-import id.research.apemapp.materials.LoopingMaterials.ForMaterials.FirstForActivity
-import id.research.apemapp.materials.LoopingMaterials.LoopingConceptMaterials.FirstLoopingConceptActivity
+import id.research.apemapp.materials.LoopingMaterials.ForMaterial.FirstForActivity
+import id.research.apemapp.materials.LoopingMaterials.LoopingConceptMaterial.FirstLoopingConceptActivity
+import id.research.apemapp.materials.LoopingMaterials.NestedForMaterial.FirstNestedForActivity
+import id.research.apemapp.materials.LoopingMaterials.WhileMaterial.FirstWhileActivity
 
 class LoopingDetailMaterialsActivity : AppCompatActivity() {
 
@@ -31,5 +33,14 @@ class LoopingDetailMaterialsActivity : AppCompatActivity() {
             finish()
         }
 
+        mLoopingDetailBinding.cardLoopingWhile.setOnClickListener {
+            startActivity(Intent(this, FirstWhileActivity::class.java))
+            finish()
+        }
+
+        mLoopingDetailBinding.cardLoopingNested.setOnClickListener {
+            startActivity(Intent(this, FirstNestedForActivity::class.java))
+            finish()
+        }
     }
 }

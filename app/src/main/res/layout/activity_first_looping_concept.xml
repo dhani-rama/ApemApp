@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:padding="16dp"
     android:scrollbars="none"
-    tools:context=".materials.LoopingMaterials.LoopingConceptMaterials.FirstLoopingConceptActivity">
+    tools:context=".materials.LoopingMaterials.LoopingConceptMaterial.FirstLoopingConceptActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -109,6 +109,7 @@
             android:clickable="true"
             android:elevation="4dp"
             android:focusable="true"
+            android:textAllCaps="false"
             android:paddingHorizontal="20dp"
             android:paddingVertical="8dp"
             android:text="Kembali"
@@ -124,6 +125,7 @@
             android:layout_height="wrap_content"
             android:clickable="true"
             android:elevation="4dp"
+            android:textAllCaps="false"
             android:focusable="true"
             android:paddingHorizontal="28dp"
             android:paddingVertical="8dp"

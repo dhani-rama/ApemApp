@@ -6,18 +6,18 @@
     android:layout_height="match_parent"
     android:padding="16dp"
     android:scrollbars="none"
-    tools:context=".materials.LoopingMaterials.LoopingConceptMaterial.ThirdLoopingConceptActivity">
+    tools:context=".materials.LoopingMaterials.WhileMaterial.FirstWhileActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/tv_header_concept_looping"
+            android:id="@+id/tv_header_while"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingVertical="16dp"
-            android:text="Konsep Perulangan"
+            android:text="Perulangan While"
             android:textColor="@color/black"
             android:textSize="24sp"
             android:textStyle="bold"
@@ -31,13 +31,36 @@
             android:layout_height="wrap_content"
             android:justificationMode="inter_word"
             android:lineSpacingExtra="8dp"
-            android:text="Pemilihan jenis perulangan yang cocok untuk menyelesaikan kasus tertentu dapat mempengaruhi kebenaran algoritma. Pemilihan jenis perulangan juga tergantung dari studi kasus yang akan diselesaikan. Adapun jenis – jenis perulangan yang akan dibahas pada materi kali ini yaitu struktur perulangan For, struktur perulangan While, struktur perulangan Do-While, dan struktur perulangan bersarang. Masing – masing jenis perulangan akan dijelaskan secara rinci pada sub materi perulangan berikutnya."
+            android:text="Struktur perulangan While merupakan jenis perulangan yang melakukan pemeriksaan kondisi di awal blok struktur. Apabila kondisi di awal blok struktur terpenuhi atau bernilai benar, maka statement yang akan diulang akan dijalankan. Sedangkan apabila kondisi di awal blok struktur tidak terpenuhi atau bernilai salah, maka  statement yang akan diulang tidak akan pernah dijalankan. Adapun format penulisan struktur perulangan While sebagai berikut :"
             android:textColor="@color/black"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_header_concept_looping"
+            app:layout_constraintTop_toBottomOf="@id/tv_header_while"
             tools:ignore="UnusedAttribute" />
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:id="@+id/img_first_while"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/img_first_while"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_first_text" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_info_first_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gambar 3.1. Contoh Struktur Perulangan While"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_first_while" />
+
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tv_second_text"
@@ -46,29 +69,20 @@
             android:justificationMode="inter_word"
             android:lineSpacingExtra="8dp"
             android:paddingVertical="16dp"
-            android:text="Berikut ini video pertama dari konsep perulangan"
+            android:text="Untuk menulis perulangan while, kita harus memiliki sebuah variabel sebagai indeksnya. Tetapi harus diperhatikan bahwa tipe data pada variabel yang akan digunakan sebagai indeks harus bertipe data yang mempunyai urutan teratur seperti tipe data int (0, 1, 2, …) atau char(‘a’, ‘b’ , ‘c’)."
             android:textColor="@color/black"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_first_text"
+            app:layout_constraintTop_toBottomOf="@id/tv_info_first_image"
             tools:ignore="UnusedAttribute" />
-
-        <com.google.android.youtube.player.YouTubePlayerView
-            android:id="@+id/yt_first_video"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_second_text" />
-
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="32dp"
             android:clickable="true"
             android:elevation="4dp"
             android:focusable="true"
@@ -79,7 +93,7 @@
             android:textSize="20sp"
             app:cornerRadius="15dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/yt_first_video"
+            app:layout_constraintTop_toBottomOf="@id/tv_second_text"
             app:rippleColor="#DBDBDB" />
 
         <com.google.android.material.button.MaterialButton

@@ -6,18 +6,18 @@
     android:layout_height="match_parent"
     android:padding="16dp"
     android:scrollbars="none"
-    tools:context=".materials.LoopingMaterials.LoopingConceptMaterial.SecondLoopingConceptActivity">
+    tools:context=".materials.LoopingMaterials.WhileMaterial.SecondWhileActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/tv_header_concept_looping"
+            android:id="@+id/tv_header_while"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingVertical="16dp"
-            android:text="Konsep Perulangan"
+            android:text="Perulangan While"
             android:textColor="@color/black"
             android:textSize="24sp"
             android:textStyle="bold"
@@ -25,194 +25,179 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/tv_first_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:justificationMode="inter_word"
-            android:lineSpacingExtra="8dp"
-            android:text="Pada struktur perulangan, selalu disertai bagian inialisasi, terminasi, iterasi, dan statement yang diulang."
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_header_concept_looping"
-            tools:ignore="UnusedAttribute" />
-
         <LinearLayout
-            android:id="@+id/layout_first_line"
+            android:id="@+id/layout_first_number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingVertical="8dp"
             android:weightSum="2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_first_text">
+            app:layout_constraintTop_toBottomOf="@id/tv_header_while">
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:lineSpacingExtra="8dp"
                 android:text="1."
                 android:textColor="@color/black"
-                android:textSize="18sp"
-                app:fontFamily="@font/montserrat" />
+                android:textSize="18sp" />
 
             <com.google.android.material.textview.MaterialTextView
-                android:layout_width="wrap_content"
+                android:id="@+id/tv_first_text"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:justificationMode="inter_word"
                 android:lineSpacingExtra="8dp"
-                android:paddingHorizontal="12dp"
-                android:text="Inialisasi merupakan nilai awal yang diberikan pada suatu variabel."
+                android:paddingHorizontal="16dp"
+                android:text="Bagian inialisasi variabel pada format penulisan perulangan while diisi dengan variabel bertipe data integer atau char. Contoh : int i = 0."
                 android:textColor="@color/black"
-                android:textSize="18sp"
-                app:fontFamily="@font/montserrat"
-                tools:ignore="UnusedAttribute" />
-
+                android:textSize="18sp" />
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/layout_second_line"
+            android:id="@+id/layout_second_number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:orientation="horizontal"
-            android:paddingVertical="8dp"
             android:weightSum="2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/layout_first_line">
+            app:layout_constraintTop_toBottomOf="@id/layout_first_number">
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:lineSpacingExtra="8dp"
                 android:text="2."
                 android:textColor="@color/black"
-                android:textSize="18sp"
-                app:fontFamily="@font/montserrat" />
+                android:textSize="18sp" />
 
             <com.google.android.material.textview.MaterialTextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:justificationMode="inter_word"
                 android:lineSpacingExtra="8dp"
-                android:paddingHorizontal="8dp"
-                android:text="Terminasi merupakan kondisi untuk berhenti dari proses perulangan."
+                android:paddingHorizontal="16dp"
+                android:text="Bagian terminasi pada format penulisan perulangan while diisi dengan kondisi untuk berhenti pada proses perulangan. Contoh : i &lt; 5."
                 android:textColor="@color/black"
-                android:textSize="18sp"
-                app:fontFamily="@font/montserrat"
-                tools:ignore="UnusedAttribute" />
-
+                android:textSize="18sp" />
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/layout_third_line"
+            android:id="@+id/layout_third_number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:orientation="horizontal"
-            android:paddingVertical="8dp"
             android:weightSum="2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/layout_second_line">
+            app:layout_constraintTop_toBottomOf="@id/layout_second_number">
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:lineSpacingExtra="8dp"
                 android:text="3."
                 android:textColor="@color/black"
-                android:textSize="18sp"
-                app:fontFamily="@font/montserrat" />
+                android:textSize="18sp" />
 
             <com.google.android.material.textview.MaterialTextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:justificationMode="inter_word"
                 android:lineSpacingExtra="8dp"
-                android:paddingHorizontal="8dp"
-                android:text="Iterasi merupakan kondisi pertambahan atau pengurangan agar proses perulangan dapat berjalan."
+                android:paddingHorizontal="16dp"
+                android:text="Bagian iterasi pada format penulisan perulangan while diisi dengan kondisi pertambahan atau pengurangan pada variabel yang dijadikan indeks perulangan. Contoh : i++."
                 android:textColor="@color/black"
-                android:textSize="18sp"
-                app:fontFamily="@font/montserrat"
-                tools:ignore="UnusedAttribute" />
-
+                android:textSize="18sp" />
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/layout_fourth_line"
+            android:id="@+id/layout_fourth_number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:orientation="horizontal"
-            android:paddingVertical="8dp"
             android:weightSum="2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/layout_third_line">
+            app:layout_constraintTop_toBottomOf="@id/layout_third_number">
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:lineSpacingExtra="8dp"
                 android:text="4."
                 android:textColor="@color/black"
-                android:textSize="18sp"
-                app:fontFamily="@font/montserrat" />
+                android:textSize="18sp" />
 
             <com.google.android.material.textview.MaterialTextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:justificationMode="inter_word"
                 android:lineSpacingExtra="8dp"
-                android:paddingHorizontal="8dp"
-                android:text="Statement yang diulang merupakan bagian yang berisi beberapa proses yang perlu dilakukan secara berulang – berulang."
+                android:paddingHorizontal="16dp"
+                android:text="Bagian statement yang diulang pada format penulisan perulangan while diisi dengan statement yang akan diulang. Contoh : cout&lt;&lt;”Saya senang belajar pemrograman dasar”."
                 android:textColor="@color/black"
-                android:textSize="18sp"
-                app:fontFamily="@font/montserrat"
-                tools:ignore="UnusedAttribute" />
-
+                android:textSize="18sp" />
         </LinearLayout>
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/tv_second_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:justificationMode="inter_word"
+            android:id="@id/tv_second_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:lineSpacingExtra="8dp"
-            android:text="Beberapa bentuk struktur perulangan memiliki syarat dan karakteristik yang berbeda – beda. Ada beberapa bentuk perulangan yang dapat digunakan untuk studi kasus yang sama. Namun ada juga bentuk perulangan yang hanya cocok untuk kasus tertentu saja. Adapun contoh struktur perulangan sebagai berikut."
+            android:paddingVertical="16dp"
+            android:text="Sehingga apabila divisualisasikan ke dalam teks editor akan menjadi seperti gambar berikut."
             android:textColor="@color/black"
             android:textSize="18sp"
-            app:fontFamily="@font/montserrat"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/layout_fourth_line"
-            tools:ignore="UnusedAttribute" />
+            app:layout_constraintTop_toBottomOf="@id/layout_fourth_number" />
 
-        <FrameLayout
-            android:id="@+id/layout_img_first_concept"
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:id="@+id/img_second_while"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:src="@drawable/img_second_while"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_second_text" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_info_second_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gambar 3.2. Contoh Program Perulangan While"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_second_while" />
+
+        <com.google.android.youtube.player.YouTubePlayerView
+            android:id="@+id/video_first"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_second_text">
+            app:layout_constraintTop_toBottomOf="@id/tv_third_text" />
 
-            <com.github.chrisbanes.photoview.PhotoView
-                android:id="@+id/img_first_concept"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_gravity="center_horizontal|top"
-                android:src="@drawable/img_second_looping_concept" />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_third_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:lineSpacingExtra="8dp"
+            android:paddingVertical="16dp"
+            android:text="Berikut ini contoh video yang menunjukkan program perulangan dengan menggunakan struktur perulangan while."
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_info_second_image" />
 
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/tv_info_first_image"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom|center_horizontal"
-                android:layout_marginBottom="16dp"
-                android:text="Gambar 1.2. Contoh Struktur Perulangan"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                android:textStyle="bold" />
-
-        </FrameLayout>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_back"
@@ -224,12 +209,12 @@
             android:focusable="true"
             android:paddingHorizontal="20dp"
             android:paddingVertical="8dp"
-            android:textAllCaps="false"
             android:text="Kembali"
+            android:textAllCaps="false"
             android:textSize="20sp"
             app:cornerRadius="15dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/layout_img_first_concept"
+            app:layout_constraintTop_toBottomOf="@id/video_first"
             app:rippleColor="#DBDBDB" />
 
         <com.google.android.material.button.MaterialButton
@@ -239,15 +224,17 @@
             android:clickable="true"
             android:elevation="4dp"
             android:focusable="true"
-            android:textAllCaps="false"
             android:paddingHorizontal="28dp"
             android:paddingVertical="8dp"
             android:text="Lanjut"
+            android:textAllCaps="false"
             android:textSize="20sp"
             app:cornerRadius="15dp"
             app:layout_constraintBottom_toBottomOf="@id/btn_back"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@id/btn_back"
             app:rippleColor="#DBDBDB" />
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

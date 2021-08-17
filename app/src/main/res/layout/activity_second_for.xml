@@ -6,14 +6,14 @@
     android:layout_height="match_parent"
     android:padding="16dp"
     android:scrollbars="none"
-    tools:context=".materials.LoopingMaterials.ForMaterials.SecondForActivity">
+    tools:context=".materials.LoopingMaterials.ForMaterial.SecondForActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/tv_header_second_for"
+            android:id="@+id/tv_header_for"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingVertical="16dp"
@@ -33,7 +33,7 @@
             android:weightSum="2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_header_second_for">
+            app:layout_constraintTop_toBottomOf="@id/tv_header_for">
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
@@ -200,6 +200,7 @@
             android:paddingHorizontal="20dp"
             android:paddingVertical="8dp"
             android:text="Kembali"
+            android:textAllCaps="false"
             android:textSize="20sp"
             app:cornerRadius="15dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -212,6 +213,7 @@
             android:layout_height="wrap_content"
             android:clickable="true"
             android:elevation="4dp"
+            android:textAllCaps="false"
             android:focusable="true"
             android:paddingHorizontal="28dp"
             android:paddingVertical="8dp"

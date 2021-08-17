@@ -1,4 +1,4 @@
-package id.research.apemapp.materials.LoopingMaterials.ForMaterials
+package id.research.apemapp.materials.LoopingMaterials.ForMaterial
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,19 +7,21 @@ import id.research.apemapp.databinding.ActivitySecondForBinding
 
 class SecondForActivity : AppCompatActivity() {
 
-    private lateinit var secondForBinding: ActivitySecondForBinding
+    private lateinit var mSecondForBinding: ActivitySecondForBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        secondForBinding = ActivitySecondForBinding.inflate(layoutInflater)
-        setContentView(secondForBinding.root)
+        mSecondForBinding = ActivitySecondForBinding.inflate(layoutInflater)
+        setContentView(mSecondForBinding.root)
 
-        secondForBinding.btnBack.setOnClickListener {
+        mSecondForBinding.btnBack.setOnClickListener {
             startActivity(Intent(this, FirstForActivity::class.java))
             finish()
         }
-        secondForBinding.btnNext.setOnClickListener {
+
+        mSecondForBinding.btnNext.setOnClickListener {
             startActivity(Intent(this, ThirdForActivity::class.java))
+            finish()
         }
 
     }

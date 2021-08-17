@@ -1,4 +1,4 @@
-package id.research.apemapp.materials.LoopingMaterials.LoopingConceptMaterials
+package id.research.apemapp.materials.LoopingMaterials.LoopingConceptMaterial
 
 import android.content.Intent
 import android.os.Bundle
