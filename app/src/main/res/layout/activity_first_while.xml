@@ -103,7 +103,7 @@
             android:clickable="true"
             android:elevation="4dp"
             android:focusable="true"
-            android:paddingHorizontal="28dp"
+            android:paddingHorizontal="32dp"
             android:paddingVertical="8dp"
             android:text="Lanjut"
             android:textAllCaps="false"

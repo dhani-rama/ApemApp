@@ -215,7 +215,7 @@
             android:elevation="4dp"
             android:textAllCaps="false"
             android:focusable="true"
-            android:paddingHorizontal="28dp"
+            android:paddingHorizontal="32dp"
             android:paddingVertical="8dp"
             android:text="Lanjut"
             android:textSize="20sp"

@@ -25,7 +25,14 @@
         android:roundIcon="@drawable/ic_logo_apem"
         android:supportsRtl="true"
         android:theme="@style/Theme.ApemApp.Terang">
-        <activity android:name=".materials.LoopingMaterials.LoopingConceptMaterial.FourthLoopingConceptActivity"></activity>
+        <activity android:name=".materials.ArrayMaterials.SecondArrayDimensionMaterial.SecondArraySecondDimensionActivity"></activity>
+        <activity android:name=".materials.ArrayMaterials.FirstArrayDimensionMaterial.SecondArrayFirstDimensionActivity" />
+        <activity android:name=".materials.ArrayMaterials.ThirdArrayDimensionMaterial.FirstArrayThirdDimensionActivity" />
+        <activity android:name=".materials.ArrayMaterials.SecondArrayDimensionMaterial.FirstArraySecondDimensionActivity" />
+        <activity android:name=".materials.ArrayMaterials.FirstArrayDimensionMaterial.FirstArrayFirstDimensionActivity" />
+        <activity android:name=".materials.ArrayMaterials.ArrayConceptMaterial.SecondArrayConceptActivity" />
+        <activity android:name=".materials.ArrayMaterials.ArrayConceptMaterial.FirstArrayConceptActivity" />
+        <activity android:name=".materials.LoopingMaterials.LoopingConceptMaterial.FourthLoopingConceptActivity" />
         <activity android:name=".materials.LoopingMaterials.NestedForMaterial.SecondNestedForActivity" />
         <activity android:name=".materials.LoopingMaterials.NestedForMaterial.FirstNestedForActivity" />
         <activity android:name=".materials.LoopingMaterials.WhileMaterial.FourthWhileActivity" />
