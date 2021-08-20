@@ -26,7 +26,7 @@
                 android:layout_height="40dp"
                 android:layout_gravity="top|start"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
                 android:background="@drawable/ic_baseline_keyboard_backspace_24"
                 android:clickable="true"
                 android:focusable="true"
