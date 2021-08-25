@@ -40,11 +40,11 @@
             tools:ignore="UnusedAttribute" />
 
         <com.github.chrisbanes.photoview.PhotoView
-            android:id="@+id/img_first_dimension_array_first"
+            android:id="@+id/img_first_array_second_dimension"
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="60dp"
             android:layout_marginTop="16dp"
-            android:src="@drawable/img_first_for"
+            android:src="@drawable/img_first_array_second_dimension"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_first_text" />
@@ -53,14 +53,26 @@
             android:id="@+id/tv_info_first_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Gambar 2.1. Format Penulisan Perulangan For"
+            android:text="Gambar 2.7. Ilustrasi Array Dua Dimensi"
             android:textColor="@color/black"
             android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/img_first_dimension_array_first" />
+            app:layout_constraintTop_toBottomOf="@id/img_first_array_second_dimension" />
 
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_link_first_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Sumber : https://dc562.4shared.com/img/dhNLkFAwei/s23/15f66f656c8/Implementasi"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_info_first_image" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tv_second_text"
@@ -69,36 +81,24 @@
             android:justificationMode="inter_word"
             android:lineSpacingExtra="8dp"
             android:paddingVertical="16dp"
-            android:text="Berikut ini bentuk umum dari array dua dimensi sebagai berikut."
+            android:text="Adapun contoh video yang mengilustrasikan konsep array satu dimensi sebagai berikut."
             android:textColor="@color/black"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_info_first_image"
+            app:layout_constraintTop_toBottomOf="@id/tv_link_first_image"
             tools:ignore="UnusedAttribute" />
 
-        <com.github.chrisbanes.photoview.PhotoView
-            android:id="@+id/img_first_dimension_array_second"
+        <com.google.android.youtube.player.YouTubePlayerView
+            android:id="@+id/video_first"
             android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:layout_marginTop="16dp"
-            android:src="@drawable/img_first_for"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_second_text" />
 
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/tv_info_second_image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Gambar 2.1. Format Penulisan Perulangan For"
-            android:textColor="@color/black"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/img_first_dimension_array_second" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_back"
@@ -115,7 +115,7 @@
             android:textSize="20sp"
             app:cornerRadius="15dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_info_second_image"
+            app:layout_constraintTop_toBottomOf="@id/video_first"
             app:rippleColor="#DBDBDB" />
 
         <com.google.android.material.button.MaterialButton

@@ -28,7 +28,7 @@ class SecondArraySecondDimensionActivity : YouTubeBaseActivity() {
             startActivity(Intent(this, ArrayDetailMaterialsActivity::class.java))
             finish()
         }
-        mSecondArrayBinding.videoFirst.initialize(
+        mSecondArrayBinding.videoSecond.initialize(
             Constants.API_YT_KEY,
             object : YouTubePlayer.OnInitializedListener {
                 override fun onInitializationSuccess(
