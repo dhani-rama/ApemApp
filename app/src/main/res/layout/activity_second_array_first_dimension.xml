@@ -1,82 +1,164 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:scrollbars="none"
     android:padding="16dp"
     tools:context=".materials.ArrayMaterials.FirstArrayDimensionMaterial.SecondArrayFirstDimensionActivity">
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/tv_header_concept_array"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingVertical="16dp"
-        android:text="Array Satu Dimensi"
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:fontFamily="@font/montserrat"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/tv_first_text"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:justificationMode="inter_word"
-        android:lineSpacingExtra="8dp"
-        android:text="Berikut ini contoh video yang menunjukkan program array dengan menggunakan array satu dimensi."
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_header_concept_array"
-        tools:ignore="UnusedAttribute" />
+        android:layout_height="wrap_content">
 
-    <com.google.android.youtube.player.YouTubePlayerView
-        android:id="@+id/video_first"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_first_text" />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_header_concept_array"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="16dp"
+            android:text="Array Satu Dimensi"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:fontFamily="@font/montserrat"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:clickable="true"
-        android:elevation="4dp"
-        android:focusable="true"
-        android:paddingHorizontal="20dp"
-        android:paddingVertical="8dp"
-        android:text="Kembali"
-        android:textAllCaps="false"
-        android:textSize="20sp"
-        app:cornerRadius="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:rippleColor="#DBDBDB" />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_first_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:justificationMode="inter_word"
+            android:lineSpacingExtra="8dp"
+            android:text="Untuk pendeklarasian array dimensi satu sebagai berikut."
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_header_concept_array"
+            tools:ignore="UnusedAttribute" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_next"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:elevation="4dp"
-        android:focusable="true"
-        android:paddingHorizontal="20dp"
-        android:paddingVertical="8dp"
-        android:text="Selesai"
-        android:textAllCaps="false"
-        android:textSize="20sp"
-        app:cornerRadius="15dp"
-        app:layout_constraintBottom_toBottomOf="@id/btn_back"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/btn_back"
-        app:rippleColor="#DBDBDB" />
+        <com.github.chrisbanes.photoview.PhotoView
+            android:id="@+id/img_first_array_first_dimension"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/img_second_array_concept"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_first_text" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_info_first_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Gambar 2.5. Bentuk Umum Pendeklarasian Array Satu Dimensi"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_first_array_first_dimension" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_second_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:justificationMode="inter_word"
+            android:lineSpacingExtra="8dp"
+            android:paddingVertical="16dp"
+            android:text="Sehingga apabila divisualisasikan ke dalam teks editor akan menjadi seperti gambar berikut."
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_info_first_image"
+            tools:ignore="UnusedAttribute" />
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:id="@+id/img_second_array_first_dimension"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:src="@drawable/img_third_array_concept"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_second_text" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_info_second_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Gambar 2.6. Contoh Program Pendeklarasian Array Satu Dimensi"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_second_array_first_dimension" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_third_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:justificationMode="inter_word"
+            android:lineSpacingExtra="8dp"
+            android:paddingVertical="16dp"
+            android:text="Berikut ini contoh video yang menunjukkan program array dengan menggunakan array satu dimensi."
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_info_second_image"
+            tools:ignore="UnusedAttribute" />
+
+        <com.google.android.youtube.player.YouTubePlayerView
+            android:id="@+id/video_second"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_third_text" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:clickable="true"
+            android:elevation="4dp"
+            android:focusable="true"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="8dp"
+            android:text="Kembali"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            app:cornerRadius="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/video_second"
+            app:rippleColor="#DBDBDB" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:elevation="4dp"
+            android:focusable="true"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="8dp"
+            android:text="Selesai"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            app:cornerRadius="15dp"
+            app:layout_constraintBottom_toBottomOf="@id/btn_back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/btn_back"
+            app:rippleColor="#DBDBDB" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

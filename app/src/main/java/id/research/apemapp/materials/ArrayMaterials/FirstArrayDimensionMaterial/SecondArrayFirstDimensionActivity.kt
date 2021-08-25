@@ -30,7 +30,7 @@ class SecondArrayFirstDimensionActivity : YouTubeBaseActivity() {
             finish()
         }
 
-        mSecondArrayBinding.videoFirst.initialize(
+        mSecondArrayBinding.videoSecond.initialize(
             Constants.API_YT_KEY,
             object : YouTubePlayer.OnInitializedListener {
                 override fun onInitializationSuccess(
@@ -58,7 +58,5 @@ class SecondArrayFirstDimensionActivity : YouTubeBaseActivity() {
                 }
 
             })
-
-
     }
 }
