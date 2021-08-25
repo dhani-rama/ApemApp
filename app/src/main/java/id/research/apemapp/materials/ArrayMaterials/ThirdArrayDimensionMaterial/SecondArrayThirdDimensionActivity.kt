@@ -7,29 +7,30 @@ import com.google.android.youtube.player.YouTubeBaseActivity
 import com.google.android.youtube.player.YouTubeInitializationResult
 import com.google.android.youtube.player.YouTubePlayer
 import es.dmoral.toasty.Toasty
-import id.research.apemapp.databinding.ActivityFirstArrayThirdDimensionBinding
+import id.research.apemapp.databinding.ActivitySecondArrayThirdDimensionBinding
 import id.research.apemapp.materials.ArrayMaterials.ArrayDetailMaterialsActivity
 import id.research.apemapp.utils.Constants
 
-class FirstArrayThirdDimensionActivity : YouTubeBaseActivity() {
+class SecondArrayThirdDimensionActivity : YouTubeBaseActivity() {
 
-    private lateinit var mFirstArray: ActivityFirstArrayThirdDimensionBinding
+    private lateinit var mSecondArrayBinding: ActivitySecondArrayThirdDimensionBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        mFirstArray = ActivityFirstArrayThirdDimensionBinding.inflate(layoutInflater)
-        setContentView(mFirstArray.root)
+        mSecondArrayBinding = ActivitySecondArrayThirdDimensionBinding.inflate(layoutInflater)
+        setContentView(mSecondArrayBinding.root)
 
-        mFirstArray.btnBack.setOnClickListener {
+        mSecondArrayBinding.btnBack.setOnClickListener {
+            startActivity(Intent(this, FirstArrayThirdDimensionActivity::class.java))
+            finish()
+        }
+
+        mSecondArrayBinding.btnNext.setOnClickListener {
             startActivity(Intent(this, ArrayDetailMaterialsActivity::class.java))
             finish()
         }
-        mFirstArray.btnNext.setOnClickListener {
-            startActivity(Intent(this, SecondArrayThirdDimensionActivity::class.java))
-            finish()
-        }
 
-        mFirstArray.videoFirst.initialize(
+        mSecondArrayBinding.videoSecond.initialize(
             Constants.API_YT_KEY,
             object : YouTubePlayer.OnInitializedListener {
                 override fun onInitializationSuccess(
@@ -49,7 +50,7 @@ class FirstArrayThirdDimensionActivity : YouTubeBaseActivity() {
                     result: YouTubeInitializationResult?
                 ) {
                     Toasty.info(
-                        this@FirstArrayThirdDimensionActivity,
+                        this@SecondArrayThirdDimensionActivity,
                         "$result",
                         Toast.LENGTH_SHORT
                     )

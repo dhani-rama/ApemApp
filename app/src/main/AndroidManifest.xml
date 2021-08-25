@@ -25,7 +25,8 @@
         android:roundIcon="@drawable/ic_logo_apem"
         android:supportsRtl="true"
         android:theme="@style/Theme.ApemApp.Terang">
-        <activity android:name=".materials.FunctionMaterials.BuiltInFunctionMaterial.FifthBuiltInActivity"></activity>
+        <activity android:name=".materials.ArrayMaterials.ThirdArrayDimensionMaterial.SecondArrayThirdDimensionActivity"></activity>
+        <activity android:name=".materials.FunctionMaterials.BuiltInFunctionMaterial.FifthBuiltInActivity" />
         <activity android:name=".materials.FunctionMaterials.BuiltInFunctionMaterial.FourthBuiltInActivity" />
         <activity android:name=".materials.FunctionMaterials.BuiltInFunctionMaterial.ThirdBuiltInActivity" />
         <activity android:name=".materials.FunctionMaterials.BuiltInFunctionMaterial.SecondBuiltInActivity" />

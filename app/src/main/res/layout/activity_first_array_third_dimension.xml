@@ -40,11 +40,11 @@
             tools:ignore="UnusedAttribute" />
 
         <com.github.chrisbanes.photoview.PhotoView
-            android:id="@+id/img_first_dimension_array_first"
+            android:id="@+id/img_first_array_third_dimension"
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="60dp"
             android:layout_marginTop="16dp"
-            android:src="@drawable/img_first_for"
+            android:src="@drawable/img_first_array_third_dimension"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_first_text" />
@@ -53,13 +53,14 @@
             android:id="@+id/tv_info_first_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Gambar 2.1. Format Penulisan Perulangan For"
+            android:gravity="center_horizontal"
+            android:text="Gambar 2.10. Bentuk Umum Pendeklarasian Array Dua Dimensi"
             android:textColor="@color/black"
             android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/img_first_dimension_array_first" />
+            app:layout_constraintTop_toBottomOf="@id/img_first_array_third_dimension" />
 
 
         <com.google.android.material.textview.MaterialTextView
@@ -69,21 +70,20 @@
             android:justificationMode="inter_word"
             android:lineSpacingExtra="8dp"
             android:paddingVertical="16dp"
-            android:text="Untuk pendeklarasian array dimensi satu sebagai berikut."
+            android:text="Sehingga apabila divisualisasikan ke dalam teks editor akan menjadi seperti gambar berikut."
             android:textColor="@color/black"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_info_first_image"
             tools:ignore="UnusedAttribute" />
 
         <com.github.chrisbanes.photoview.PhotoView
-            android:id="@+id/img_first_dimension_array_second"
+            android:id="@+id/img_second_array_third_dimension"
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="80dp"
             android:layout_marginTop="16dp"
-            android:src="@drawable/img_first_for"
+            android:src="@drawable/img_second_array_third_dimension"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_second_text" />
@@ -92,13 +92,38 @@
             android:id="@+id/tv_info_second_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Gambar 2.1. Format Penulisan Perulangan For"
+            android:gravity="center_horizontal"
+            android:text="Gambar 2.11. Contoh Program Pendeklarasian Array Multi Dimensi"
             android:textColor="@color/black"
             android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/img_first_dimension_array_second" />
+            app:layout_constraintTop_toBottomOf="@id/img_second_array_third_dimension" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_third_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:justificationMode="inter_word"
+            android:lineSpacingExtra="8dp"
+            android:paddingVertical="16dp"
+            android:text="Adapun contoh video yang mengilustrasikan konsep array multi dimensi sebagai berikut."
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_info_second_image"
+            tools:ignore="UnusedAttribute" />
+
+        <com.google.android.youtube.player.YouTubePlayerView
+            android:id="@+id/video_first"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_third_text" />
+
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_back"
@@ -115,7 +140,7 @@
             android:textSize="20sp"
             app:cornerRadius="15dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_info_second_image"
+            app:layout_constraintTop_toBottomOf="@id/video_first"
             app:rippleColor="#DBDBDB" />
 
         <com.google.android.material.button.MaterialButton
@@ -125,9 +150,9 @@
             android:clickable="true"
             android:elevation="4dp"
             android:focusable="true"
-            android:paddingHorizontal="20dp"
+            android:paddingHorizontal="32dp"
             android:paddingVertical="8dp"
-            android:text="Selesai"
+            android:text="Lanjut"
             android:textAllCaps="false"
             android:textSize="20sp"
             app:cornerRadius="15dp"
@@ -136,5 +161,4 @@
             app:layout_constraintTop_toTopOf="@id/btn_back"
             app:rippleColor="#DBDBDB" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </ScrollView>
