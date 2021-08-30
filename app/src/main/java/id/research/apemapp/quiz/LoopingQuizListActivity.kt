@@ -43,7 +43,7 @@ class LoopingQuizListActivity : AppCompatActivity() {
 
     private fun updateQuestion() {
 
-        mDatabase = FirebaseDatabase.getInstance().getReference().child("Questions")
+        mDatabase = FirebaseDatabase.getInstance().getReference().child("questionsLooping")
 
         mDatabase.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {

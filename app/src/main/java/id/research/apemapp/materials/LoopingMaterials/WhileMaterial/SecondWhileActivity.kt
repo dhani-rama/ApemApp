@@ -40,7 +40,7 @@ class SecondWhileActivity : YouTubeBaseActivity() {
                     if (wasRestored) {
                         youtubePlayer!!.play()
                     } else {
-                        youtubePlayer!!.cueVideo("4vXAiT9IMbc")
+                        youtubePlayer!!.cueVideo("3uNJ29_Y-iI")
                     }
                 }
 

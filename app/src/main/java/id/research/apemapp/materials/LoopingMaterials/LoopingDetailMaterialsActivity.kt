@@ -3,6 +3,7 @@ package id.research.apemapp.materials.LoopingMaterials
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import id.research.apemapp.HomeActivity
 import id.research.apemapp.databinding.ActivityLoopingDetailMaterialsBinding
 import id.research.apemapp.materials.LoopingMaterials.ForMaterial.FirstForActivity
 import id.research.apemapp.materials.LoopingMaterials.LoopingConceptMaterial.FirstLoopingConceptActivity
@@ -20,7 +21,8 @@ class LoopingDetailMaterialsActivity : AppCompatActivity() {
         setContentView(mLoopingDetailBinding.root)
 
         mLoopingDetailBinding.btnBack.setOnClickListener {
-            onBackPressed()
+            startActivity(Intent(this, HomeActivity::class.java))
+            finish()
         }
 
         mLoopingDetailBinding.cardLoopingConcept.setOnClickListener {

@@ -40,7 +40,7 @@ class FourthLoopingConceptActivity : YouTubeBaseActivity() {
                     if (wasRestored) {
                         youTubePlayer!!.play()
                     } else {
-                        youTubePlayer!!.cueVideo("4vXAiT9IMbc")
+                        youTubePlayer!!.cueVideo("UnjN6paBra0")
                     }
                 }
 

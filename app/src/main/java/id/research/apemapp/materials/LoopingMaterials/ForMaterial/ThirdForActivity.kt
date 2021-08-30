@@ -40,7 +40,7 @@ class ThirdForActivity : YouTubeBaseActivity() {
                     if (wasRestored) {
                         youtubePlayer!!.play()
                     } else {
-                        youtubePlayer!!.cueVideo("4vXAiT9IMbc")
+                        youtubePlayer!!.cueVideo("Gw7nl35HF1I")
                     }
                 }
 
