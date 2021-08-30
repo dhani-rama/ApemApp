@@ -1,9 +1,9 @@
 package id.research.apemapp.quiz
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import id.research.apemapp.HomeActivity
 import id.research.apemapp.databinding.ActivityResultQuizBinding
 import id.research.apemapp.utils.Constants
@@ -47,14 +47,13 @@ class ResultQuizActivity : AppCompatActivity() {
             imgFailure.visibility = View.GONE
         }
 
-        if(rewardValue < 15){
-            with(resultQuizBinding){
+        if (rewardValue < 75) {
+            with(resultQuizBinding) {
                 tvNeverGiveUp.visibility = View.VISIBLE
                 imgFailure.visibility = View.VISIBLE
             }
-        }
-        else{
-            with(resultQuizBinding){
+        } else {
+            with(resultQuizBinding) {
                 tvCongratulations.visibility = View.VISIBLE
                 imgCongratulation.visibility = View.VISIBLE
             }

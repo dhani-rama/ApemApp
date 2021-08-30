@@ -7,5 +7,6 @@ data class QuestionListEntity(
     val OptionC: String = "",
     val OptionD: String = "",
     val OptionE: String = "",
-    val Answer: String = ""
+    val Answer: String = "",
+    val Solution: String = ""
 )

@@ -27,13 +27,18 @@ class QuizFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-        quizBinding.cardArray.setOnClickListener {
+        quizBinding.cardLooping.setOnClickListener {
             startActivity(Intent(this.requireActivity(), LoopingQuizListActivity::class.java))
             activity?.finish()
         }
 
-        quizBinding.cardFunction.setOnClickListener {
+        quizBinding.cardArray.setOnClickListener {
             startActivity(Intent(this.requireActivity(), ArrayQuizListActivity::class.java))
+            activity?.finish()
+        }
+
+        quizBinding.cardFunction.setOnClickListener {
+            startActivity(Intent(this.requireActivity(), FunctionQuizListActivity::class.java))
             activity?.finish()
         }
     }
