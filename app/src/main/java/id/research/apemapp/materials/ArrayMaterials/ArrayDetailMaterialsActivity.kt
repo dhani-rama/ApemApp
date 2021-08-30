@@ -3,6 +3,7 @@ package id.research.apemapp.materials.ArrayMaterials
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import id.research.apemapp.HomeActivity
 import id.research.apemapp.databinding.ActivityArrayDetailMaterialsBinding
 import id.research.apemapp.materials.ArrayMaterials.ArrayConceptMaterial.FirstArrayConceptActivity
 import id.research.apemapp.materials.ArrayMaterials.FirstArrayDimensionMaterial.FirstArrayFirstDimensionActivity
@@ -20,7 +21,8 @@ class ArrayDetailMaterialsActivity : AppCompatActivity() {
         setContentView(mArrayDetailMaterialsBinding.root)
 
         mArrayDetailMaterialsBinding.btnBack.setOnClickListener {
-            onBackPressed()
+            startActivity(Intent(this, HomeActivity::class.java))
+            finish()
         }
         mArrayDetailMaterialsBinding.cardArrayConcept.setOnClickListener {
             startActivity(Intent(this, FirstArrayConceptActivity::class.java))

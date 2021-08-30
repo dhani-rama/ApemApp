@@ -41,7 +41,7 @@ class SecondArrayFirstDimensionActivity : YouTubeBaseActivity() {
                     if (wasRestored) {
                         youtubePlayer!!.play()
                     } else {
-                        youtubePlayer!!.cueVideo("4vXAiT9IMbc")
+                        youtubePlayer!!.cueVideo("HAnkYbMvLOo")
                     }
                 }
 
