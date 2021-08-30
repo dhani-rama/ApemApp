@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
+    android:padding="8dp"
     android:scrollbars="none"
-    tools:context=".quiz.LoopingQuizListActivity">
+    tools:context=".quiz.FunctionQuizListActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -52,10 +52,10 @@
             <TextView
                 android:id="@+id/tv_question"
                 android:layout_width="match_parent"
-                android:paddingHorizontal="16dp"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:maxEms="10"
+                android:paddingHorizontal="16dp"
                 android:text="@string/question"
                 android:textColor="@color/white"
                 android:textSize="20sp"
@@ -70,58 +70,48 @@
             app:layout_constraintStart_toStartOf="@id/layout_answer"
             app:layout_constraintTop_toBottomOf="@+id/layout_answer">
 
-            <com.google.android.material.radiobutton.MaterialRadioButton
+            <RadioButton
                 android:id="@+id/rb_first_answer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_radio_button"
                 android:padding="8dp"
-                android:clickable="true"
-                android:focusable="true"
                 android:text="@string/option_answer_text" />
 
-            <com.google.android.material.radiobutton.MaterialRadioButton
+            <RadioButton
                 android:id="@+id/rb_second_answer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/bg_radio_button"
                 android:padding="8dp"
-                android:clickable="true"
-                android:focusable="true"
                 android:text="@string/option_answer_text" />
 
-            <com.google.android.material.radiobutton.MaterialRadioButton
+            <RadioButton
                 android:id="@+id/rb_third_answer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/bg_radio_button"
                 android:padding="8dp"
-                android:clickable="true"
-                android:focusable="true"
                 android:text="@string/option_answer_text" />
 
-            <com.google.android.material.radiobutton.MaterialRadioButton
+            <RadioButton
                 android:id="@+id/rb_fourth_answer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/bg_radio_button"
                 android:padding="8dp"
-                android:clickable="true"
-                android:focusable="true"
                 android:text="@string/option_answer_text" />
 
-            <com.google.android.material.radiobutton.MaterialRadioButton
+            <RadioButton
                 android:id="@+id/rb_fifth_answer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/bg_radio_button"
                 android:padding="8dp"
-                android:clickable="true"
-                android:focusable="true"
                 android:text="@string/option_answer_text" />
         </RadioGroup>
 
@@ -130,23 +120,23 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:fontFamily="@font/montserrat"
             android:clickable="true"
             android:elevation="4dp"
             android:focusable="true"
+            android:fontFamily="@font/montserrat"
             android:paddingVertical="16dp"
             android:text="Lanjut"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold"
             android:visibility="invisible"
-            app:cornerRadius="15dp"
             app:backgroundTint="#3490dc"
-            app:rippleColor="#DBDBDB"
+            app:cornerRadius="15dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/radio_group_answer" />
+            app:layout_constraintTop_toBottomOf="@id/radio_group_answer"
+            app:rippleColor="#DBDBDB" />
 
 
         <com.google.android.material.button.MaterialButton
@@ -154,24 +144,23 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:fontFamily="@font/montserrat"
             android:clickable="true"
             android:elevation="4dp"
             android:focusable="true"
+            android:fontFamily="@font/montserrat"
             android:paddingVertical="16dp"
             android:text="Selesai"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold"
             android:visibility="invisible"
-            app:cornerRadius="15dp"
             app:backgroundTint="#3490dc"
-            app:rippleColor="#DBDBDB"
+            app:cornerRadius="15dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/radio_group_answer" />
-
+            app:layout_constraintTop_toBottomOf="@id/radio_group_answer"
+            app:rippleColor="#DBDBDB" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
