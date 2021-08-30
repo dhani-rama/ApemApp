@@ -69,5 +69,6 @@
     <string name="memory_use">Memori yang digunakan :</string>
     <string name="time_compilatiion">Waktu Kompilasi :</string>
     <string name="result_compilation">Hasil Kompilasi</string>
+    <string name="looping">Perulangan</string>
 
 </resources>

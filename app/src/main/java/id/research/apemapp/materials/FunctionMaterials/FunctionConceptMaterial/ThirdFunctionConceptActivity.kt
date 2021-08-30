@@ -7,29 +7,29 @@ import com.google.android.youtube.player.YouTubeBaseActivity
 import com.google.android.youtube.player.YouTubeInitializationResult
 import com.google.android.youtube.player.YouTubePlayer
 import es.dmoral.toasty.Toasty
-import id.research.apemapp.databinding.ActivitySecondFunctionConceptBinding
+import id.research.apemapp.databinding.ActivityThirdFunctionConceptBinding
+import id.research.apemapp.materials.FunctionMaterials.FunctionDetailMaterialsActivity
 import id.research.apemapp.utils.Constants
 
-class SecondFunctionConceptActivity : YouTubeBaseActivity() {
+class ThirdFunctionConceptActivity : YouTubeBaseActivity() {
 
-    private lateinit var mSecondFunctionBinding: ActivitySecondFunctionConceptBinding
+    private lateinit var mThirdFunctionBinding: ActivityThirdFunctionConceptBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        mSecondFunctionBinding = ActivitySecondFunctionConceptBinding.inflate(layoutInflater)
-        setContentView(mSecondFunctionBinding.root)
+        mThirdFunctionBinding = ActivityThirdFunctionConceptBinding.inflate(layoutInflater)
+        setContentView(mThirdFunctionBinding.root)
 
-        mSecondFunctionBinding.btnBack.setOnClickListener {
-            startActivity(Intent(this, FirstFunctionConceptActivity::class.java))
+        mThirdFunctionBinding.btnBack.setOnClickListener {
+            startActivity(Intent(this, SecondFunctionConceptActivity::class.java))
             finish()
         }
-        mSecondFunctionBinding.btnNext.setOnClickListener {
-            startActivity(Intent(this, ThirdFunctionConceptActivity::class.java))
+        mThirdFunctionBinding.btnNext.setOnClickListener {
+            startActivity(Intent(this, FunctionDetailMaterialsActivity::class.java))
             finish()
         }
 
-        mSecondFunctionBinding.videoFirst.initialize(
-            Constants.API_YT_KEY,
+        mThirdFunctionBinding.videoFirst.initialize(Constants.API_YT_KEY,
             object : YouTubePlayer.OnInitializedListener {
                 override fun onInitializationSuccess(
                     provider: YouTubePlayer.Provider?,
@@ -47,10 +47,11 @@ class SecondFunctionConceptActivity : YouTubeBaseActivity() {
                     provider: YouTubePlayer.Provider?,
                     result: YouTubeInitializationResult?
                 ) {
-                    Toasty.info(this@SecondFunctionConceptActivity, "$result", Toast.LENGTH_SHORT)
+                    Toasty.info(this@ThirdFunctionConceptActivity, "$result", Toast.LENGTH_SHORT)
                         .show()
                 }
 
             })
+
     }
 }

@@ -1,4 +1,4 @@
-package id.research.apemapp.materials.FunctionMaterials.FunctionConceptMaterial
+package id.research.apemapp.materials.FunctionMaterials.FunctionParameterMaterial
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,28 +7,28 @@ import com.google.android.youtube.player.YouTubeBaseActivity
 import com.google.android.youtube.player.YouTubeInitializationResult
 import com.google.android.youtube.player.YouTubePlayer
 import es.dmoral.toasty.Toasty
-import id.research.apemapp.databinding.ActivitySecondFunctionConceptBinding
+import id.research.apemapp.databinding.ActivitySecondParameterBinding
+import id.research.apemapp.materials.FunctionMaterials.FunctionDetailMaterialsActivity
 import id.research.apemapp.utils.Constants
 
-class SecondFunctionConceptActivity : YouTubeBaseActivity() {
+class SecondParameterActivity : YouTubeBaseActivity() {
 
-    private lateinit var mSecondFunctionBinding: ActivitySecondFunctionConceptBinding
+    private lateinit var mSecondParameterBinding: ActivitySecondParameterBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        mSecondFunctionBinding = ActivitySecondFunctionConceptBinding.inflate(layoutInflater)
-        setContentView(mSecondFunctionBinding.root)
+        mSecondParameterBinding = ActivitySecondParameterBinding.inflate(layoutInflater)
+        setContentView(mSecondParameterBinding.root)
 
-        mSecondFunctionBinding.btnBack.setOnClickListener {
-            startActivity(Intent(this, FirstFunctionConceptActivity::class.java))
+        mSecondParameterBinding.btnBack.setOnClickListener {
+            startActivity(Intent(this, FirstParameterActivity::class.java))
             finish()
         }
-        mSecondFunctionBinding.btnNext.setOnClickListener {
-            startActivity(Intent(this, ThirdFunctionConceptActivity::class.java))
+        mSecondParameterBinding.btnNext.setOnClickListener {
+            startActivity(Intent(this, FunctionDetailMaterialsActivity::class.java))
             finish()
         }
-
-        mSecondFunctionBinding.videoFirst.initialize(
+        mSecondParameterBinding.videoFirst.initialize(
             Constants.API_YT_KEY,
             object : YouTubePlayer.OnInitializedListener {
                 override fun onInitializationSuccess(
@@ -47,10 +47,11 @@ class SecondFunctionConceptActivity : YouTubeBaseActivity() {
                     provider: YouTubePlayer.Provider?,
                     result: YouTubeInitializationResult?
                 ) {
-                    Toasty.info(this@SecondFunctionConceptActivity, "$result", Toast.LENGTH_SHORT)
+                    Toasty.info(this@SecondParameterActivity, "$result", Toast.LENGTH_SHORT)
                         .show()
                 }
 
             })
+
     }
 }

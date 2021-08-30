@@ -41,7 +41,7 @@ class ArrayQuizListActivity : AppCompatActivity() {
 
     private fun updateQuestion() {
 
-        mDatabase = FirebaseDatabase.getInstance().getReference().child("ArrayQuestions")
+        mDatabase = FirebaseDatabase.getInstance().getReference().child("questionsArray")
 
         mDatabase.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
