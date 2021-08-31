@@ -8,7 +8,6 @@ import com.google.android.youtube.player.YouTubeInitializationResult
 import com.google.android.youtube.player.YouTubePlayer
 import es.dmoral.toasty.Toasty
 import id.research.apemapp.databinding.ActivityFirstParameterBinding
-import id.research.apemapp.materials.FunctionMaterials.FunctionDetailMaterialsActivity
 import id.research.apemapp.utils.Constants
 
 class FirstParameterActivity : YouTubeBaseActivity() {
@@ -21,7 +20,7 @@ class FirstParameterActivity : YouTubeBaseActivity() {
         setContentView(mFirstParameter.root)
 
         mFirstParameter.btnBack.setOnClickListener {
-            startActivity(Intent(this, FunctionDetailMaterialsActivity::class.java))
+            startActivity(Intent(this, ParameterGoalsActivity::class.java))
             finish()
         }
 
@@ -41,7 +40,7 @@ class FirstParameterActivity : YouTubeBaseActivity() {
                     if (wasRestored) {
                         youtubePlayer!!.play()
                     } else {
-                        youtubePlayer!!.cueVideo("zaG-D4qIOvI")
+                        youtubePlayer!!.cueVideo("5j3M-oYokGE")
                     }
                 }
 

@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import id.research.apemapp.databinding.ActivityFirstFileHeaderBinding
-import id.research.apemapp.materials.FunctionMaterials.FunctionDetailMaterialsActivity
 
 class FirstFileHeaderActivity : AppCompatActivity() {
 
@@ -16,7 +15,7 @@ class FirstFileHeaderActivity : AppCompatActivity() {
         setContentView(mFirstHeaderBinding.root)
 
         mFirstHeaderBinding.btnBack.setOnClickListener {
-            startActivity(Intent(this, FunctionDetailMaterialsActivity::class.java))
+            startActivity(Intent(this, FileHeaderGoalsActivity::class.java))
             finish()
         }
         mFirstHeaderBinding.btnNext.setOnClickListener {

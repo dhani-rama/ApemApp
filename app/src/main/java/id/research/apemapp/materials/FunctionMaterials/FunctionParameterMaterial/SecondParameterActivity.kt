@@ -39,7 +39,7 @@ class SecondParameterActivity : YouTubeBaseActivity() {
                     if (wasRestored) {
                         youtubePlayer!!.play()
                     } else {
-                        youtubePlayer!!.cueVideo("zaG-D4qIOvI")
+                        youtubePlayer!!.cueVideo("ozL4Ct9TBGc")
                     }
                 }
 

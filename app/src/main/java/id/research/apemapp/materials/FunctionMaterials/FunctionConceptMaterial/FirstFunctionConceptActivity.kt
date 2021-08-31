@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import id.research.apemapp.databinding.ActivityFirstFunctionConceptBinding
-import id.research.apemapp.materials.FunctionMaterials.FunctionDetailMaterialsActivity
 
 class FirstFunctionConceptActivity : AppCompatActivity() {
 
@@ -16,7 +15,7 @@ class FirstFunctionConceptActivity : AppCompatActivity() {
         setContentView(mFirstFunctionBinding.root)
 
         mFirstFunctionBinding.btnBack.setOnClickListener {
-            startActivity(Intent(this, FunctionDetailMaterialsActivity::class.java))
+            startActivity(Intent(this, FunctionConceptGoalsActivity::class.java))
             finish()
         }
 

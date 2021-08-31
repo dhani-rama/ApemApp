@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import id.research.apemapp.databinding.ActivityFirstVariableBinding
-import id.research.apemapp.materials.FunctionMaterials.FunctionDetailMaterialsActivity
 
 class FirstVariableActivity : AppCompatActivity() {
 
@@ -16,7 +15,7 @@ class FirstVariableActivity : AppCompatActivity() {
         setContentView(mFirstVariableBinding.root)
 
         mFirstVariableBinding.btnBack.setOnClickListener {
-            startActivity(Intent(this, FunctionDetailMaterialsActivity::class.java))
+            startActivity(Intent(this, VariableGoalsActivity::class.java))
             finish();
         }
 

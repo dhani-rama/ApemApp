@@ -39,7 +39,7 @@ class ThirdFunctionConceptActivity : YouTubeBaseActivity() {
                     if (wasRestored) {
                         youtubePlayer!!.play()
                     } else {
-                        youtubePlayer!!.cueVideo("zaG-D4qIOvI")
+                        youtubePlayer!!.cueVideo("CRFouzKtC18")
                     }
                 }
 

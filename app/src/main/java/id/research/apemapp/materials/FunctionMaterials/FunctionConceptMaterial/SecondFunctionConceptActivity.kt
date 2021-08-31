@@ -39,7 +39,7 @@ class SecondFunctionConceptActivity : YouTubeBaseActivity() {
                     if (wasRestored) {
                         youtubePlayer!!.play()
                     } else {
-                        youtubePlayer!!.cueVideo("zaG-D4qIOvI")
+                        youtubePlayer!!.cueVideo("QwA_h87W4-0")
                     }
                 }
 

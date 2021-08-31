@@ -208,10 +208,20 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center|bottom"
-                            android:layout_marginBottom="8dp"
-                            android:text="Header File"
+                            android:layout_marginBottom="24dp"
+                            android:text="Header File dan"
                             android:textColor="@color/black"
-                            android:textSize="18sp"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|bottom"
+                            android:layout_marginBottom="4dp"
+                            android:text="Fungsi Bawaan C++"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
                             android:textStyle="bold" />
 
                     </FrameLayout>

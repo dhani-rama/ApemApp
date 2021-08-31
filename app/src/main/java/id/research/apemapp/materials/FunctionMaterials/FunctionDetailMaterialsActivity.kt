@@ -5,10 +5,10 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import id.research.apemapp.HomeActivity
 import id.research.apemapp.databinding.ActivityFunctionDetailMaterialsBinding
-import id.research.apemapp.materials.FunctionMaterials.FunctionConceptMaterial.FirstFunctionConceptActivity
-import id.research.apemapp.materials.FunctionMaterials.FunctionFileHeaderMaterial.FirstFileHeaderActivity
-import id.research.apemapp.materials.FunctionMaterials.FunctionParameterMaterial.FirstParameterActivity
-import id.research.apemapp.materials.FunctionMaterials.FunctionVariableMaterial.FirstVariableActivity
+import id.research.apemapp.materials.FunctionMaterials.FunctionConceptMaterial.FunctionConceptGoalsActivity
+import id.research.apemapp.materials.FunctionMaterials.FunctionFileHeaderMaterial.FileHeaderGoalsActivity
+import id.research.apemapp.materials.FunctionMaterials.FunctionParameterMaterial.ParameterGoalsActivity
+import id.research.apemapp.materials.FunctionMaterials.FunctionVariableMaterial.VariableGoalsActivity
 
 class FunctionDetailMaterialsActivity : AppCompatActivity() {
 
@@ -20,22 +20,22 @@ class FunctionDetailMaterialsActivity : AppCompatActivity() {
         setContentView(mFunctionDetailBinding.root)
 
         mFunctionDetailBinding.cardFunctionConcept.setOnClickListener {
-            startActivity(Intent(this, FirstFunctionConceptActivity::class.java))
+            startActivity(Intent(this, FunctionConceptGoalsActivity::class.java))
             finish()
         }
 
         mFunctionDetailBinding.cardVariabelFunction.setOnClickListener {
-            startActivity(Intent(this, FirstVariableActivity::class.java))
+            startActivity(Intent(this, VariableGoalsActivity::class.java))
             finish()
         }
 
         mFunctionDetailBinding.cardFunctionParameter.setOnClickListener {
-            startActivity(Intent(this, FirstParameterActivity::class.java))
+            startActivity(Intent(this, ParameterGoalsActivity::class.java))
             finish()
         }
 
         mFunctionDetailBinding.cardHeaderFileFunction.setOnClickListener {
-            startActivity(Intent(this, FirstFileHeaderActivity::class.java))
+            startActivity(Intent(this, FileHeaderGoalsActivity::class.java))
             finish()
         }
 
