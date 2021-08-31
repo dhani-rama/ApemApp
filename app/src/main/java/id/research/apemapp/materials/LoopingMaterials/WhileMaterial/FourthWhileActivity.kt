@@ -41,7 +41,7 @@ class FourthWhileActivity : YouTubeBaseActivity() {
                     if (wasRestored) {
                         youtubePlayer!!.play()
                     } else {
-                        youtubePlayer!!.cueVideo("9uSfWGaKzHI")
+                        youtubePlayer!!.cueVideo("uaC0ofKBY8E")
                     }
                 }
 

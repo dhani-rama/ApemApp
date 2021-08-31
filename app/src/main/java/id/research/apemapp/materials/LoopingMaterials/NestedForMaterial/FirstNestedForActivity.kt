@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import id.research.apemapp.databinding.ActivityFirstNestedForBinding
-import id.research.apemapp.materials.LoopingMaterials.LoopingDetailMaterialsActivity
 
 class FirstNestedForActivity : AppCompatActivity() {
 
@@ -16,7 +15,7 @@ class FirstNestedForActivity : AppCompatActivity() {
         setContentView(mFirstNestedBinding.root)
 
         mFirstNestedBinding.btnBack.setOnClickListener {
-            startActivity(Intent(this, LoopingDetailMaterialsActivity::class.java))
+            startActivity(Intent(this, NestedForLearningGoalsActivity::class.java))
             finish()
         }
         mFirstNestedBinding.btnNext.setOnClickListener {

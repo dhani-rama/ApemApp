@@ -5,10 +5,10 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import id.research.apemapp.HomeActivity
 import id.research.apemapp.databinding.ActivityLoopingDetailMaterialsBinding
-import id.research.apemapp.materials.LoopingMaterials.ForMaterial.FirstForActivity
-import id.research.apemapp.materials.LoopingMaterials.LoopingConceptMaterial.FirstLoopingConceptActivity
-import id.research.apemapp.materials.LoopingMaterials.NestedForMaterial.FirstNestedForActivity
-import id.research.apemapp.materials.LoopingMaterials.WhileMaterial.FirstWhileActivity
+import id.research.apemapp.materials.LoopingMaterials.ForMaterial.ForLearningGoalsActivity
+import id.research.apemapp.materials.LoopingMaterials.LoopingConceptMaterial.LoopingConceptGoalsActivity
+import id.research.apemapp.materials.LoopingMaterials.NestedForMaterial.NestedForLearningGoalsActivity
+import id.research.apemapp.materials.LoopingMaterials.WhileMaterial.WhileLearningGoalsActivity
 
 class LoopingDetailMaterialsActivity : AppCompatActivity() {
 
@@ -26,22 +26,22 @@ class LoopingDetailMaterialsActivity : AppCompatActivity() {
         }
 
         mLoopingDetailBinding.cardLoopingConcept.setOnClickListener {
-            startActivity(Intent(this, FirstLoopingConceptActivity::class.java))
+            startActivity(Intent(this, LoopingConceptGoalsActivity::class.java))
             finish()
         }
 
         mLoopingDetailBinding.cardLoopingFor.setOnClickListener {
-            startActivity(Intent(this, FirstForActivity::class.java))
+            startActivity(Intent(this, ForLearningGoalsActivity::class.java))
             finish()
         }
 
         mLoopingDetailBinding.cardLoopingWhile.setOnClickListener {
-            startActivity(Intent(this, FirstWhileActivity::class.java))
+            startActivity(Intent(this, WhileLearningGoalsActivity::class.java))
             finish()
         }
 
         mLoopingDetailBinding.cardLoopingNested.setOnClickListener {
-            startActivity(Intent(this, FirstNestedForActivity::class.java))
+            startActivity(Intent(this, NestedForLearningGoalsActivity::class.java))
             finish()
         }
     }

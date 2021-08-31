@@ -49,7 +49,7 @@
                 android:layout_height="wrap_content"
                 android:lineSpacingExtra="8dp"
                 android:paddingHorizontal="16dp"
-                android:text="Bagian inialisasi variabel pada format penulisan perulangan do-while diisi dengan variabel bertipe data integer atau char. Contoh : int i = 0."
+                android:text="Bagian inialisasi variabel pada format penulisan perulangan do-while diisi dengan variabel bertipe data integer. Contoh : int i = 0."
                 android:textColor="@color/black"
                 android:textSize="18sp" />
         </LinearLayout>
@@ -168,7 +168,7 @@
             android:id="@+id/tv_info_second_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Gambar 3.4. Contoh Program Perulangan Do-While"
+            android:text="Gambar 1.8. Contoh Program Perulangan Do-While"
             android:textColor="@color/black"
             android:textSize="14sp"
             android:textStyle="bold"

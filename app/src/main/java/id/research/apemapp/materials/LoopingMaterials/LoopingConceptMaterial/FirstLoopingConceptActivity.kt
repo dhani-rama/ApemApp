@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import id.research.apemapp.databinding.ActivityFirstLoopingConceptBinding
-import id.research.apemapp.materials.LoopingMaterials.LoopingDetailMaterialsActivity
 
 class FirstLoopingConceptActivity : AppCompatActivity() {
 
@@ -17,7 +16,7 @@ class FirstLoopingConceptActivity : AppCompatActivity() {
         setContentView(mFirstConceptBinding.root)
 
         mFirstConceptBinding.btnBack.setOnClickListener {
-            startActivity(Intent(this, LoopingDetailMaterialsActivity::class.java))
+            startActivity(Intent(this, LoopingConceptGoalsActivity::class.java))
             finish()
         }
 
