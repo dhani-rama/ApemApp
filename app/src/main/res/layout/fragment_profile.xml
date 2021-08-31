@@ -169,25 +169,25 @@
                 android:layout_marginHorizontal="24dp"
                 android:background="@color/biru5" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btn_instruction_used"
-                style="@style/Widget.MaterialComponents.Button.TextButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="16dp"
-                android:textColor="@color/biru5"
-                app:iconTint="@color/biru5"
-                android:text="Petunjuk Penggunaan"
-                app:icon="@drawable/ic_sticky_note"
-                android:textAllCaps="false"
-                android:textSize="15sp" />
+            <!--            <com.google.android.material.button.MaterialButton-->
+            <!--                android:id="@+id/btn_instruction_used"-->
+            <!--                style="@style/Widget.MaterialComponents.Button.TextButton"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginStart="24dp"-->
+            <!--                android:layout_marginTop="16dp"-->
+            <!--                android:textColor="@color/biru5"-->
+            <!--                app:iconTint="@color/biru5"-->
+            <!--                android:text="Petunjuk Penggunaan"-->
+            <!--                app:icon="@drawable/ic_sticky_note"-->
+            <!--                android:textAllCaps="false"-->
+            <!--                android:textSize="15sp" />-->
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginHorizontal="24dp"
-                android:background="@color/biru5" />
+            <!--            <View-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="1dp"-->
+            <!--                android:layout_marginHorizontal="24dp"-->
+            <!--                android:background="@color/biru5" />-->
 
 
             <!--            <com.google.android.material.button.MaterialButton-->

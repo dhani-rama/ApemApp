@@ -28,18 +28,16 @@ class QuizFragment : Fragment() {
 
 
         quizBinding.cardLooping.setOnClickListener {
-            startActivity(Intent(this.requireActivity(), LoopingQuizListActivity::class.java))
-            activity?.finish()
+            startActivity(Intent(this.requireActivity(), RuleLoopingQuizActivity::class.java))
         }
 
         quizBinding.cardArray.setOnClickListener {
-            startActivity(Intent(this.requireActivity(), ArrayQuizListActivity::class.java))
-            activity?.finish()
+            startActivity(Intent(this.requireActivity(), RuleArrayQuizActivity::class.java))
         }
 
         quizBinding.cardFunction.setOnClickListener {
-            startActivity(Intent(this.requireActivity(), FunctionQuizListActivity::class.java))
-            activity?.finish()
+            startActivity(Intent(this.requireActivity(), RuleFunctionQuizActivity::class.java))
+//            activity?.finish()
         }
     }
 }

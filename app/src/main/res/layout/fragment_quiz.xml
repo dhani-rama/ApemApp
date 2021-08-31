@@ -93,7 +93,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/background_materi1">
+                android:background="@drawable/background_materi2">
 
                 <TextView
                     android:id="@+id/tv_header_looping"
@@ -129,7 +129,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/background_materi2">
+                android:background="@drawable/background_materi1">
 
                 <TextView
                     android:id="@+id/tv_header_array"
@@ -165,7 +165,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/background_materi1">
+                android:background="@drawable/bg_function">
 
                 <TextView
                     android:id="@+id/tv_header_function"

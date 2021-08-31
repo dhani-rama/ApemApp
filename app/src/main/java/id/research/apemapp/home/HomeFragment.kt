@@ -67,5 +67,17 @@ class HomeFragment : Fragment() {
         homeBinding.imgUser.setOnClickListener {
             findNavController().navigate(R.id.action_home_fragment_to_profile_fragment)
         }
+
+        homeBinding.cardLooping.setOnClickListener {
+            startActivity(Intent(this.requireActivity(), LoopingCompetenceActivity::class.java))
+        }
+
+        homeBinding.cardArray.setOnClickListener {
+            startActivity(Intent(this.requireActivity(), ArrayCompetenceActivity::class.java))
+        }
+
+        homeBinding.cardFunction.setOnClickListener {
+            startActivity(Intent(this.requireActivity(), FunctionCompetenceActivity::class.java))
+        }
     }
 }

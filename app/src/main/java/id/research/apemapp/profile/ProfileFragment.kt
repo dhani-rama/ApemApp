@@ -86,10 +86,10 @@ class ProfileFragment : Fragment() {
             startActivity(Intent(this.requireActivity(), DeveloperProfileActivity::class.java))
         }
 
-        settingsBinding.btnInstructionUsed.setOnClickListener {
-            Toasty.info(this.requireActivity(), "Belum Aku Coding Sayang :)", Toast.LENGTH_LONG)
-                .show()
-        }
+//        settingsBinding.btnInstructionUsed.setOnClickListener {
+//            Toasty.info(this.requireActivity(), "Belum Aku Coding Sayang :)", Toast.LENGTH_LONG)
+//                .show()
+//        }
 
 //        settingsBinding.btnUploadImage.setOnClickListener {
 //            startActivity(Intent(this.requireActivity(), TestingUploadImageActivity::class.java))
