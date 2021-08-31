@@ -8,7 +8,6 @@ import com.google.android.youtube.player.YouTubeInitializationResult
 import com.google.android.youtube.player.YouTubePlayer
 import es.dmoral.toasty.Toasty
 import id.research.apemapp.databinding.ActivityFirstArraySecondDimensionBinding
-import id.research.apemapp.materials.ArrayMaterials.ArrayDetailMaterialsActivity
 import id.research.apemapp.utils.Constants
 
 class FirstArraySecondDimensionActivity : YouTubeBaseActivity() {
@@ -21,7 +20,7 @@ class FirstArraySecondDimensionActivity : YouTubeBaseActivity() {
         setContentView(mFirstArray.root)
 
         mFirstArray.btnBack.setOnClickListener {
-            startActivity(Intent(this, ArrayDetailMaterialsActivity::class.java))
+            startActivity(Intent(this, ArraySecondDimensionGoalsActivity::class.java))
             finish()
         }
         mFirstArray.btnNext.setOnClickListener {

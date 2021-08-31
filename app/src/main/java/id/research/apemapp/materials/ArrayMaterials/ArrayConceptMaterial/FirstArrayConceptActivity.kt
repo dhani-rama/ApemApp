@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import id.research.apemapp.databinding.ActivityFirstArrayConceptBinding
-import id.research.apemapp.materials.ArrayMaterials.ArrayDetailMaterialsActivity
 
 class FirstArrayConceptActivity : AppCompatActivity() {
 
@@ -16,7 +15,7 @@ class FirstArrayConceptActivity : AppCompatActivity() {
         setContentView(mFirstBinding.root)
 
         mFirstBinding.btnBack.setOnClickListener {
-            startActivity(Intent(this, ArrayDetailMaterialsActivity::class.java))
+            startActivity(Intent(this, ArrayConceptGoalActivity::class.java))
             finish()
         }
         mFirstBinding.btnNext.setOnClickListener {

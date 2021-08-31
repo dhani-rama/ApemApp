@@ -53,7 +53,7 @@
             android:id="@+id/tv_info_first_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Gambar 2.1. Format Penulisan Perulangan For"
+            android:text="Gambar 2.4. Ilustrasi Array Satu Dimensi"
             android:textColor="@color/black"
             android:textSize="14sp"
             android:textStyle="bold"
