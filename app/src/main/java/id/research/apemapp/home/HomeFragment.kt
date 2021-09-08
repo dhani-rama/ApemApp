@@ -17,13 +17,14 @@ import id.research.apemapp.home.OnlineCompiler.OnlineCompilerActivity
 import id.research.apemapp.utils.Constants
 import id.research.apemapp.utils.MySharedPreferences
 import kotlinx.android.synthetic.main.fragment_home.*
+import org.imaginativeworld.whynotimagecarousel.CarouselItem
+import org.imaginativeworld.whynotimagecarousel.ImageCarousel
 
 
 class HomeFragment : Fragment() {
 
     private lateinit var homeBinding: FragmentHomeBinding
     private lateinit var mLoading: ProgressDialog
-    private lateinit var mDatabase: DatabaseReference
     private lateinit var myPreferences: MySharedPreferences
     private lateinit var studentId: String
 
@@ -60,6 +61,9 @@ class HomeFragment : Fragment() {
         //mengambil data dari shared preferences
         homeBinding.tvName.text = myPreferences.getValue(Constants.STUDENT_FIRST_NAME)
 
+
+        firstImageSlider()
+
         homeBinding.cardCodeEditor.setOnClickListener {
             startActivity(Intent(this.requireActivity(), OnlineCompilerActivity::class.java))
         }
@@ -79,5 +83,18 @@ class HomeFragment : Fragment() {
         homeBinding.cardFunction.setOnClickListener {
             startActivity(Intent(this.requireActivity(), FunctionCompetenceActivity::class.java))
         }
+    }
+
+    private fun firstImageSlider() {
+        val firstCarousel: ImageCarousel = requireView().findViewById(R.id.carousel_view_first)
+        val firstList = mutableListOf<CarouselItem>()
+
+        firstList.add(CarouselItem(imageDrawable = R.drawable.img_logo_kemdikbud))
+        firstList.add(CarouselItem(imageDrawable = R.drawable.img_first_logo_um))
+        firstList.add(CarouselItem(imageDrawable = R.drawable.img_second_logo_um))
+        firstList.add(CarouselItem(imageDrawable = R.drawable.img_first_logo_vocational))
+        firstList.add(CarouselItem(imageDrawable = R.drawable.img_second_logo_vocational))
+
+        firstCarousel.addData(firstList)
     }
 }

@@ -27,14 +27,22 @@
                 android:layout_gravity="center"
                 android:src="@drawable/class_login" />
 
-            <ImageButton
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/btn_back"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_gravity="top|start"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/ic_arrow_back"
-                android:backgroundTint="@color/black" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:elevation="4dp"
+                android:focusable="true"
+                android:src="@drawable/ic_first_back_arrow"
+                app:backgroundTint="#60000000"
+                app:borderWidth="0dp"
+                app:cardElevation="4dp"
+                app:fabSize="mini"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:rippleColor="#DBDBDB"
+                tools:ignore="ContentDescription" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"

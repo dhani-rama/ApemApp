@@ -8,6 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import id.research.apemapp.databinding.FragmentQuizBinding
+import id.research.apemapp.quiz.ArrayQuiz.RuleArrayQuizActivity
+import id.research.apemapp.quiz.FunctionQuiz.RuleFunctionQuizActivity
+import id.research.apemapp.quiz.LoopingQuiz.RuleLoopingQuizActivity
 
 class QuizFragment : Fragment() {
 

@@ -1,7 +1,9 @@
 package id.research.apemapp.profile
 
+import android.annotation.SuppressLint
 import android.app.ProgressDialog
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.net.Uri
 import android.os.Bundle
 import android.widget.Toast
@@ -22,10 +24,10 @@ class UpdateProfileActivity : AppCompatActivity() {
     private lateinit var myPreferences: MySharedPreferences
     private lateinit var mDatabaseReference: DatabaseReference
     private lateinit var studentId: String
-    private lateinit var mImageUri: Uri
     private lateinit var mStorageReference: StorageReference
     private lateinit var mLoading: ProgressDialog
 
+    @SuppressLint("SourceLockedOrientationActivity")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -35,6 +37,8 @@ class UpdateProfileActivity : AppCompatActivity() {
         mLoading = ProgressDialog(this)
         mLoading.setCancelable(false)
         mLoading.setMessage("Loading...")
+
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
 
         myPreferences = MySharedPreferences(this)
         mDatabaseReference = FirebaseDatabase.getInstance().getReference("Student")
@@ -150,19 +154,3 @@ class UpdateProfileActivity : AppCompatActivity() {
     }
 }
 
-//    private fun selectImage() {
-//        val intent = Intent()
-//        intent.type = "image/*"
-//        intent.action = Intent.ACTION_GET_CONTENT
-//
-//        startActivityForResult(intent, 2)
-//    }
-//
-//    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-//        super.onActivityResult(requestCode, resultCode, data)
-//
-//        if (requestCode == 2 && resultCode == RESULT_OK) {
-//            mImageUri = data?.data!!
-//            mUpdateProfileBinding.imgUser.setImageURI(mImageUri)
-//        }
-//    }

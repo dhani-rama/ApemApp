@@ -4,31 +4,69 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
     tools:context=".dictionary.DictionaryDetailListActivity">
 
-    <ImageButton
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btn_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:background="@drawable/ic_arrow_back"
+        android:clickable="true"
+        android:elevation="4dp"
+        android:focusable="true"
+        android:src="@drawable/ic_first_back_arrow"
+        app:backgroundTint="#60000000"
+        app:borderWidth="0dp"
+        app:cardElevation="4dp"
+        app:fabSize="mini"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#DBDBDB"
         tools:ignore="ContentDescription" />
+
+    <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+        android:id="@+id/carousel_view_first"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        app:autoPlay="true"
+        app:autoPlayDelay="3000"
+        app:imageScaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:showNavigationButtons="false" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_header_dictionary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:gravity="center_horizontal"
+        android:maxLines="5"
+        android:paddingHorizontal="16dp"
+        android:text="Arti Kata"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        app:fontFamily="@font/poppins_semibold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_word"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="40dp"
         android:fontFamily="@font/montserrat"
+        app:layout_constraintStart_toStartOf="parent"
+        android:paddingHorizontal="16dp"
         android:text="@string/kata"
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/btn_back"
-        app:layout_constraintTop_toBottomOf="@+id/btn_back" />
+        app:layout_constraintTop_toBottomOf="@id/tv_header_dictionary" />
 
     <TextView
         android:id="@+id/tv_meaning"
@@ -40,9 +78,8 @@
         android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="normal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/tv_word"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_word" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

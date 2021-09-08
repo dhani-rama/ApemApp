@@ -1,5 +1,7 @@
 package id.research.apemapp.dictionary
 
+import android.annotation.SuppressLint
+import android.content.pm.ActivityInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -20,10 +22,13 @@ class DictionaryListActivity : AppCompatActivity(), SearchView.OnQueryTextListen
     private lateinit var dictionaryListAdapter: DictionaryListAdapter
     private lateinit var myPreferences: MySharedPreferences
 
+    @SuppressLint("SourceLockedOrientationActivity")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         dictionaryListBinding = ActivityDictionaryListBinding.inflate(layoutInflater)
         setContentView(dictionaryListBinding.root)
+
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
 
         setSupportActionBar(dictionaryListBinding.toolbarSearch)
 

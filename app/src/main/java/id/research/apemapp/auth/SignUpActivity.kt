@@ -2,8 +2,10 @@
 
 package id.research.apemapp.auth
 
+import android.annotation.SuppressLint
 import android.app.ProgressDialog
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -22,11 +24,14 @@ class SignUpActivity : AppCompatActivity() {
     private lateinit var mDatabase: DatabaseReference
     private lateinit var myPreferences: MySharedPreferences
 
+    @SuppressLint("SourceLockedOrientationActivity")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         signUpBinding = ActivitySignUpBinding.inflate(layoutInflater)
         setContentView(signUpBinding.root)
+
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
 
         //inialisasi variabel
         mLoading = ProgressDialog(this@SignUpActivity)
