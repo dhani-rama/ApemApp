@@ -1,6 +1,8 @@
-package id.research.apemapp.quiz
+package id.research.apemapp.quiz.LoopingQuiz
 
+import android.annotation.SuppressLint
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -10,6 +12,7 @@ import com.google.firebase.database.*
 import es.dmoral.toasty.Toasty
 import id.research.apemapp.databinding.ActivityLoopingQuizListBinding
 import id.research.apemapp.models.QuestionListEntity
+import id.research.apemapp.quiz.ResultQuizActivity
 import id.research.apemapp.utils.Constants
 import id.research.apemapp.utils.MySharedPreferences
 
@@ -26,10 +29,13 @@ class LoopingQuizListActivity : AppCompatActivity() {
     var mScore: Int = 0
 
 
+    @SuppressLint("SourceLockedOrientationActivity")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         quizBinding = ActivityLoopingQuizListBinding.inflate(layoutInflater)
         setContentView(quizBinding.root)
+
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
 
         mySharedPreferences = MySharedPreferences(this)
         studentId = mySharedPreferences.getValue(Constants.STUDENT_ID)!!
@@ -83,18 +89,25 @@ class LoopingQuizListActivity : AppCompatActivity() {
 
                             setQuestion()
 
+
                             mDatabase = FirebaseDatabase.getInstance().getReference("Student")
                             mDatabase.child(studentId).child("looping_quiz_score")
                                 .setValue(mScore.toString())
 
                             val intent =
-                                Intent(this@LoopingQuizListActivity, ResultQuizActivity::class.java)
+                                Intent(
+                                    this@LoopingQuizListActivity,
+                                    ResultLoopingQuizActivity::class.java
+                                )
                                     .apply {
                                         putExtra(
                                             Constants.STUDENT_FINAL_QUIZ_SCORE,
                                             mScore.toString()
                                         )
-                                        putExtra(Constants.STUDENT_LOOPING_QUIZ_SCORE, mScore)
+                                        putExtra(
+                                            Constants.STUDENT_LOOPING_QUIZ_SCORE,
+                                            mScore
+                                        )
                                     }
                             startActivity(intent)
                             finish()

@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="8dp"
     android:scrollbars="none"
     tools:context=".home.LoopingCompetenceActivity">
 
@@ -12,19 +11,57 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ImageButton
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/btn_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:layout_marginRight="8dp"
-            android:background="@drawable/ic_arrow_back"
+            android:layout_marginStart="16dp"
+            android:clickable="true"
+            android:elevation="4dp"
+            android:focusable="true"
+            android:src="@drawable/ic_first_back_arrow"
+            app:backgroundTint="#60000000"
+            app:borderWidth="0dp"
+            app:cardElevation="4dp"
+            app:fabSize="mini"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:rippleColor="#DBDBDB"
             tools:ignore="ContentDescription" />
 
+
+        <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+            android:id="@+id/carousel_view_first"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            app:autoPlay="true"
+            app:autoPlayDelay="3000"
+            app:imageScaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:showNavigationButtons="false" />
+
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/tv_header_array"
+            android:id="@+id/tv_header_competence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:gravity="center_horizontal"
+            android:maxLines="5"
+            android:paddingHorizontal="16dp"
+            android:text="KD dan IPK"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            app:fontFamily="@font/poppins_semibold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_header_looping"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="56dp"
@@ -38,7 +75,7 @@
             app:fontFamily="@font/poppins_semibold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@id/tv_header_competence"/>
 
         <LinearLayout
             android:id="@+id/layout_first_kd"
@@ -50,14 +87,14 @@
             android:weightSum="2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_header_array">
+            app:layout_constraintTop_toBottomOf="@id/tv_header_looping">
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="3.7"
                 android:textColor="@color/black"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 app:fontFamily="@font/poppins_semibold" />
 
             <com.google.android.material.textview.MaterialTextView
@@ -67,46 +104,15 @@
                 android:paddingHorizontal="16dp"
                 android:text="Menerapkan struktur kontrol Perulangan dalam bahasa pemrograman"
                 android:textColor="@color/black"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 app:fontFamily="@font/poppins_semibold" />
         </LinearLayout>
-
-        <!--    <LinearLayout-->
-        <!--        android:id="@+id/layout_second_kd"-->
-        <!--        android:layout_width="match_parent"-->
-        <!--        android:layout_height="wrap_content"-->
-        <!--        android:orientation="horizontal"-->
-        <!--        android:weightSum="2"-->
-        <!--        android:layout_marginTop="16dp"-->
-        <!--        android:paddingHorizontal="16dp"-->
-        <!--        app:layout_constraintEnd_toEndOf="parent"-->
-        <!--        app:layout_constraintStart_toStartOf="parent"-->
-        <!--        app:layout_constraintTop_toBottomOf="@id/layout_first_kd">-->
-
-        <!--        <com.google.android.material.textview.MaterialTextView-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:text="4.9"-->
-        <!--            app:fontFamily="@font/poppins_semibold"-->
-        <!--            android:textColor="@color/black"-->
-        <!--            android:textSize="20sp" />-->
-
-        <!--        <com.google.android.material.textview.MaterialTextView-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:paddingHorizontal="16dp"-->
-        <!--            app:fontFamily="@font/poppins_semibold"-->
-        <!--            android:maxLines="5"-->
-        <!--            android:text="Membuat kode program menggunakan fungsi"-->
-        <!--            android:textColor="@color/black"-->
-        <!--            android:textSize="20sp" />-->
-        <!--    </LinearLayout>-->
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tv_ipk_function"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="28dp"
             android:gravity="center_horizontal"
             android:maxLines="5"
             android:paddingHorizontal="16dp"
@@ -136,7 +142,7 @@
                 android:layout_height="wrap_content"
                 android:text="3.7.1"
                 android:textColor="@color/black"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 app:fontFamily="@font/poppins_semibold" />
 
             <com.google.android.material.textview.MaterialTextView
@@ -146,7 +152,7 @@
                 android:paddingHorizontal="16dp"
                 android:text="Mengemukakan karakteristik struktur perulangan menggunakan for, while dan do while"
                 android:textColor="@color/black"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 app:fontFamily="@font/poppins_semibold" />
         </LinearLayout>
 
@@ -167,7 +173,7 @@
                 android:layout_height="wrap_content"
                 android:text="3.7.2"
                 android:textColor="@color/black"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 app:fontFamily="@font/poppins_semibold" />
 
             <com.google.android.material.textview.MaterialTextView
@@ -177,7 +183,7 @@
                 android:paddingHorizontal="16dp"
                 android:text="Menerapkan statement/perintah untuk kontrol perulangan sederhana"
                 android:textColor="@color/black"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 app:fontFamily="@font/poppins_semibold" />
         </LinearLayout>
 
@@ -198,7 +204,7 @@
                 android:layout_height="wrap_content"
                 android:text="3.7.3"
                 android:textColor="@color/black"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 app:fontFamily="@font/poppins_semibold" />
 
             <com.google.android.material.textview.MaterialTextView
@@ -208,7 +214,7 @@
                 android:paddingHorizontal="16dp"
                 android:text="Menerapkan statement/perintah untuk kontrol perulangan bersarang"
                 android:textColor="@color/black"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 app:fontFamily="@font/poppins_semibold" />
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
