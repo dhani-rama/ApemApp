@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_result_quiz"
+    android:scrollbars="none"
+    tools:context=".quiz.ArrayQuiz.ResultArrayQuizActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_header_result_function"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/montserrat"
+            android:padding="8dp"
+            android:text="Hasil Kuis Fungsi"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:textAllCaps="false" />
+
+
+        <RelativeLayout
+            android:id="@+id/layout_img_quiz_animation"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_quiz_header"
+            android:backgroundTint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_header_result_function">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/img_congratulation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:visibility="invisible"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/congrats_quiz" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/img_failure"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="invisible"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/never_give_up_quiz" />
+
+        </RelativeLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_score_quiz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:text="90"
+            android:textColor="@color/white"
+            android:textSize="72sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_img_quiz_animation" />
+
+
+        <com.github.captain_miao.optroundcardview.OptRoundCardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="420dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:optRoundCardBackgroundColor="@color/white"
+            app:optRoundCardCornerRadius="50dp"
+            app:optRoundCardLeftBottomCorner="false"
+            app:optRoundCardRightBottomCorner="false">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_congratulations"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:fontFamily="@font/montserrat"
+                    android:paddingHorizontal="16dp"
+                    android:text="Selamat !"
+                    android:textAllCaps="false"
+                    android:textColor="@color/abu_abu2"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:visibility="invisible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_never_give_up"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:fontFamily="@font/montserrat"
+                    android:paddingHorizontal="16dp"
+                    android:text="Tetap Semangat Ya !"
+                    android:textAllCaps="true"
+                    android:textColor="@color/abu_abu2"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:visibility="invisible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:textAllCaps="false" />
+
+                <LinearLayout
+                    android:id="@+id/layout_congratulation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_congratulations">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_first_congratulation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Kamu mendapat nilai"
+                        android:textAllCaps="false"
+                        android:textColor="@color/abu_abu4"
+                        android:textSize="18sp"
+                        android:visibility="invisible" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_second_congratulation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:fontFamily="@font/montserrat"
+                        android:text="90"
+                        android:textAllCaps="false"
+                        android:textColor="@color/abu_abu2"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:visibility="invisible" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_never_give_up"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_never_give_up">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_first_never_give_up"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Kamu mendapat nilai"
+                        android:textAllCaps="false"
+                        android:textColor="@color/abu_abu4"
+                        android:textSize="18sp"
+                        android:visibility="invisible" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_second_never_give_up"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:fontFamily="@font/montserrat"
+                        android:text="90"
+                        android:textAllCaps="false"
+                        android:textColor="@color/abu_abu2"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:visibility="invisible" />
+                </LinearLayout>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_third_congratulation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="15"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:lineSpacingExtra="2dp"
+                    android:paddingHorizontal="16dp"
+                    android:text="Nilai kamu di atas rata - rata. Jangan cepat puas dengan apa yang telah kamu raih. Teruslah belajar dan tetap semangat !"
+                    android:textAllCaps="false"
+                    android:textColor="@color/abu_abu4"
+                    android:textSize="18sp"
+                    android:visibility="invisible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/layout_congratulation"
+                    app:textAllCaps="false" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_third_never_give_up"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="15"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:lineSpacingExtra="2dp"
+                    android:paddingHorizontal="16dp"
+                    android:text="Nilai kamu di bawah rata - rata. Tetap semangat dan jangan berputus asa. Silahkan kamu baca materi fungsi lagi, agar kamu mendapat nilai kuis yang memuaskan"
+                    android:textAllCaps="false"
+                    android:textColor="@color/abu_abu4"
+                    android:textSize="18sp"
+                    android:visibility="invisible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/layout_never_give_up"
+                    app:textAllCaps="false" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_fourth_never_give_up"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="15"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:lineSpacingExtra="2dp"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="16dp"
+                    android:text="Semangat !!"
+                    android:textAllCaps="false"
+                    android:textColor="@color/abu_abu4"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:visibility="invisible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_third_never_give_up"
+                    app:textAllCaps="false" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_back_congratulation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="16dp"
+                    android:clickable="true"
+                    android:elevation="4dp"
+                    android:focusable="true"
+                    android:paddingVertical="16dp"
+                    android:text="Kembali Ke Beranda"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:visibility="invisible"
+                    app:backgroundTint="#3490dc"
+                    app:cornerRadius="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_third_congratulation"
+                    app:rippleColor="#DBDBDB" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_back_materials"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="16dp"
+                    android:clickable="true"
+                    android:elevation="4dp"
+                    android:focusable="true"
+                    android:paddingVertical="16dp"
+                    android:text="Akses materi fungsi"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:visibility="invisible"
+                    app:backgroundTint="#3490dc"
+                    app:cornerRadius="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_fourth_never_give_up"
+                    app:rippleColor="#DBDBDB" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_back_never_give_up"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:clickable="true"
+                    android:elevation="4dp"
+                    android:focusable="true"
+                    android:paddingVertical="16dp"
+                    android:text="Kembali Ke Beranda"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:visibility="invisible"
+                    app:backgroundTint="#3490dc"
+                    app:cornerRadius="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btn_back_materials"
+                    app:rippleColor="#DBDBDB" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.github.captain_miao.optroundcardview.OptRoundCardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

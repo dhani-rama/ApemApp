@@ -1,6 +1,8 @@
-package id.research.apemapp.quiz
+package id.research.apemapp.quiz.FunctionQuiz
 
+import android.annotation.SuppressLint
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -10,6 +12,7 @@ import com.google.firebase.database.*
 import es.dmoral.toasty.Toasty
 import id.research.apemapp.databinding.ActivityFunctionQuizListBinding
 import id.research.apemapp.models.QuestionListEntity
+import id.research.apemapp.quiz.ResultQuizActivity
 import id.research.apemapp.utils.Constants
 import id.research.apemapp.utils.MySharedPreferences
 
@@ -24,10 +27,13 @@ class FunctionQuizListActivity : AppCompatActivity() {
     var answerIndex: Int = 0
     var mScore: Int = 0
 
+    @SuppressLint("SourceLockedOrientationActivity")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mFunctionQuizBinding = ActivityFunctionQuizListBinding.inflate(layoutInflater)
         setContentView(mFunctionQuizBinding.root)
+
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
 
         mySharedPreferences = MySharedPreferences(this)
         studentId = mySharedPreferences.getValue(Constants.STUDENT_ID)!!
@@ -84,14 +90,14 @@ class FunctionQuizListActivity : AppCompatActivity() {
                             val intent =
                                 Intent(
                                     this@FunctionQuizListActivity,
-                                    ResultQuizActivity::class.java
+                                    ResultFunctionQuizActivity::class.java
                                 )
                                     .apply {
                                         putExtra(
                                             Constants.STUDENT_FINAL_QUIZ_SCORE,
                                             mScore.toString()
                                         )
-                                        putExtra(Constants.STUDENT_LOOPING_QUIZ_SCORE, mScore)
+                                        putExtra(Constants.STUDENT_FUNCTION_QUIZ_SCORE, mScore)
                                     }
                             startActivity(intent)
                             finish()
