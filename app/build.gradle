@@ -93,4 +93,10 @@ dependencies {
     implementation("com.github.markusressel.KodeHighlighter:core:${codeHighlighterVersion}")
 
     implementation("com.github.markusressel.KodeHighlighter:java:${codeHighlighterVersion}")
+
+    //For Image Slider
+    implementation 'org.imaginativeworld.whynotimagecarousel:whynotimagecarousel:1.2.1'
+
+    //cardview
+    implementation 'com.github.captain-miao:optroundcardview:1.0.0'
 }
