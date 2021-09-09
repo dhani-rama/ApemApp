@@ -246,6 +246,37 @@
                 app:fontFamily="@font/poppins_semibold" />
         </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/layout_eightth_rule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:weightSum="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_seventh_rule">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8."
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:fontFamily="@font/poppins_semibold" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="5"
+                android:paddingHorizontal="16dp"
+                android:text="Batas nilai lulus dalam kuis ini yaitu 70."
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:fontFamily="@font/poppins_semibold" />
+        </LinearLayout>
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_back"
             android:layout_width="wrap_content"
@@ -263,7 +294,7 @@
             android:textSize="20sp"
             app:cornerRadius="15dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/layout_seventh_rule"
+            app:layout_constraintTop_toBottomOf="@id/layout_eightth_rule"
             app:rippleColor="#DBDBDB" />
 
         <com.google.android.material.button.MaterialButton

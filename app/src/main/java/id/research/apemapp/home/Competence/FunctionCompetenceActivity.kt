@@ -1,29 +1,29 @@
-package id.research.apemapp.home
+package id.research.apemapp.home.Competence
 
 import android.annotation.SuppressLint
 import android.content.pm.ActivityInfo
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import id.research.apemapp.R
-import id.research.apemapp.databinding.ActivityArrayCompetenceBinding
+import id.research.apemapp.databinding.ActivityFunctionCompetenceBinding
 import org.imaginativeworld.whynotimagecarousel.CarouselItem
 import org.imaginativeworld.whynotimagecarousel.ImageCarousel
 
-class ArrayCompetenceActivity : AppCompatActivity() {
+class FunctionCompetenceActivity : AppCompatActivity() {
 
-    private lateinit var mArrayCompetenceBinding: ActivityArrayCompetenceBinding
+    private lateinit var mFunctionCompetenceBinding: ActivityFunctionCompetenceBinding
 
     @SuppressLint("SourceLockedOrientationActivity")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        mArrayCompetenceBinding = ActivityArrayCompetenceBinding.inflate(layoutInflater)
-        setContentView(mArrayCompetenceBinding.root)
+        mFunctionCompetenceBinding = ActivityFunctionCompetenceBinding.inflate(layoutInflater)
+        setContentView(mFunctionCompetenceBinding.root)
 
         firstImageSlider()
 
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
 
-        mArrayCompetenceBinding.btnBack.setOnClickListener {
+        mFunctionCompetenceBinding.btnBack.setOnClickListener {
             onBackPressed()
         }
 

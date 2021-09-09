@@ -117,15 +117,21 @@
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.66" />
 
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/third_Guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.99" />
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/card_looping"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
             android:clickable="true"
             android:focusable="true"
             app:cardCornerRadius="15dp"
-            android:layout_marginHorizontal="8dp"
             app:layout_constraintEnd_toEndOf="@id/first_Guideline"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_competence"
@@ -196,13 +202,13 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="8dp"
-            app:layout_constraintStart_toStartOf="@id/first_Guideline"
-            app:layout_constraintEnd_toEndOf="@id/second_Guideline"
-            app:layout_constraintTop_toTopOf="@id/card_looping"
-            app:layout_constraintBottom_toBottomOf="@id/card_looping"
             android:clickable="true"
             android:focusable="true"
             app:cardCornerRadius="15dp"
+            app:layout_constraintBottom_toBottomOf="@id/card_looping"
+            app:layout_constraintEnd_toEndOf="@id/second_Guideline"
+            app:layout_constraintStart_toStartOf="@id/first_Guideline"
+            app:layout_constraintTop_toTopOf="@id/card_looping"
             app:strokeColor="@color/abu_abu3"
             app:strokeWidth="2dp">
 
@@ -267,16 +273,16 @@
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/card_function"
-            android:layout_marginHorizontal="8dp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="@id/card_array"
-            app:layout_constraintBottom_toBottomOf="@id/card_array"
-            app:layout_constraintStart_toStartOf="@id/second_Guideline"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="8dp"
             android:clickable="true"
             android:focusable="true"
             app:cardCornerRadius="15dp"
+            app:layout_constraintBottom_toBottomOf="@id/card_array"
+            app:layout_constraintEnd_toEndOf="@id/third_Guideline"
+            app:layout_constraintStart_toStartOf="@id/second_Guideline"
+            app:layout_constraintTop_toTopOf="@id/card_array"
             app:strokeColor="@color/abu_abu3"
             app:strokeWidth="2dp">
 
@@ -339,621 +345,81 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </com.google.android.material.card.MaterialCardView>
+        
 
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_compiler"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/montserrat"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:text="Compiler Online"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card_looping" />
 
-        <!--        <HorizontalScrollView-->
-        <!--            android:id="@+id/scrollview_competence"-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:paddingHorizontal="12dp"-->
-        <!--            android:scrollbars="none"-->
-        <!--            app:layout_constraintEnd_toEndOf="parent"-->
-        <!--            app:layout_constraintStart_toStartOf="parent"-->
-        <!--            app:layout_constraintTop_toBottomOf="@id/tv_competence">-->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_code_editor"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginHorizontal="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_compiler"
+            app:rippleColor="#DBDBDB">
 
-        <!--            <GridLayout-->
-        <!--                android:layout_width="wrap_content"-->
-        <!--                android:layout_height="wrap_content"-->
-        <!--                android:columnCount="3"-->
-        <!--                android:orientation="horizontal"-->
-        <!--                android:rowCount="1"-->
-        <!--                android:scrollbars="horizontal"-->
-        <!--                android:useDefaultMargins="true">-->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/img_compiler_apem"
+                tools:ignore="ContentDescription" />
 
-        <!--                <com.google.android.material.card.MaterialCardView-->
-        <!--                    android:id="@+id/card_looping"-->
-        <!--                    android:layout_width="wrap_content"-->
-        <!--                    android:layout_height="wrap_content"-->
-        <!--                    android:clickable="true"-->
-        <!--                    android:focusable="true"-->
-        <!--                    app:cardCornerRadius="15dp"-->
-        <!--                    app:strokeColor="@color/abu_abu3"-->
-        <!--                    app:strokeWidth="2dp">-->
+        </com.google.android.material.card.MaterialCardView>
 
-        <!--                    <androidx.constraintlayout.widget.ConstraintLayout-->
-        <!--                        android:layout_width="wrap_content"-->
-        <!--                        android:layout_height="match_parent">-->
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_instruction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/montserrat"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:text="Petunjuk Penggunaan"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card_code_editor" />
 
-        <!--                        <de.hdodenhof.circleimageview.CircleImageView-->
-        <!--                            android:id="@+id/img_looping"-->
-        <!--                            android:layout_width="32dp"-->
-        <!--                            android:layout_height="32dp"-->
-        <!--                            android:layout_marginTop="8dp"-->
-        <!--                            android:src="@drawable/ic_loop"-->
-        <!--                            app:layout_constraintEnd_toEndOf="parent"-->
-        <!--                            app:layout_constraintStart_toStartOf="parent"-->
-        <!--                            app:layout_constraintTop_toTopOf="parent" />-->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_instruction"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginHorizontal="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_instruction"
+            app:rippleColor="#DBDBDB">
 
-        <!--                        <com.google.android.material.textview.MaterialTextView-->
-        <!--                            android:id="@+id/header_looping"-->
-        <!--                            android:layout_width="wrap_content"-->
-        <!--                            android:layout_height="wrap_content"-->
-        <!--                            android:paddingVertical="8dp"-->
-        <!--                            android:text="Perulangan"-->
-        <!--                            android:textColor="@color/black"-->
-        <!--                            android:textSize="14sp"-->
-        <!--                            android:textStyle="bold"-->
-        <!--                            app:fontFamily="@font/montserrat"-->
-        <!--                            app:layout_constraintEnd_toEndOf="parent"-->
-        <!--                            app:layout_constraintStart_toStartOf="parent"-->
-        <!--                            app:layout_constraintTop_toBottomOf="@id/img_looping" />-->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/img_instruction"
+                tools:ignore="ContentDescription" />
 
-        <!--                        <com.google.android.material.textview.MaterialTextView-->
-        <!--                            android:id="@+id/tv_looping_competence"-->
-        <!--                            android:layout_width="wrap_content"-->
-        <!--                            android:layout_height="wrap_content"-->
-        <!--                            android:ems="10"-->
-        <!--                            android:fontFamily="@font/montserrat"-->
-        <!--                            android:gravity="center_horizontal"-->
-        <!--                            android:maxLines="3"-->
-        <!--                            android:paddingHorizontal="2dp"-->
-        <!--                            android:text="3.7 Menerapkan struktur kontrol perulangan dalam bahasa pemrograman."-->
-        <!--                            android:textColor="@color/abu_abu2"-->
-        <!--                            android:textSize="10sp"-->
-        <!--                            app:layout_constraintEnd_toEndOf="parent"-->
-        <!--                            app:layout_constraintStart_toStartOf="parent"-->
-        <!--                            app:layout_constraintTop_toBottomOf="@id/header_looping" />-->
-
-        <!--                        <com.google.android.material.textview.MaterialTextView-->
-        <!--                            android:layout_width="wrap_content"-->
-        <!--                            android:layout_height="wrap_content"-->
-        <!--                            android:padding="8dp"-->
-        <!--                            android:text="@string/detail"-->
-        <!--                            android:textColor="@color/biru1"-->
-        <!--                            android:textSize="12sp"-->
-        <!--                            android:textStyle="bold"-->
-        <!--                            app:fontFamily="@font/montserrat"-->
-        <!--                            app:layout_constraintEnd_toEndOf="parent"-->
-        <!--                            app:layout_constraintTop_toBottomOf="@id/tv_looping_competence" />-->
-
-        <!--                    </androidx.constraintlayout.widget.ConstraintLayout>-->
-        <!--                </com.google.android.material.card.MaterialCardView>-->
-
-        <!--                <com.google.android.material.card.MaterialCardView-->
-        <!--                    android:id="@+id/card_array"-->
-        <!--                    android:layout_width="wrap_content"-->
-        <!--                    android:layout_height="wrap_content"-->
-        <!--                    android:layout_marginHorizontal="8dp"-->
-        <!--                    android:clickable="true"-->
-        <!--                    android:focusable="true"-->
-        <!--                    app:cardCornerRadius="15dp"-->
-        <!--                    app:strokeColor="@color/abu_abu3"-->
-        <!--                    app:strokeWidth="2dp">-->
-
-        <!--                    <androidx.constraintlayout.widget.ConstraintLayout-->
-        <!--                        android:layout_width="match_parent"-->
-        <!--                        android:layout_height="match_parent">-->
-
-        <!--                        <de.hdodenhof.circleimageview.CircleImageView-->
-        <!--                            android:id="@+id/img_array"-->
-        <!--                            android:layout_width="32dp"-->
-        <!--                            android:layout_height="32dp"-->
-        <!--                            android:layout_marginTop="8dp"-->
-        <!--                            android:src="@drawable/ic_array"-->
-        <!--                            app:layout_constraintEnd_toEndOf="parent"-->
-        <!--                            app:layout_constraintStart_toStartOf="parent"-->
-        <!--                            app:layout_constraintTop_toTopOf="parent" />-->
-
-        <!--                        <com.google.android.material.textview.MaterialTextView-->
-        <!--                            android:id="@+id/header_array"-->
-        <!--                            android:layout_width="wrap_content"-->
-        <!--                            android:layout_height="wrap_content"-->
-        <!--                            android:paddingVertical="8dp"-->
-        <!--                            android:text="@string/array"-->
-        <!--                            android:textColor="@color/black"-->
-        <!--                            android:textSize="14sp"-->
-        <!--                            android:textStyle="bold"-->
-        <!--                            app:fontFamily="@font/montserrat"-->
-        <!--                            app:layout_constraintEnd_toEndOf="parent"-->
-        <!--                            app:layout_constraintStart_toStartOf="parent"-->
-        <!--                            app:layout_constraintTop_toBottomOf="@id/img_array" />-->
-
-        <!--                        <com.google.android.material.textview.MaterialTextView-->
-        <!--                            android:id="@+id/tv_array_competence"-->
-        <!--                            android:layout_width="wrap_content"-->
-        <!--                            android:layout_height="wrap_content"-->
-        <!--                            android:ems="10"-->
-        <!--                            android:fontFamily="@font/montserrat"-->
-        <!--                            android:gravity="center_horizontal"-->
-        <!--                            android:maxLines="3"-->
-        <!--                            android:paddingHorizontal="2dp"-->
-        <!--                            android:text="@string/kd_array1"-->
-        <!--                            android:textColor="@color/abu_abu2"-->
-        <!--                            android:textSize="10sp"-->
-        <!--                            app:layout_constraintEnd_toEndOf="parent"-->
-        <!--                            app:layout_constraintStart_toStartOf="parent"-->
-        <!--                            app:layout_constraintTop_toBottomOf="@id/header_array" />-->
-
-        <!--                        <com.google.android.material.textview.MaterialTextView-->
-        <!--                            android:layout_width="wrap_content"-->
-        <!--                            android:layout_height="wrap_content"-->
-        <!--                            android:padding="8dp"-->
-        <!--                            android:text="@string/detail"-->
-        <!--                            android:textColor="@color/biru1"-->
-        <!--                            android:textSize="12sp"-->
-        <!--                            android:textStyle="bold"-->
-        <!--                            app:fontFamily="@font/montserrat"-->
-        <!--                            app:layout_constraintEnd_toEndOf="parent"-->
-        <!--                            app:layout_constraintTop_toBottomOf="@id/tv_array_competence" />-->
-
-        <!--                    </androidx.constraintlayout.widget.ConstraintLayout>-->
-        <!--                </com.google.android.material.card.MaterialCardView>-->
-
-        <!--                <com.google.android.material.card.MaterialCardView-->
-        <!--                    android:id="@+id/card_function"-->
-        <!--                    android:layout_width="wrap_content"-->
-        <!--                    android:layout_height="wrap_content"-->
-        <!--                    android:clickable="true"-->
-        <!--                    android:focusable="true"-->
-        <!--                    app:cardCornerRadius="15dp"-->
-        <!--                    app:strokeColor="@color/abu_abu3"-->
-        <!--                    app:strokeWidth="2dp">-->
-
-        <!--                    <androidx.constraintlayout.widget.ConstraintLayout-->
-        <!--                        android:layout_width="match_parent"-->
-        <!--                        android:layout_height="match_parent">-->
-
-        <!--                        <de.hdodenhof.circleimageview.CircleImageView-->
-        <!--                            android:id="@+id/img_function"-->
-        <!--                            android:layout_width="32dp"-->
-        <!--                            android:layout_height="32dp"-->
-        <!--                            android:layout_marginTop="8dp"-->
-        <!--                            android:src="@drawable/ic_fungsi"-->
-        <!--                            app:layout_constraintEnd_toEndOf="parent"-->
-        <!--                            app:layout_constraintStart_toStartOf="parent"-->
-        <!--                            app:layout_constraintTop_toTopOf="parent" />-->
-
-        <!--                        <com.google.android.material.textview.MaterialTextView-->
-        <!--                            android:id="@+id/header_function"-->
-        <!--                            android:layout_width="wrap_content"-->
-        <!--                            android:layout_height="wrap_content"-->
-        <!--                            android:paddingVertical="8dp"-->
-        <!--                            android:text="@string/fungsi"-->
-        <!--                            android:textColor="@color/black"-->
-        <!--                            android:textSize="14sp"-->
-        <!--                            android:textStyle="bold"-->
-        <!--                            app:fontFamily="@font/montserrat"-->
-        <!--                            app:layout_constraintEnd_toEndOf="parent"-->
-        <!--                            app:layout_constraintStart_toStartOf="parent"-->
-        <!--                            app:layout_constraintTop_toBottomOf="@id/img_function" />-->
-
-        <!--                        <com.google.android.material.textview.MaterialTextView-->
-        <!--                            android:id="@+id/tv_function_competence"-->
-        <!--                            android:layout_width="wrap_content"-->
-        <!--                            android:layout_height="wrap_content"-->
-        <!--                            android:ems="10"-->
-        <!--                            android:fontFamily="@font/montserrat"-->
-        <!--                            android:gravity="center_horizontal"-->
-        <!--                            android:maxLines="3"-->
-        <!--                            android:paddingHorizontal="2dp"-->
-        <!--                            android:text="@string/kd_fungsi"-->
-        <!--                            android:textColor="@color/abu_abu2"-->
-        <!--                            android:textSize="10sp"-->
-        <!--                            app:layout_constraintEnd_toEndOf="parent"-->
-        <!--                            app:layout_constraintStart_toStartOf="parent"-->
-        <!--                            app:layout_constraintTop_toBottomOf="@id/header_function" />-->
-
-        <!--                        <com.google.android.material.textview.MaterialTextView-->
-        <!--                            android:layout_width="wrap_content"-->
-        <!--                            android:layout_height="wrap_content"-->
-        <!--                            android:layout_marginTop="12dp"-->
-        <!--                            android:padding="8dp"-->
-        <!--                            android:text="@string/detail"-->
-        <!--                            android:textColor="@color/biru1"-->
-        <!--                            android:textSize="12sp"-->
-        <!--                            android:textStyle="bold"-->
-        <!--                            app:fontFamily="@font/montserrat"-->
-        <!--                            app:layout_constraintEnd_toEndOf="parent"-->
-        <!--                            app:layout_constraintTop_toBottomOf="@id/tv_function_competence" />-->
-
-        <!--                    </androidx.constraintlayout.widget.ConstraintLayout>-->
-        <!--                </com.google.android.material.card.MaterialCardView>-->
-        <!--            </GridLayout>-->
-        <!--        </HorizontalScrollView>-->
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/tv_about_application"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="24dp"
-                    android:fontFamily="@font/montserrat"
-                    android:paddingHorizontal="16dp"
-                    android:paddingVertical="8dp"
-                    android:text="Compiler Online"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/card_looping" />
-
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/card_code_editor"
-                    android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:layout_marginHorizontal="16dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    app:cardCornerRadius="20dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_about_application"
-                    app:rippleColor="#DBDBDB">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/img_compiler_apem"
-                        tools:ignore="ContentDescription" />
-
-                </com.google.android.material.card.MaterialCardView>
+        </com.google.android.material.card.MaterialCardView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
 
-    <!--    <LinearLayout-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:orientation="vertical"-->
-    <!--        tools:context=".home.HomeFragment">-->
-
-    <!--        <androidx.constraintlayout.widget.ConstraintLayout-->
-    <!--            android:id="@+id/layout_profile"-->
-    <!--            android:layout_width="match_parent"-->
-    <!--            android:layout_height="200dp"-->
-    <!--            android:background="@drawable/background"-->
-    <!--            app:layout_constraintEnd_toEndOf="parent"-->
-    <!--            app:layout_constraintStart_toStartOf="parent"-->
-    <!--            app:layout_constraintTop_toTopOf="parent">-->
-
-    <!--            <de.hdodenhof.circleimageview.CircleImageView-->
-    <!--                android:id="@+id/img_user"-->
-    <!--                android:layout_width="72dp"-->
-    <!--                android:layout_height="72dp"-->
-    <!--                android:layout_marginStart="16dp"-->
-    <!--                android:layout_marginTop="40dp"-->
-    <!--                android:src="@drawable/ic_user"-->
-    <!--                app:layout_constraintStart_toStartOf="parent"-->
-    <!--                app:layout_constraintTop_toTopOf="parent" />-->
-
-    <!--            <com.google.android.material.textview.MaterialTextView-->
-    <!--                android:id="@+id/tv_halo"-->
-    <!--                android:layout_width="wrap_content"-->
-    <!--                android:layout_height="wrap_content"-->
-    <!--                android:layout_marginStart="8dp"-->
-    <!--                android:layout_marginTop="8dp"-->
-    <!--                android:paddingHorizontal="8dp"-->
-    <!--                android:text="@string/halo"-->
-    <!--                android:textColor="@color/white"-->
-    <!--                android:textSize="20sp"-->
-    <!--                android:textStyle="bold"-->
-    <!--                app:fontFamily="@font/montserrat"-->
-    <!--                app:layout_constraintStart_toStartOf="parent"-->
-    <!--                app:layout_constraintTop_toBottomOf="@id/img_user" />-->
-
-    <!--            <com.google.android.material.textview.MaterialTextView-->
-    <!--                android:id="@+id/tv_name"-->
-    <!--                android:layout_width="wrap_content"-->
-    <!--                android:layout_height="wrap_content"-->
-    <!--                android:maxLines="3"-->
-    <!--                android:text="@string/sayang"-->
-    <!--                android:textColor="@color/white"-->
-    <!--                android:textSize="20sp"-->
-    <!--                android:textStyle="bold"-->
-    <!--                app:fontFamily="@font/montserrat"-->
-    <!--                app:layout_constraintBottom_toBottomOf="@id/tv_halo"-->
-    <!--                app:layout_constraintStart_toEndOf="@id/tv_halo"-->
-    <!--                app:layout_constraintTop_toTopOf="@id/tv_halo" />-->
-
-    <!--            <com.google.android.material.textview.MaterialTextView-->
-    <!--                android:id="@+id/tv_ask"-->
-    <!--                android:layout_width="wrap_content"-->
-    <!--                android:layout_height="wrap_content"-->
-    <!--                android:layout_marginStart="8dp"-->
-    <!--                android:paddingHorizontal="8dp"-->
-    <!--                android:text="@string/sudah_siap_belajar_hari_ini"-->
-    <!--                android:textColor="@color/white"-->
-    <!--                android:textSize="14sp"-->
-    <!--                android:textStyle="bold"-->
-    <!--                app:fontFamily="@font/montserrat"-->
-    <!--                app:layout_constraintStart_toStartOf="parent"-->
-    <!--                app:layout_constraintTop_toBottomOf="@id/tv_halo" />-->
-
-
-    <!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
-
-
-    <!--        <androidx.constraintlayout.widget.ConstraintLayout-->
-    <!--            android:layout_width="match_parent"-->
-    <!--            android:layout_height="match_parent"-->
-    <!--            android:layout_marginBottom="16dp"-->
-    <!--            android:paddingHorizontal="16dp">-->
-
-    <!--            <com.google.android.material.textview.MaterialTextView-->
-    <!--                android:id="@+id/tv_competence"-->
-    <!--                android:layout_width="wrap_content"-->
-    <!--                android:layout_height="wrap_content"-->
-    <!--                android:layout_marginTop="24dp"-->
-    <!--                android:fontFamily="@font/montserrat"-->
-    <!--                android:paddingVertical="8dp"-->
-    <!--                android:text="KD dan IPK"-->
-    <!--                android:textColor="@color/black"-->
-    <!--                android:textSize="20sp"-->
-    <!--                android:textStyle="bold"-->
-    <!--                app:layout_constraintStart_toStartOf="parent"-->
-    <!--                app:layout_constraintTop_toTopOf="parent" />-->
-
-    <!--            <LinearLayout-->
-    <!--                android:id="@+id/layout_competence"-->
-    <!--                android:layout_width="match_parent"-->
-    <!--                android:layout_height="wrap_content"-->
-    <!--                android:gravity="center_horizontal"-->
-    <!--                android:orientation="horizontal"-->
-    <!--                android:weightSum="3"-->
-    <!--                app:layout_constraintEnd_toEndOf="parent"-->
-    <!--                app:layout_constraintStart_toStartOf="parent"-->
-    <!--                app:layout_constraintTop_toBottomOf="@id/tv_competence">-->
-
-    <!--                <com.google.android.material.card.MaterialCardView-->
-    <!--                    android:id="@+id/card_looping"-->
-    <!--                    android:layout_width="104dp"-->
-    <!--                    android:layout_height="165dp"-->
-    <!--                    android:clickable="true"-->
-    <!--                    android:focusable="true"-->
-    <!--                    app:cardCornerRadius="15dp"-->
-    <!--                    app:strokeColor="@color/abu_abu3"-->
-    <!--                    app:strokeWidth="2dp">-->
-
-    <!--                    <androidx.constraintlayout.widget.ConstraintLayout-->
-    <!--                        android:layout_width="match_parent"-->
-    <!--                        android:layout_height="match_parent">-->
-
-    <!--                        <de.hdodenhof.circleimageview.CircleImageView-->
-    <!--                            android:id="@+id/img_looping"-->
-    <!--                            android:layout_width="31dp"-->
-    <!--                            android:layout_height="32dp"-->
-    <!--                            android:layout_marginTop="8dp"-->
-    <!--                            android:src="@drawable/ic_loop"-->
-    <!--                            app:layout_constraintEnd_toEndOf="parent"-->
-    <!--                            app:layout_constraintStart_toStartOf="parent"-->
-    <!--                            app:layout_constraintTop_toTopOf="parent" />-->
-
-    <!--                        <com.google.android.material.textview.MaterialTextView-->
-    <!--                            android:id="@+id/header_looping"-->
-    <!--                            android:layout_width="wrap_content"-->
-    <!--                            android:layout_height="wrap_content"-->
-    <!--                            android:paddingVertical="8dp"-->
-    <!--                            android:text="Perulangan"-->
-    <!--                            android:textColor="@color/black"-->
-    <!--                            android:textSize="14sp"-->
-    <!--                            android:textStyle="bold"-->
-    <!--                            app:fontFamily="@font/montserrat"-->
-    <!--                            app:layout_constraintEnd_toEndOf="parent"-->
-    <!--                            app:layout_constraintStart_toStartOf="parent"-->
-    <!--                            app:layout_constraintTop_toBottomOf="@id/img_looping" />-->
-
-    <!--                        <com.google.android.material.textview.MaterialTextView-->
-    <!--                            android:layout_width="wrap_content"-->
-    <!--                            android:layout_height="wrap_content"-->
-    <!--                            android:ems="10"-->
-    <!--                            android:fontFamily="@font/montserrat"-->
-    <!--                            android:gravity="center_horizontal"-->
-    <!--                            android:maxLines="3"-->
-    <!--                            android:paddingHorizontal="2dp"-->
-    <!--                            android:text="3.7 Menerapkan struktur kontrol perulangan dalam bahasa pemrograman."-->
-    <!--                            android:textColor="@color/abu_abu2"-->
-    <!--                            android:textSize="10sp"-->
-    <!--                            app:layout_constraintEnd_toEndOf="parent"-->
-    <!--                            app:layout_constraintStart_toStartOf="parent"-->
-    <!--                            app:layout_constraintTop_toBottomOf="@id/header_looping" />-->
-
-    <!--                        <com.google.android.material.textview.MaterialTextView-->
-    <!--                            android:layout_width="wrap_content"-->
-    <!--                            android:layout_height="wrap_content"-->
-    <!--                            android:padding="8dp"-->
-    <!--                            android:text="@string/detail"-->
-    <!--                            android:textColor="@color/biru1"-->
-    <!--                            android:textSize="12sp"-->
-    <!--                            android:textStyle="bold"-->
-    <!--                            app:fontFamily="@font/montserrat"-->
-    <!--                            app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--                            app:layout_constraintEnd_toEndOf="parent" />-->
-
-    <!--                    </androidx.constraintlayout.widget.ConstraintLayout>-->
-    <!--                </com.google.android.material.card.MaterialCardView>-->
-
-
-    <!--                <com.google.android.material.card.MaterialCardView-->
-    <!--                    android:id="@+id/card_array"-->
-    <!--                    android:layout_width="104dp"-->
-    <!--                    android:layout_height="165dp"-->
-    <!--                    android:layout_marginHorizontal="8dp"-->
-    <!--                    android:clickable="true"-->
-    <!--                    android:focusable="true"-->
-    <!--                    app:cardCornerRadius="15dp"-->
-    <!--                    app:strokeColor="@color/abu_abu3"-->
-    <!--                    app:strokeWidth="2dp">-->
-
-    <!--                    <androidx.constraintlayout.widget.ConstraintLayout-->
-    <!--                        android:layout_width="match_parent"-->
-    <!--                        android:layout_height="match_parent">-->
-
-    <!--                        <de.hdodenhof.circleimageview.CircleImageView-->
-    <!--                            android:id="@+id/img_array"-->
-    <!--                            android:layout_width="31dp"-->
-    <!--                            android:layout_height="32dp"-->
-    <!--                            android:layout_marginTop="8dp"-->
-    <!--                            android:src="@drawable/ic_array"-->
-    <!--                            app:layout_constraintEnd_toEndOf="parent"-->
-    <!--                            app:layout_constraintStart_toStartOf="parent"-->
-    <!--                            app:layout_constraintTop_toTopOf="parent" />-->
-
-    <!--                        <com.google.android.material.textview.MaterialTextView-->
-    <!--                            android:id="@+id/header_array"-->
-    <!--                            android:layout_width="wrap_content"-->
-    <!--                            android:layout_height="wrap_content"-->
-    <!--                            android:paddingVertical="8dp"-->
-    <!--                            android:text="@string/array"-->
-    <!--                            android:textColor="@color/black"-->
-    <!--                            android:textSize="14sp"-->
-    <!--                            android:textStyle="bold"-->
-    <!--                            app:fontFamily="@font/montserrat"-->
-    <!--                            app:layout_constraintEnd_toEndOf="parent"-->
-    <!--                            app:layout_constraintStart_toStartOf="parent"-->
-    <!--                            app:layout_constraintTop_toBottomOf="@id/img_array" />-->
-
-    <!--                        <com.google.android.material.textview.MaterialTextView-->
-    <!--                            android:layout_width="wrap_content"-->
-    <!--                            android:layout_height="wrap_content"-->
-    <!--                            android:ems="10"-->
-    <!--                            android:fontFamily="@font/montserrat"-->
-    <!--                            android:gravity="center_horizontal"-->
-    <!--                            android:maxLines="3"-->
-    <!--                            android:paddingHorizontal="2dp"-->
-    <!--                            android:text="@string/kd_array1"-->
-    <!--                            android:textColor="@color/abu_abu2"-->
-    <!--                            android:textSize="10sp"-->
-    <!--                            app:layout_constraintEnd_toEndOf="parent"-->
-    <!--                            app:layout_constraintStart_toStartOf="parent"-->
-    <!--                            app:layout_constraintTop_toBottomOf="@id/header_array" />-->
-
-    <!--                        <com.google.android.material.textview.MaterialTextView-->
-    <!--                            android:layout_width="wrap_content"-->
-    <!--                            android:layout_height="wrap_content"-->
-    <!--                            android:padding="8dp"-->
-    <!--                            android:text="@string/detail"-->
-    <!--                            android:textColor="@color/biru1"-->
-    <!--                            android:textSize="12sp"-->
-    <!--                            android:textStyle="bold"-->
-    <!--                            app:fontFamily="@font/montserrat"-->
-    <!--                            app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--                            app:layout_constraintEnd_toEndOf="parent" />-->
-
-    <!--                    </androidx.constraintlayout.widget.ConstraintLayout>-->
-    <!--                </com.google.android.material.card.MaterialCardView>-->
-
-    <!--                <com.google.android.material.card.MaterialCardView-->
-    <!--                    android:id="@+id/card_function"-->
-    <!--                    android:layout_width="104dp"-->
-    <!--                    android:layout_height="165dp"-->
-    <!--                    android:clickable="true"-->
-    <!--                    android:focusable="true"-->
-    <!--                    app:cardCornerRadius="15dp"-->
-    <!--                    app:strokeColor="@color/abu_abu3"-->
-    <!--                    app:strokeWidth="2dp">-->
-
-    <!--                    <androidx.constraintlayout.widget.ConstraintLayout-->
-    <!--                        android:layout_width="match_parent"-->
-    <!--                        android:layout_height="match_parent">-->
-
-    <!--                        <de.hdodenhof.circleimageview.CircleImageView-->
-    <!--                            android:id="@+id/img_function"-->
-    <!--                            android:layout_width="31dp"-->
-    <!--                            android:layout_height="32dp"-->
-    <!--                            android:layout_marginTop="8dp"-->
-    <!--                            android:src="@drawable/ic_fungsi"-->
-    <!--                            app:layout_constraintEnd_toEndOf="parent"-->
-    <!--                            app:layout_constraintStart_toStartOf="parent"-->
-    <!--                            app:layout_constraintTop_toTopOf="parent" />-->
-
-    <!--                        <com.google.android.material.textview.MaterialTextView-->
-    <!--                            android:id="@+id/header_function"-->
-    <!--                            android:layout_width="wrap_content"-->
-    <!--                            android:layout_height="wrap_content"-->
-    <!--                            android:paddingVertical="8dp"-->
-    <!--                            android:text="@string/fungsi"-->
-    <!--                            android:textColor="@color/black"-->
-    <!--                            android:textSize="14sp"-->
-    <!--                            android:textStyle="bold"-->
-    <!--                            app:fontFamily="@font/montserrat"-->
-    <!--                            app:layout_constraintEnd_toEndOf="parent"-->
-    <!--                            app:layout_constraintStart_toStartOf="parent"-->
-    <!--                            app:layout_constraintTop_toBottomOf="@id/img_function" />-->
-
-    <!--                        <com.google.android.material.textview.MaterialTextView-->
-    <!--                            android:layout_width="wrap_content"-->
-    <!--                            android:layout_height="wrap_content"-->
-    <!--                            android:ems="10"-->
-    <!--                            android:fontFamily="@font/montserrat"-->
-    <!--                            android:gravity="center_horizontal"-->
-    <!--                            android:maxLines="3"-->
-    <!--                            android:paddingHorizontal="2dp"-->
-    <!--                            android:text="@string/kd_fungsi"-->
-    <!--                            android:textColor="@color/abu_abu2"-->
-    <!--                            android:textSize="10sp"-->
-    <!--                            app:layout_constraintEnd_toEndOf="parent"-->
-    <!--                            app:layout_constraintStart_toStartOf="parent"-->
-    <!--                            app:layout_constraintTop_toBottomOf="@id/header_function" />-->
-
-    <!--                        <com.google.android.material.textview.MaterialTextView-->
-    <!--                            android:layout_width="wrap_content"-->
-    <!--                            android:layout_height="wrap_content"-->
-    <!--                            android:padding="8dp"-->
-    <!--                            android:text="@string/detail"-->
-    <!--                            android:textColor="@color/biru1"-->
-    <!--                            android:textSize="12sp"-->
-    <!--                            android:textStyle="bold"-->
-    <!--                            app:fontFamily="@font/montserrat"-->
-    <!--                            app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--                            app:layout_constraintEnd_toEndOf="parent" />-->
-
-    <!--                    </androidx.constraintlayout.widget.ConstraintLayout>-->
-    <!--                </com.google.android.material.card.MaterialCardView>-->
-    <!--            </LinearLayout>-->
-    <!--            -->
-    <!--            <com.google.android.material.textview.MaterialTextView-->
-    <!--                android:id="@+id/tv_about_application"-->
-    <!--                android:layout_width="wrap_content"-->
-    <!--                android:layout_height="wrap_content"-->
-    <!--                android:layout_marginTop="32dp"-->
-    <!--                android:fontFamily="@font/montserrat"-->
-    <!--                android:paddingVertical="8dp"-->
-    <!--                android:text="Compiler Online"-->
-    <!--                android:textColor="@color/black"-->
-    <!--                android:textSize="20sp"-->
-    <!--                android:textStyle="bold"-->
-    <!--                app:layout_constraintStart_toStartOf="parent"-->
-    <!--                app:layout_constraintTop_toBottomOf="@id/layout_competence" />-->
-
-    <!--            <com.google.android.material.card.MaterialCardView-->
-    <!--                android:id="@+id/card_code_editor"-->
-    <!--                android:layout_width="match_parent"-->
-    <!--                android:layout_height="150dp"-->
-    <!--                android:clickable="true"-->
-    <!--                android:focusable="true"-->
-    <!--                app:cardCornerRadius="15dp"-->
-    <!--                app:layout_constraintEnd_toEndOf="parent"-->
-    <!--                app:layout_constraintStart_toStartOf="parent"-->
-    <!--                app:layout_constraintTop_toBottomOf="@+id/tv_about_application"-->
-    <!--                app:rippleColor="#DBDBDB">-->
-
-    <!--                <ImageView-->
-    <!--                    android:layout_width="match_parent"-->
-    <!--                    android:layout_height="match_parent"-->
-    <!--                    android:background="@drawable/background_materi2"-->
-    <!--                    tools:ignore="ContentDescription" />-->
-
-
-    <!--            </com.google.android.material.card.MaterialCardView>-->
-    <!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
-    <!--    </LinearLayout>-->
-
+  

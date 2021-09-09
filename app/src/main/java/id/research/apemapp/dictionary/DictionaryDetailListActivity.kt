@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import id.research.apemapp.R
 import id.research.apemapp.databinding.ActivityDictionaryDetailListBinding
-import id.research.apemapp.utils.Constants
+import id.research.apemapp.objects.Constants
 import org.imaginativeworld.whynotimagecarousel.CarouselItem
 import org.imaginativeworld.whynotimagecarousel.ImageCarousel
 

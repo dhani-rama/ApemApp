@@ -12,8 +12,7 @@ import com.google.firebase.database.*
 import es.dmoral.toasty.Toasty
 import id.research.apemapp.databinding.ActivityFunctionQuizListBinding
 import id.research.apemapp.models.QuestionListEntity
-import id.research.apemapp.quiz.ResultQuizActivity
-import id.research.apemapp.utils.Constants
+import id.research.apemapp.objects.Constants
 import id.research.apemapp.utils.MySharedPreferences
 
 class FunctionQuizListActivity : AppCompatActivity() {

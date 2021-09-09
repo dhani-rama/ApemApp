@@ -8,7 +8,7 @@ import com.google.android.youtube.player.YouTubeInitializationResult
 import com.google.android.youtube.player.YouTubePlayer
 import es.dmoral.toasty.Toasty
 import id.research.apemapp.databinding.ActivityFirstParameterBinding
-import id.research.apemapp.utils.Constants
+import id.research.apemapp.objects.Constants
 
 class FirstParameterActivity : YouTubeBaseActivity() {
 

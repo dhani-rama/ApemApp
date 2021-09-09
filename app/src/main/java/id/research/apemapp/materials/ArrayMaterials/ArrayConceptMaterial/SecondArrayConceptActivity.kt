@@ -9,7 +9,7 @@ import com.google.android.youtube.player.YouTubePlayer
 import es.dmoral.toasty.Toasty
 import id.research.apemapp.databinding.ActivitySecondArrayConceptBinding
 import id.research.apemapp.materials.ArrayMaterials.ArrayDetailMaterialsActivity
-import id.research.apemapp.utils.Constants
+import id.research.apemapp.objects.Constants
 
 class SecondArrayConceptActivity : YouTubeBaseActivity() {
 
@@ -30,7 +30,8 @@ class SecondArrayConceptActivity : YouTubeBaseActivity() {
             finish()
         }
 
-        mSecondBinding.videoFirst.initialize(Constants.API_YT_KEY,
+        mSecondBinding.videoFirst.initialize(
+            Constants.API_YT_KEY,
             object : YouTubePlayer.OnInitializedListener {
                 override fun onInitializationSuccess(
                     provider: YouTubePlayer.Provider?,

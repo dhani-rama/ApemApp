@@ -25,7 +25,10 @@
         android:roundIcon="@drawable/ic_logo_apem"
         android:supportsRtl="true"
         android:theme="@style/Theme.ApemApp.Terang">
-        <activity android:name=".quiz.LoopingQuiz.ResultLoopingQuizActivity"></activity>
+        <activity
+            android:name=".home.InstructionUsing.InstructionUsingActivity"
+            android:parentActivityName=".HomeActivity" />
+        <activity android:name=".quiz.LoopingQuiz.ResultLoopingQuizActivity" />
         <activity android:name=".quiz.FunctionQuiz.ResultFunctionQuizActivity" />
         <activity android:name=".quiz.ArrayQuiz.ResultArrayQuizActivity" />
         <activity android:name=".materials.FunctionMaterials.FunctionVariableMaterial.VariableGoalsActivity" />
@@ -43,9 +46,9 @@
         <activity android:name=".quiz.FunctionQuiz.RuleFunctionQuizActivity" />
         <activity android:name=".quiz.ArrayQuiz.RuleArrayQuizActivity" />
         <activity android:name=".quiz.LoopingQuiz.RuleLoopingQuizActivity" />
-        <activity android:name=".home.FunctionCompetenceActivity" />
-        <activity android:name=".home.ArrayCompetenceActivity" />
-        <activity android:name=".home.LoopingCompetenceActivity" />
+        <activity android:name=".home.Competence.FunctionCompetenceActivity" />
+        <activity android:name=".home.Competence.ArrayCompetenceActivity" />
+        <activity android:name=".home.Competence.LoopingCompetenceActivity" />
         <activity android:name=".materials.FunctionMaterials.FunctionFileHeaderMaterial.SecondFileHeaderActivity" />
         <activity android:name=".materials.FunctionMaterials.FunctionFileHeaderMaterial.FirstFileHeaderActivity" />
         <activity android:name=".materials.FunctionMaterials.FunctionParameterMaterial.SecondParameterActivity" />
@@ -113,5 +116,11 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>
+
+    <queries>
+        <intent>
+            <action android:name="com.google.android.youtube.api.service.START" />
+        </intent>
+    </queries>
 
 </manifest>

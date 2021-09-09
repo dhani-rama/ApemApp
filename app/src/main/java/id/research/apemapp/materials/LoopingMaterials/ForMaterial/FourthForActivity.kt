@@ -9,7 +9,7 @@ import com.google.android.youtube.player.YouTubePlayer
 import es.dmoral.toasty.Toasty
 import id.research.apemapp.databinding.ActivityFourthForBinding
 import id.research.apemapp.materials.LoopingMaterials.LoopingDetailMaterialsActivity
-import id.research.apemapp.utils.Constants
+import id.research.apemapp.objects.Constants
 
 class FourthForActivity : YouTubeBaseActivity() {
 

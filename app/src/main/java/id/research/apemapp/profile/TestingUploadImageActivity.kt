@@ -16,7 +16,7 @@ import com.google.firebase.storage.StorageReference
 import es.dmoral.toasty.Toasty
 import id.research.apemapp.HomeActivity
 import id.research.apemapp.databinding.ActivityUploadImageBinding
-import id.research.apemapp.utils.Constants
+import id.research.apemapp.objects.Constants
 import id.research.apemapp.utils.MySharedPreferences
 import java.io.File
 

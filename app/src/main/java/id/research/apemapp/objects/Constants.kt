@@ -1,4 +1,4 @@
-package id.research.apemapp.utils
+package id.research.apemapp.objects
 
 object Constants {
     const val LOGIN = "signIn"

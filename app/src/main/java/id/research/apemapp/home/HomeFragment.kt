@@ -10,11 +10,14 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import com.google.firebase.database.DatabaseReference
 import id.research.apemapp.R
 import id.research.apemapp.databinding.FragmentHomeBinding
+import id.research.apemapp.home.Competence.ArrayCompetenceActivity
+import id.research.apemapp.home.Competence.FunctionCompetenceActivity
+import id.research.apemapp.home.Competence.LoopingCompetenceActivity
+import id.research.apemapp.home.InstructionUsing.InstructionUsingActivity
 import id.research.apemapp.home.OnlineCompiler.OnlineCompilerActivity
-import id.research.apemapp.utils.Constants
+import id.research.apemapp.objects.Constants
 import id.research.apemapp.utils.MySharedPreferences
 import kotlinx.android.synthetic.main.fragment_home.*
 import org.imaginativeworld.whynotimagecarousel.CarouselItem
@@ -82,6 +85,10 @@ class HomeFragment : Fragment() {
 
         homeBinding.cardFunction.setOnClickListener {
             startActivity(Intent(this.requireActivity(), FunctionCompetenceActivity::class.java))
+        }
+
+        homeBinding.cardInstruction.setOnClickListener {
+            startActivity(Intent(this.requireActivity(), InstructionUsingActivity::class.java))
         }
     }
 

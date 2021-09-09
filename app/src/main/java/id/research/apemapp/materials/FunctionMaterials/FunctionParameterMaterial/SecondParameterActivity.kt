@@ -9,7 +9,7 @@ import com.google.android.youtube.player.YouTubePlayer
 import es.dmoral.toasty.Toasty
 import id.research.apemapp.databinding.ActivitySecondParameterBinding
 import id.research.apemapp.materials.FunctionMaterials.FunctionDetailMaterialsActivity
-import id.research.apemapp.utils.Constants
+import id.research.apemapp.objects.Constants
 
 class SecondParameterActivity : YouTubeBaseActivity() {
 

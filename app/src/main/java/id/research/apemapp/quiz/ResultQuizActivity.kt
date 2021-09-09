@@ -6,7 +6,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import id.research.apemapp.HomeActivity
 import id.research.apemapp.databinding.ActivityResultQuizBinding
-import id.research.apemapp.utils.Constants
+import id.research.apemapp.objects.Constants
 import id.research.apemapp.utils.MySharedPreferences
 
 class ResultQuizActivity : AppCompatActivity() {

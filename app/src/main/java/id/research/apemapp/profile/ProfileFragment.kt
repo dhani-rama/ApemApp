@@ -22,7 +22,7 @@ import es.dmoral.toasty.Toasty
 import id.research.apemapp.R
 import id.research.apemapp.auth.SignInActivity
 import id.research.apemapp.databinding.FragmentProfileBinding
-import id.research.apemapp.utils.Constants
+import id.research.apemapp.objects.Constants
 import id.research.apemapp.utils.MySharedPreferences
 import java.io.File
 
@@ -53,7 +53,7 @@ class ProfileFragment : Fragment() {
 
 
         mDatabaseReference = FirebaseDatabase.getInstance().getReference("Student")
-        mStorageReference = FirebaseStorage.getInstance().getReference()
+        mStorageReference = FirebaseStorage.getInstance().reference
         studentId = myPreferences.getValue(Constants.STUDENT_ID)!!
 
         val foto = myPreferences.getValue(Constants.STUDENT_PHOTO)
@@ -125,7 +125,7 @@ class ProfileFragment : Fragment() {
 
                     val goOut = Intent(this@ProfileFragment.context, SignInActivity::class.java)
                     startActivity(goOut)
-                    getActivity()?.finish()
+                    activity?.finish()
                 }
                 .build()
             //show dialog

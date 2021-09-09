@@ -8,7 +8,7 @@ import android.widget.Filterable
 import androidx.recyclerview.widget.RecyclerView
 import id.research.apemapp.databinding.ItemDictionaryBinding
 import id.research.apemapp.models.DictionaryItemEntity
-import id.research.apemapp.utils.Constants
+import id.research.apemapp.objects.Constants
 import java.util.*
 import kotlin.collections.ArrayList
 

@@ -14,7 +14,7 @@ import es.dmoral.toasty.Toasty
 import id.research.apemapp.HomeActivity
 import id.research.apemapp.databinding.ActivitySignInBinding
 import id.research.apemapp.models.AuthenticationItementity
-import id.research.apemapp.utils.Constants
+import id.research.apemapp.objects.Constants
 import id.research.apemapp.utils.MySharedPreferences
 
 class SignInActivity : AppCompatActivity() {

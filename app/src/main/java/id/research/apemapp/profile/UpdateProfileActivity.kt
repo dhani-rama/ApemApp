@@ -4,7 +4,6 @@ import android.annotation.SuppressLint
 import android.app.ProgressDialog
 import android.content.Intent
 import android.content.pm.ActivityInfo
-import android.net.Uri
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -15,7 +14,7 @@ import com.google.firebase.storage.StorageReference
 import es.dmoral.toasty.Toasty
 import id.research.apemapp.HomeActivity
 import id.research.apemapp.databinding.ActivityUpdateProfileBinding
-import id.research.apemapp.utils.Constants
+import id.research.apemapp.objects.Constants
 import id.research.apemapp.utils.MySharedPreferences
 
 class UpdateProfileActivity : AppCompatActivity() {

@@ -9,8 +9,7 @@ import android.view.View
 import id.research.apemapp.HomeActivity
 import id.research.apemapp.databinding.ActivityResultFunctionQuizBinding
 import id.research.apemapp.materials.FunctionMaterials.FunctionDetailMaterialsActivity
-import id.research.apemapp.materials.LoopingMaterials.LoopingDetailMaterialsActivity
-import id.research.apemapp.utils.Constants
+import id.research.apemapp.objects.Constants
 import id.research.apemapp.utils.MySharedPreferences
 
 class ResultFunctionQuizActivity : AppCompatActivity() {
