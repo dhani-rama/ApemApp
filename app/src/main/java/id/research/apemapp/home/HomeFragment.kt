@@ -18,6 +18,7 @@ import id.research.apemapp.home.Competence.LoopingCompetenceActivity
 import id.research.apemapp.home.InstructionUsing.InstructionUsingActivity
 import id.research.apemapp.home.OnlineCompiler.OnlineCompilerActivity
 import id.research.apemapp.objects.Constants
+import id.research.apemapp.profile.DeveloperProfileActivity
 import id.research.apemapp.utils.MySharedPreferences
 import kotlinx.android.synthetic.main.fragment_home.*
 import org.imaginativeworld.whynotimagecarousel.CarouselItem
@@ -90,6 +91,13 @@ class HomeFragment : Fragment() {
         homeBinding.cardInstruction.setOnClickListener {
             startActivity(Intent(this.requireActivity(), InstructionUsingActivity::class.java))
         }
+
+        homeBinding.cardDeveloper.setOnClickListener {
+            startActivity(Intent(this.requireActivity(), DeveloperProfileActivity::class.java))
+            activity?.finish()
+        }
+
+
     }
 
     private fun firstImageSlider() {
@@ -97,8 +105,7 @@ class HomeFragment : Fragment() {
         val firstList = mutableListOf<CarouselItem>()
 
         firstList.add(CarouselItem(imageDrawable = R.drawable.img_logo_kemdikbud))
-        firstList.add(CarouselItem(imageDrawable = R.drawable.img_first_logo_um))
-        firstList.add(CarouselItem(imageDrawable = R.drawable.img_second_logo_um))
+        firstList.add(CarouselItem(imageDrawable = R.drawable.img_logo_um))
         firstList.add(CarouselItem(imageDrawable = R.drawable.img_first_logo_vocational))
         firstList.add(CarouselItem(imageDrawable = R.drawable.img_second_logo_vocational))
 

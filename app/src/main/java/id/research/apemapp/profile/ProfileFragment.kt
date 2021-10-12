@@ -82,9 +82,9 @@ class ProfileFragment : Fragment() {
 //            startActivity(Intent(this.requireActivity(), UpdatePasswordActivity::class.java))
 //        }
 
-        settingsBinding.btnProfilDeveloper.setOnClickListener {
-            startActivity(Intent(this.requireActivity(), DeveloperProfileActivity::class.java))
-        }
+//        settingsBinding.btnProfilDeveloper.setOnClickListener {
+//            startActivity(Intent(this.requireActivity(), DeveloperProfileActivity::class.java))
+//        }
 
 //        settingsBinding.btnInstructionUsed.setOnClickListener {
 //            Toasty.info(this.requireActivity(), "Belum Aku Coding Sayang :)", Toast.LENGTH_LONG)

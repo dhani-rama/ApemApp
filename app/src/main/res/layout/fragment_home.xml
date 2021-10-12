@@ -16,7 +16,7 @@
         <org.imaginativeworld.whynotimagecarousel.ImageCarousel
             android:id="@+id/carousel_view_first"
             android:layout_width="match_parent"
-            android:layout_height="180dp"
+            android:layout_height="150dp"
             app:autoPlay="true"
             app:autoPlayDelay="3000"
             app:imageScaleType="centerCrop"
@@ -30,7 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
-            android:layout_marginTop="148dp"
+            android:layout_marginTop="128dp"
             android:background="@drawable/bg_rounded_image"
             android:padding="4dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -44,20 +44,50 @@
 
         </RelativeLayout>
 
+        <!--        <com.google.android.material.textview.MaterialTextView-->
+        <!--            android:id="@+id/tv_halo"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginStart="8dp"-->
+        <!--            android:layout_marginTop="8dp"-->
+        <!--            android:paddingHorizontal="8dp"-->
+        <!--            android:text="@string/halo"-->
+        <!--            android:textColor="@color/black"-->
+        <!--            android:textSize="20sp"-->
+        <!--            android:textStyle="bold"-->
+        <!--            app:fontFamily="@font/montserrat"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@id/layout_photo" />-->
+
+        <!--        <com.google.android.material.textview.MaterialTextView-->
+        <!--            android:id="@+id/tv_name"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:maxLines="3"-->
+        <!--            android:text="@string/sayang"-->
+        <!--            android:textColor="@color/black"-->
+        <!--            android:textSize="20sp"-->
+        <!--            android:textStyle="bold"-->
+        <!--            app:fontFamily="@font/montserrat"-->
+        <!--            app:layout_constraintBottom_toBottomOf="@id/tv_halo"-->
+        <!--            app:layout_constraintStart_toEndOf="@id/tv_halo"-->
+        <!--            app:layout_constraintTop_toTopOf="@id/tv_halo" />-->
+
+
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tv_halo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="12dp"
             android:paddingHorizontal="8dp"
             android:text="@string/halo"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold"
             app:fontFamily="@font/montserrat"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/layout_photo" />
+            app:layout_constraintBottom_toBottomOf="@id/layout_photo"
+            app:layout_constraintStart_toEndOf="@id/layout_photo"
+            app:layout_constraintTop_toTopOf="@id/layout_photo" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tv_name"
@@ -74,31 +104,46 @@
             app:layout_constraintTop_toTopOf="@id/tv_halo" />
 
 
+        <!--        <com.google.android.material.textview.MaterialTextView-->
+        <!--            android:id="@+id/tv_ask"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginStart="8dp"-->
+        <!--            android:paddingHorizontal="8dp"-->
+        <!--            android:text="@string/sudah_siap_belajar_hari_ini"-->
+        <!--            android:textColor="@color/black"-->
+        <!--            android:textSize="14sp"-->
+        <!--            android:textStyle="bold"-->
+        <!--            app:fontFamily="@font/montserrat"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@id/tv_halo" />-->
+
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tv_ask"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:paddingHorizontal="8dp"
+            android:paddingVertical="8dp"
             android:text="@string/sudah_siap_belajar_hari_ini"
             android:textColor="@color/black"
             android:textSize="14sp"
             android:textStyle="bold"
             app:fontFamily="@font/montserrat"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_halo" />
+            app:layout_constraintTop_toBottomOf="@id/layout_photo" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tv_competence"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="4dp"
             android:fontFamily="@font/montserrat"
             android:paddingHorizontal="16dp"
             android:paddingVertical="8dp"
-            android:text="KD dan IPK"
+            android:text="Materi"
             android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_ask" />
@@ -124,6 +169,13 @@
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.99" />
 
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/fourth_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/card_looping"
             android:layout_width="0dp"
@@ -146,7 +198,7 @@
                     android:id="@+id/img_looping"
                     android:layout_width="32dp"
                     android:layout_height="32dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="12dp"
                     android:src="@drawable/ic_loop"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -162,37 +214,38 @@
                     android:textSize="14sp"
                     android:textStyle="bold"
                     app:fontFamily="@font/montserrat"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/img_looping" />
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/tv_looping_competence"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:fontFamily="@font/montserrat"
-                    android:gravity="center_horizontal"
-                    android:maxLines="3"
-                    android:paddingHorizontal="2dp"
-                    android:text="3.7 Menerapkan struktur kontrol perulangan dalam bahasa pemrograman."
-                    android:textColor="@color/abu_abu2"
-                    android:textSize="10sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/header_looping" />
+                <!--                <com.google.android.material.textview.MaterialTextView-->
+                <!--                    android:id="@+id/tv_looping_competence"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:ems="10"-->
+                <!--                    android:fontFamily="@font/montserrat"-->
+                <!--                    android:gravity="center_horizontal"-->
+                <!--                    android:maxLines="3"-->
+                <!--                    android:paddingHorizontal="2dp"-->
+                <!--                    android:text="3.7 Menerapkan struktur kontrol perulangan dalam bahasa pemrograman."-->
+                <!--                    android:textColor="@color/abu_abu2"-->
+                <!--                    android:textSize="10sp"-->
+                <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@id/header_looping" />-->
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="8dp"
-                    android:text="@string/detail"
-                    android:textColor="@color/biru1"
-                    android:textSize="12sp"
-                    android:textStyle="bold"
-                    app:fontFamily="@font/montserrat"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_looping_competence" />
+                <!--                <com.google.android.material.textview.MaterialTextView-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:padding="8dp"-->
+                <!--                    android:text="@string/detail"-->
+                <!--                    android:textColor="@color/biru1"-->
+                <!--                    android:textSize="12sp"-->
+                <!--                    android:textStyle="bold"-->
+                <!--                    app:fontFamily="@font/montserrat"-->
+                <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@id/tv_looping_competence" />-->
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </com.google.android.material.card.MaterialCardView>
@@ -220,7 +273,7 @@
                     android:id="@+id/img_array"
                     android:layout_width="32dp"
                     android:layout_height="32dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="12dp"
                     android:src="@drawable/ic_array"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -236,37 +289,38 @@
                     android:textSize="14sp"
                     android:textStyle="bold"
                     app:fontFamily="@font/montserrat"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/img_array" />
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/tv_array_competence"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:fontFamily="@font/montserrat"
-                    android:gravity="center_horizontal"
-                    android:maxLines="3"
-                    android:paddingHorizontal="2dp"
-                    android:text="@string/kd_array1"
-                    android:textColor="@color/abu_abu2"
-                    android:textSize="10sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/header_array" />
+                <!--                <com.google.android.material.textview.MaterialTextView-->
+                <!--                    android:id="@+id/tv_array_competence"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:ems="10"-->
+                <!--                    android:fontFamily="@font/montserrat"-->
+                <!--                    android:gravity="center_horizontal"-->
+                <!--                    android:maxLines="3"-->
+                <!--                    android:paddingHorizontal="2dp"-->
+                <!--                    android:text="@string/kd_array1"-->
+                <!--                    android:textColor="@color/abu_abu2"-->
+                <!--                    android:textSize="10sp"-->
+                <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@id/header_array" />-->
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="8dp"
-                    android:text="@string/detail"
-                    android:textColor="@color/biru1"
-                    android:textSize="12sp"
-                    android:textStyle="bold"
-                    app:fontFamily="@font/montserrat"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_array_competence" />
+                <!--                <com.google.android.material.textview.MaterialTextView-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:padding="8dp"-->
+                <!--                    android:text="@string/detail"-->
+                <!--                    android:textColor="@color/biru1"-->
+                <!--                    android:textSize="12sp"-->
+                <!--                    android:textStyle="bold"-->
+                <!--                    app:fontFamily="@font/montserrat"-->
+                <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@id/tv_array_competence" />-->
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </com.google.android.material.card.MaterialCardView>
@@ -294,7 +348,7 @@
                     android:id="@+id/img_function"
                     android:layout_width="32dp"
                     android:layout_height="32dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="12dp"
                     android:src="@drawable/ic_fungsi"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -310,54 +364,55 @@
                     android:textSize="14sp"
                     android:textStyle="bold"
                     app:fontFamily="@font/montserrat"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/img_function" />
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/tv_function_competence"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:fontFamily="@font/montserrat"
-                    android:gravity="center_horizontal"
-                    android:maxLines="3"
-                    android:paddingHorizontal="2dp"
-                    android:text="@string/kd_fungsi"
-                    android:textColor="@color/abu_abu2"
-                    android:textSize="10sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/header_function" />
+                <!--                <com.google.android.material.textview.MaterialTextView-->
+                <!--                    android:id="@+id/tv_function_competence"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:ems="10"-->
+                <!--                    android:fontFamily="@font/montserrat"-->
+                <!--                    android:gravity="center_horizontal"-->
+                <!--                    android:maxLines="3"-->
+                <!--                    android:paddingHorizontal="2dp"-->
+                <!--                    android:text="@string/kd_fungsi"-->
+                <!--                    android:textColor="@color/abu_abu2"-->
+                <!--                    android:textSize="10sp"-->
+                <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@id/header_function" />-->
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:padding="8dp"
-                    android:text="@string/detail"
-                    android:textColor="@color/biru1"
-                    android:textSize="12sp"
-                    android:textStyle="bold"
-                    app:fontFamily="@font/montserrat"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_function_competence" />
+                <!--                <com.google.android.material.textview.MaterialTextView-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginTop="12dp"-->
+                <!--                    android:padding="8dp"-->
+                <!--                    android:text="@string/detail"-->
+                <!--                    android:textColor="@color/biru1"-->
+                <!--                    android:textSize="12sp"-->
+                <!--                    android:textStyle="bold"-->
+                <!--                    app:fontFamily="@font/montserrat"-->
+                <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@id/tv_function_competence" />-->
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </com.google.android.material.card.MaterialCardView>
-        
+
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tv_compiler"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="12dp"
             android:fontFamily="@font/montserrat"
             android:paddingHorizontal="16dp"
             android:paddingVertical="8dp"
             android:text="Compiler Online"
             android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/card_looping" />
@@ -365,7 +420,7 @@
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/card_code_editor"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="130dp"
             android:layout_marginHorizontal="16dp"
             android:clickable="true"
             android:focusable="true"
@@ -385,38 +440,114 @@
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tv_instruction"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="12dp"
             android:fontFamily="@font/montserrat"
-            android:paddingHorizontal="16dp"
+            android:gravity="center"
             android:paddingVertical="8dp"
-            android:text="Petunjuk Penggunaan"
+            android:text="@string/instruction"
             android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textSize="16sp"
             android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/fourth_guideline"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/card_code_editor" />
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/card_instruction"
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_width="0dp"
+            android:layout_height="130dp"
+            android:layout_marginHorizontal="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="@id/fourth_guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_instruction"
+            app:rippleColor="#DBDBDB">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/img_instruction"
+                    tools:ignore="ContentDescription" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textColor="@color/white"
+                    android:padding="4dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:text="@string/instruction"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_developer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:gravity="center"
+            android:paddingVertical="8dp"
+            android:text="@string/developer_profile"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/tv_instruction"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/fourth_guideline"
+            app:layout_constraintTop_toTopOf="@id/tv_instruction" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_developer"
+            android:layout_width="0dp"
+            android:layout_height="130dp"
             android:layout_marginHorizontal="16dp"
             android:clickable="true"
             android:focusable="true"
             app:cardCornerRadius="20dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_instruction"
+            app:layout_constraintStart_toStartOf="@id/fourth_guideline"
+            app:layout_constraintTop_toBottomOf="@+id/tv_developer"
             app:rippleColor="#DBDBDB">
 
-            <ImageView
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/img_instruction"
-                tools:ignore="ContentDescription" />
+                android:layout_height="match_parent">
 
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/img_developer_profile"
+                    tools:ignore="ContentDescription" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textColor="@color/white"
+                    android:padding="4dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:text="@string/developer_profile"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </com.google.android.material.card.MaterialCardView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
