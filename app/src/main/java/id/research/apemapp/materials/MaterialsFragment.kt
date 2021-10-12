@@ -65,8 +65,7 @@ class MaterialsFragment: Fragment() {
         val firstList = mutableListOf<CarouselItem>()
 
         firstList.add(CarouselItem(imageDrawable = R.drawable.img_logo_kemdikbud))
-        firstList.add(CarouselItem(imageDrawable = R.drawable.img_first_logo_um))
-        firstList.add(CarouselItem(imageDrawable = R.drawable.img_second_logo_um))
+        firstList.add(CarouselItem(imageDrawable = R.drawable.img_logo_um))
         firstList.add(CarouselItem(imageDrawable = R.drawable.img_first_logo_vocational))
         firstList.add(CarouselItem(imageDrawable = R.drawable.img_second_logo_vocational))
 

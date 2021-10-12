@@ -14,7 +14,7 @@
         android:paddingVertical="16dp"
         android:text="Konsep Perulangan"
         android:textColor="@color/black"
-        android:textSize="24sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:fontFamily="@font/montserrat"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,7 +28,7 @@
         android:lineSpacingExtra="8dp"
         android:text="Berikut ini video kedua dari konsep perulangan"
         android:textColor="@color/black"
-        android:textSize="18sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_header_concept_looping"
@@ -78,6 +78,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/btn_back"
         app:rippleColor="#DBDBDB" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

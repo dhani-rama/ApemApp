@@ -19,7 +19,7 @@
             android:paddingVertical="16dp"
             android:text="Parameter Pass By Reference"
             android:textColor="@color/black"
-            android:textSize="24sp"
+            android:textSize="20sp"
             android:textStyle="bold"
             app:fontFamily="@font/montserrat"
             app:layout_constraintStart_toStartOf="parent"
@@ -33,7 +33,7 @@
             android:lineSpacingExtra="8dp"
             android:text="Pass by reference merupakan fungsi yang digunakan untuk mengirimkan alamat dari variabel yang menyimpan nilai tersebut. Hal – hal yang perlu diperhatikan dalam pengiriman parameter menggunakan pass by reference sebagai berikut :"
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_header_function_variable"
@@ -56,7 +56,7 @@
                 android:lineSpacingExtra="8dp"
                 android:text="1."
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
@@ -65,7 +65,7 @@
                 android:paddingHorizontal="16dp"
                 android:text="Yang dikirimkan ke dalam fungsi atau prosedur adalah alamat letak dari nilai datanya."
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -85,7 +85,7 @@
                 android:lineSpacingExtra="8dp"
                 android:text="2."
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
@@ -94,7 +94,7 @@
                 android:paddingHorizontal="16dp"
                 android:text="Fungsi atau prosedur yang menerima kiriman alamat ini akan menggunakan alamat yang sama untuk mendapatkan nilai datanya."
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -114,7 +114,7 @@
                 android:lineSpacingExtra="8dp"
                 android:text="3."
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
@@ -123,7 +123,7 @@
                 android:paddingHorizontal="16dp"
                 android:text="Perubahan nilai fungsi atau prosedur akan mengubah nilai asli di bagian program yang memanggil fungsi atau prosedur."
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -143,7 +143,7 @@
                 android:lineSpacingExtra="8dp"
                 android:text="4."
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
@@ -152,7 +152,7 @@
                 android:paddingHorizontal="16dp"
                 android:text="Tidak dapat digunakan untuk suatu ungkapan, hanya dapat digunakan untuk sebuah variabel atau elemen larik atau konstanta saja."
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -172,7 +172,7 @@
                 android:lineSpacingExtra="8dp"
                 android:text="5."
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
@@ -181,7 +181,7 @@
                 android:paddingHorizontal="16dp"
                 android:text="Pengiriman dua arah baik pada bagian program yang memanggil maupun program yang dipanggil oleh fungsi atau prosedur."
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
         </LinearLayout>
 
         <com.google.android.material.textview.MaterialTextView
@@ -193,7 +193,7 @@
             android:paddingVertical="16dp"
             android:text="Berikut ini contoh video yang menunjukkan program fungsi pass by reference."
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/layout_fifth_number"

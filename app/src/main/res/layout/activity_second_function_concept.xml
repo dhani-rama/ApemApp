@@ -20,7 +20,7 @@
             android:paddingVertical="16dp"
             android:text="Konsep Fungsi"
             android:textColor="@color/black"
-            android:textSize="24sp"
+            android:textSize="20sp"
             android:textStyle="bold"
             app:fontFamily="@font/montserrat"
             app:layout_constraintStart_toStartOf="parent"
@@ -34,7 +34,7 @@
             android:lineSpacingExtra="8dp"
             android:text="Di dalam pemrograman C++, fungsi terbagi menjadi 2 jenis yaitu fungsi buatan dan fungsi build-in(bawaan) merupakan fungsi yang sudah menjadi bagian dari paket compiler yang kita gunakan yang sudah tersedia untuk digunakan. Adapun bentuk umum dari sebuah fungsi sebagai berikut."
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_header_function_concept"
@@ -56,7 +56,7 @@
             android:layout_height="wrap_content"
             android:text="Gambar 3.2 Bentuk Umum dari Sebuah Fungsi"
             android:textColor="@color/black"
-            android:textSize="14sp"
+            android:textSize="12sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -72,7 +72,7 @@
             android:paddingVertical="16dp"
             android:text="Berikut ini contoh video yang menunjukkan pendeklarasian sebuah fungsi sebagai berikut :"
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_info_first_image"
@@ -96,7 +96,7 @@
             android:paddingVertical="16dp"
             android:text="Mendeklarasikan fungsi pada suatu program dapat memudahkan kita dalam beberapa hal seperti : "
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/video_first"
@@ -118,7 +118,7 @@
                 android:lineSpacingExtra="8dp"
                 android:text="1."
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
@@ -127,7 +127,7 @@
                 android:paddingHorizontal="16dp"
                 android:text="Menguraikan program yang rumit menjadi langkah – langkah yang lebih sederhana atau kecil."
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -147,7 +147,7 @@
                 android:lineSpacingExtra="8dp"
                 android:text="2."
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
@@ -156,7 +156,7 @@
                 android:paddingHorizontal="16dp"
                 android:text="Menyembunyikan informasi dari user, sehingga mencegah adanya perbuatan iseng seperti memodifikasi program yang kita buat."
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -176,7 +176,7 @@
                 android:lineSpacingExtra="8dp"
                 android:text="3."
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
@@ -185,7 +185,7 @@
                 android:paddingHorizontal="16dp"
                 android:text="Mengurangi duplikasi kode dalam program."
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -205,7 +205,7 @@
                 android:lineSpacingExtra="8dp"
                 android:text="4."
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
@@ -214,7 +214,7 @@
                 android:paddingHorizontal="16dp"
                 android:text="Alur program menjadi lebih mudah dimengerti."
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -234,7 +234,7 @@
                 android:lineSpacingExtra="8dp"
                 android:text="5."
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
@@ -243,7 +243,7 @@
                 android:paddingHorizontal="16dp"
                 android:text="Fungsi ataupun prosedur dapat dipakai kembali."
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
         </LinearLayout>
 
 

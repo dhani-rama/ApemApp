@@ -19,7 +19,7 @@
             android:paddingVertical="16dp"
             android:text="Konsep Perulangan"
             android:textColor="@color/black"
-            android:textSize="24sp"
+            android:textSize="20sp"
             android:textStyle="bold"
             app:fontFamily="@font/montserrat"
             app:layout_constraintStart_toStartOf="parent"
@@ -33,7 +33,7 @@
             android:lineSpacingExtra="8dp"
             android:text="Pada struktur perulangan, selalu disertai bagian inialisasi, terminasi, iterasi, dan statement yang diulang."
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_header_concept_looping"
@@ -55,7 +55,7 @@
                 android:layout_height="wrap_content"
                 android:text="1."
                 android:textColor="@color/black"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 app:fontFamily="@font/montserrat" />
 
             <com.google.android.material.textview.MaterialTextView
@@ -66,7 +66,7 @@
                 android:paddingHorizontal="12dp"
                 android:text="Inialisasi merupakan nilai awal yang diberikan pada suatu variabel."
                 android:textColor="@color/black"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 app:fontFamily="@font/montserrat"
                 tools:ignore="UnusedAttribute" />
 
@@ -88,7 +88,7 @@
                 android:layout_height="wrap_content"
                 android:text="2."
                 android:textColor="@color/black"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 app:fontFamily="@font/montserrat" />
 
             <com.google.android.material.textview.MaterialTextView
@@ -99,7 +99,7 @@
                 android:paddingHorizontal="8dp"
                 android:text="Terminasi merupakan kondisi untuk berhenti dari proses perulangan."
                 android:textColor="@color/black"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 app:fontFamily="@font/montserrat"
                 tools:ignore="UnusedAttribute" />
 
@@ -121,7 +121,7 @@
                 android:layout_height="wrap_content"
                 android:text="3."
                 android:textColor="@color/black"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 app:fontFamily="@font/montserrat" />
 
             <com.google.android.material.textview.MaterialTextView
@@ -132,7 +132,7 @@
                 android:paddingHorizontal="8dp"
                 android:text="Iterasi merupakan kondisi pertambahan atau pengurangan agar proses perulangan dapat berjalan."
                 android:textColor="@color/black"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 app:fontFamily="@font/montserrat"
                 tools:ignore="UnusedAttribute" />
 
@@ -154,7 +154,7 @@
                 android:layout_height="wrap_content"
                 android:text="4."
                 android:textColor="@color/black"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 app:fontFamily="@font/montserrat" />
 
             <com.google.android.material.textview.MaterialTextView
@@ -165,7 +165,7 @@
                 android:paddingHorizontal="8dp"
                 android:text="Statement yang diulang merupakan bagian yang berisi beberapa proses yang perlu dilakukan secara berulang – berulang."
                 android:textColor="@color/black"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 app:fontFamily="@font/montserrat"
                 tools:ignore="UnusedAttribute" />
 
@@ -179,7 +179,7 @@
             android:lineSpacingExtra="8dp"
             android:text="Beberapa bentuk struktur perulangan memiliki syarat dan karakteristik yang berbeda – beda. Ada beberapa bentuk perulangan yang dapat digunakan untuk studi kasus yang sama. Namun ada juga bentuk perulangan yang hanya cocok untuk kasus tertentu saja. Adapun contoh struktur perulangan sebagai berikut."
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="14sp"
             app:fontFamily="@font/montserrat"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -209,7 +209,7 @@
                 android:layout_marginBottom="16dp"
                 android:text="Gambar 1.2. Contoh Struktur Perulangan"
                 android:textColor="@color/black"
-                android:textSize="14sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
 
         </FrameLayout>

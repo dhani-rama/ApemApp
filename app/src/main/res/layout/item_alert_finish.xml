@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_header_alert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+
+            android:text="Materi Telah Selesai"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/img_logo"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_header_alert"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="false"
+            app:lottie_rawRes="@raw/complete" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_ask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:paddingVertical="16dp"
+            android:text="Apakah kamu ingin membuat program menggunakan compiler A-PEM ?"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_logo" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_next"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:backgroundTint="#F2328D"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingVertical="12dp"
+            android:text="Iya"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:cardElevation="4dp"
+            app:cornerRadius="15dp"
+            android:layout_marginHorizontal="8dp"
+            app:layout_constraintEnd_toEndOf="@id/third_guideline"
+            app:layout_constraintStart_toStartOf="@id/first_guideline"
+            app:layout_constraintTop_toBottomOf="@id/tv_ask"
+            app:rippleColor="#DBDBDB" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_dismiss"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#F2328D"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingVertical="12dp"
+            android:text="Tidak"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:cardElevation="4dp"
+            app:cornerRadius="15dp"
+            android:layout_marginHorizontal="8dp"
+            app:layout_constraintEnd_toEndOf="@id/first_guideline"
+            app:layout_constraintStart_toStartOf="@id/second_guideline"
+            app:layout_constraintTop_toTopOf="@id/btn_next"
+            app:layout_constraintBottom_toBottomOf="@id/btn_next"
+            app:rippleColor="#DBDBDB" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/first_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/second_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.125" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/third_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.875" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

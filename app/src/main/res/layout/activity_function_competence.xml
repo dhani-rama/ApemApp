@@ -50,9 +50,9 @@
             android:gravity="center_horizontal"
             android:maxLines="5"
             android:paddingHorizontal="16dp"
-            android:text="KD dan IPK"
+            android:text="Fungsi"
             android:textColor="@color/white"
-            android:textSize="28sp"
+            android:textSize="24sp"
             app:fontFamily="@font/poppins_semibold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -69,7 +69,7 @@
             android:paddingVertical="16dp"
             android:text="Kompetensi Dasar Fungsi"
             android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textSize="16sp"
             app:fontFamily="@font/poppins_semibold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -92,7 +92,7 @@
                 android:layout_height="wrap_content"
                 android:text="3.9"
                 android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 app:fontFamily="@font/poppins_semibold" />
 
             <com.google.android.material.textview.MaterialTextView
@@ -102,7 +102,7 @@
                 android:paddingHorizontal="16dp"
                 android:text="Menerapkan penggunaan fungsi"
                 android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 app:fontFamily="@font/poppins_semibold" />
         </LinearLayout>
 
@@ -111,14 +111,14 @@
             android:id="@+id/tv_ipk_function"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="8dp"
             android:gravity="center_horizontal"
             android:maxLines="5"
             android:paddingHorizontal="16dp"
             android:paddingVertical="16dp"
             android:text="Indikator Pencapaian Kompetensi"
             android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textSize="16sp"
             app:fontFamily="@font/poppins_semibold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -141,7 +141,7 @@
                 android:layout_height="wrap_content"
                 android:text="3.9.1"
                 android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 app:fontFamily="@font/poppins_semibold" />
 
             <com.google.android.material.textview.MaterialTextView
@@ -151,7 +151,7 @@
                 android:paddingHorizontal="16dp"
                 android:text="Mengemukakan konsep fungsi dalam bahasa pemrograman C++."
                 android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 app:fontFamily="@font/poppins_semibold" />
         </LinearLayout>
 
@@ -172,7 +172,7 @@
                 android:layout_height="wrap_content"
                 android:text="3.9.2"
                 android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 app:fontFamily="@font/poppins_semibold" />
 
             <com.google.android.material.textview.MaterialTextView
@@ -182,7 +182,7 @@
                 android:paddingHorizontal="16dp"
                 android:text="Menerapkan penggunaan fungsifungsi buatan sendiri dalam menyelesaikan permasalahan sederhana"
                 android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 app:fontFamily="@font/poppins_semibold" />
         </LinearLayout>
 
@@ -203,7 +203,7 @@
                 android:layout_height="wrap_content"
                 android:text="3.9.3"
                 android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 app:fontFamily="@font/poppins_semibold" />
 
             <com.google.android.material.textview.MaterialTextView
@@ -213,8 +213,30 @@
                 android:paddingHorizontal="16dp"
                 android:text="Mengemukakan konsep fungsi dalam bahasa pemrograman C++."
                 android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 app:fontFamily="@font/poppins_semibold" />
         </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_next_function"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="#F2328D"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingHorizontal="42dp"
+            android:paddingVertical="12dp"
+            android:text="@string/function_material_access"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:cardElevation="4dp"
+            app:cornerRadius="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_third_ipk"
+            app:rippleColor="#DBDBDB" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

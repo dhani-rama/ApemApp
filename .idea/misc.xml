@@ -1,5 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_array_competence.xml" value="0.1" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_array_concept_goal.xml" value="0.22" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_array_first_dimension_goals.xml" value="0.25" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_array_second_dimension_goals.xml" value="0.22" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_array_third_dimension_goals.xml" value="0.22" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_developer_profile.xml" value="0.2041025641025641" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_fifth_built_in.xml" value="0.18" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_file_header_goals.xml" value="0.22" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_first_array_concept.xml" value="0.25" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_first_array_first_dimension.xml" value="0.22" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_first_array_second_dimension.xml" value="0.25" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_first_array_third_dimension.xml" value="0.25" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_first_file_header.xml" value="0.22" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_first_for.xml" value="0.2041025641025641" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_first_function_concept.xml" value="0.25" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_first_looping_concept.xml" value="0.25" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_first_nested_for.xml" value="0.22" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_first_parameter.xml" value="0.22" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_first_variable.xml" value="0.22" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_first_while.xml" value="0.22" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_for_learning_goals.xml" value="0.22" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_fourth_for.xml" value="0.22" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_fourth_looping_concept.xml" value="0.18" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_fourth_while.xml" value="0.22" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_function_competence.xml" value="0.132890365448505" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_function_concept_goals.xml" value="0.22" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_function_detail_materials.xml" value="0.10555555555555556" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_instruction_beranda.xml" value="0.15833333333333333" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_instruction_using.xml" value="0.2041025641025641" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_looping_competence.xml" value="0.1" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_looping_concept_goals.xml" value="0.22" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_nested_for_learning_goals.xml" value="0.22" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_parameter_goals.xml" value="0.25" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_result_array_quiz.xml" value="0.10555555555555556" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_result_function_quiz.xml" value="0.10555555555555556" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_result_looping_quiz.xml" value="0.2041025641025641" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_rule_array_quiz.xml" value="0.2041025641025641" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_rule_function_quiz.xml" value="0.2041025641025641" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_second_array_concept.xml" value="0.18" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_second_array_first_dimension.xml" value="0.18" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_second_array_second_dimension.xml" value="0.22" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_second_array_third_dimension.xml" value="0.22" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_second_file_header.xml" value="0.22" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_second_for.xml" value="0.2041025641025641" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_second_function_concept.xml" value="0.25" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_second_looping_concept.xml" value="0.2" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_second_nested_for.xml" value="0.1" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_second_parameter.xml" value="0.18" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_second_variable.xml" value="0.22" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_second_while.xml" value="0.25" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_splash_screen.xml" value="0.10555555555555556" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_third_for.xml" value="0.33" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_third_function_concept.xml" value="0.2" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_third_looping_concept.xml" value="0.1" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_third_while.xml" value="0.2" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_update_profile.xml" value="0.10555555555555556" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_variable_goals.xml" value="0.15" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/activity_while_learning_goals.xml" value="0.22" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/fragment_dictionary.xml" value="0.2041025641025641" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/fragment_home.xml" value="0.22" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/fragment_instruction_dictionary.xml" value="0.15833333333333333" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/fragment_instruction_home.xml" value="0.15833333333333333" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/fragment_instruction_profile.xml" value="0.15833333333333333" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/fragment_instructon_material.xml" value="0.15833333333333333" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/fragment_materials.xml" value="0.21" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/fragment_profile.xml" value="0.10555555555555556" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/item_alert_finish.xml" value="0.1824074074074074" />
+        <entry key="..\:/Users/ramad/AndroidStudioProjects/ApemApp/app/src/main/res/layout/item_instruction.xml" value="0.22" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>

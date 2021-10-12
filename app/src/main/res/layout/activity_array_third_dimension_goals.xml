@@ -14,7 +14,7 @@
         android:paddingVertical="16dp"
         android:text="Tujuan Pembelajaran"
         android:textColor="@color/black"
-        android:textSize="24sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:fontFamily="@font/montserrat"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:text="1."
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="14sp"
             app:fontFamily="@font/montserrat" />
 
         <com.google.android.material.textview.MaterialTextView
@@ -44,9 +44,10 @@
             android:layout_height="wrap_content"
             android:maxLines="5"
             android:paddingHorizontal="16dp"
+            android:lineSpacingExtra="8dp"
             android:text="Peserta didik diharapkan mampu memahami dan menjelaskan struktur array multi dimensi."
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="14sp"
             app:fontFamily="@font/montserrat" />
     </LinearLayout>
 
@@ -66,7 +67,7 @@
             android:layout_height="wrap_content"
             android:text="2."
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="14sp"
             app:fontFamily="@font/montserrat" />
 
         <com.google.android.material.textview.MaterialTextView
@@ -74,9 +75,10 @@
             android:layout_height="wrap_content"
             android:maxLines="5"
             android:paddingHorizontal="16dp"
+            android:lineSpacingExtra="8dp"
             android:text="Peserta didik diharapkan dapat membuat program sederhana dengan menggunakan struktur array multi dimensi."
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="14sp"
             app:fontFamily="@font/montserrat" />
     </LinearLayout>
 

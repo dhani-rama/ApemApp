@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:background="@drawable/bg_instruction">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -13,22 +14,306 @@
             android:id="@+id/tv_instruction"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:fontFamily="@font/poppins_semibold"
             android:text="Petunjuk Penggunaan"
+            android:textColor="@color/white"
             android:textSize="24sp"
             android:textStyle="bold"
-            android:textColor="@color/white"/>
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--        <ImageView-->
+        <!--            android:id="@+id/img_instruction"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="400dp"-->
+        <!--            android:layout_marginTop="16dp"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@id/tv_instruction"-->
+        <!--            android:src="@drawable/img_home"/>-->
 
         <com.github.chrisbanes.photoview.PhotoView
             android:id="@+id/img_instruction"
-            android:layout_width="match_parent"
-            android:layout_height="350dp"
+            android:layout_width="wrap_content"
+            android:layout_height="400dp"
+            android:layout_marginTop="16dp"
             android:src="@drawable/img_home"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_instruction" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_explaination"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Penjelasan"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_instruction" />
+
+        <LinearLayout
+            android:id="@+id/layout_first_rule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:weightSum="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_explaination">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_first_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1."
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:fontFamily="@font/poppins_semibold" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_first_explaination"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:text="Pastikan anda sudah memahami materi yang telah anda pelajari."
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:fontFamily="@font/poppins_semibold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_second_rule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:weightSum="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_first_rule">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_second_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2."
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:fontFamily="@font/poppins_semibold" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_second_explaination"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:text="Kuis Array disajikan dengan 20 soal dengan masing – masing soal terdapat 5 pilihan."
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:fontFamily="@font/poppins_semibold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_third_rule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:weightSum="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_second_rule">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_third_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3."
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:fontFamily="@font/poppins_semibold" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_third_explaination"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:text="Bacalah soal kuis dengan seksama."
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:fontFamily="@font/poppins_semibold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_fourth_rule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:weightSum="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_third_rule">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_fourth_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4."
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:fontFamily="@font/poppins_semibold" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_fourth_explaination"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:text="Pilih salah satu pilihan jawaban yang menurut anda benar."
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:fontFamily="@font/poppins_semibold" />
+        </LinearLayout>
+
+
+        <!--        <com.google.android.material.textview.MaterialTextView-->
+        <!--            android:id="@+id/tv_first_number"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:fontFamily="@font/poppins_semibold"-->
+        <!--            android:paddingHorizontal="8dp"-->
+        <!--            android:text="1."-->
+        <!--            android:textColor="@color/white"-->
+        <!--            android:textSize="18sp"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="@id/first_guideline"-->
+        <!--            app:layout_constraintTop_toBottomOf="@id/tv_explaination" />-->
+
+        <!--        <com.google.android.material.textview.MaterialTextView-->
+        <!--            android:id="@+id/tv_first_explanation"-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:fontFamily="@font/poppins_semibold"-->
+        <!--            android:layout_marginStart="8dp"-->
+        <!--            android:text="penjelasan 1"-->
+        <!--            android:lineSpacingExtra="8dp"-->
+        <!--            android:textSize="18sp"-->
+        <!--            android:textColor="@color/white"-->
+        <!--            app:layout_constraintEnd_toEndOf="@id/second_guideline"-->
+        <!--            app:layout_constraintStart_toStartOf="@id/first_guideline"-->
+        <!--            app:layout_constraintTop_toTopOf="@id/tv_first_number"-->
+        <!--            app:layout_constraintBottom_toBottomOf="@id/tv_first_number" />-->
+
+        <!--        <com.google.android.material.textview.MaterialTextView-->
+        <!--            android:id="@+id/tv_second_number"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:fontFamily="@font/poppins_semibold"-->
+        <!--            android:paddingHorizontal="8dp"-->
+        <!--            android:layout_marginTop="8dp"-->
+        <!--            android:text="2."-->
+        <!--            android:textColor="@color/white"-->
+        <!--            android:textSize="18sp"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="@id/first_guideline"-->
+        <!--            app:layout_constraintTop_toBottomOf="@id/tv_first_number" />-->
+
+        <!--        <com.google.android.material.textview.MaterialTextView-->
+        <!--            android:id="@+id/tv_second_explanation"-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:fontFamily="@font/poppins_semibold"-->
+        <!--            android:layout_marginStart="8dp"-->
+        <!--            android:text="Penjelasan 2"-->
+        <!--            android:lineSpacingExtra="8dp"-->
+        <!--            android:textSize="18sp"-->
+        <!--            android:textColor="@color/white"-->
+        <!--            app:layout_constraintEnd_toEndOf="@id/second_guideline"-->
+        <!--            app:layout_constraintStart_toStartOf="@id/first_guideline"-->
+        <!--            app:layout_constraintTop_toTopOf="@id/tv_second_number"-->
+        <!--            app:layout_constraintBottom_toBottomOf="@id/tv_second_number" />-->
+
+        <!--        <com.google.android.material.textview.MaterialTextView-->
+        <!--            android:id="@+id/tv_third_number"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:fontFamily="@font/poppins_semibold"-->
+        <!--            android:paddingHorizontal="8dp"-->
+        <!--            android:layout_marginTop="8dp"-->
+        <!--            android:text="3."-->
+        <!--            android:textColor="@color/white"-->
+        <!--            android:textSize="18sp"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="@id/first_guideline"-->
+        <!--            app:layout_constraintTop_toBottomOf="@id/tv_second_number" />-->
+
+        <!--        <com.google.android.material.textview.MaterialTextView-->
+        <!--            android:id="@+id/tv_third_explanation"-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:fontFamily="@font/poppins_semibold"-->
+        <!--            android:layout_marginStart="8dp"-->
+        <!--            android:text="Penjelasan 3"-->
+        <!--            android:lineSpacingExtra="8dp"-->
+        <!--            android:textSize="18sp"-->
+        <!--            android:textColor="@color/white"-->
+        <!--            app:layout_constraintEnd_toEndOf="@id/second_guideline"-->
+        <!--            app:layout_constraintStart_toStartOf="@id/first_guideline"-->
+        <!--            app:layout_constraintTop_toTopOf="@id/tv_third_number"-->
+        <!--            app:layout_constraintBottom_toBottomOf="@id/tv_third_number" />-->
+
+        <!--        <com.google.android.material.textview.MaterialTextView-->
+        <!--            android:id="@+id/tv_fourth_number"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:fontFamily="@font/poppins_semibold"-->
+        <!--            android:paddingHorizontal="8dp"-->
+        <!--            android:layout_marginTop="8dp"-->
+        <!--            android:text="4."-->
+        <!--            android:textColor="@color/white"-->
+        <!--            android:textSize="18sp"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="@id/first_guideline"-->
+        <!--            app:layout_constraintTop_toBottomOf="@id/tv_third_number" />-->
+
+        <!--        <com.google.android.material.textview.MaterialTextView-->
+        <!--            android:id="@+id/tv_fourth_explanation"-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:fontFamily="@font/poppins_semibold"-->
+        <!--            android:layout_marginStart="8dp"-->
+        <!--            android:text="Penjelasan 4"-->
+        <!--            android:lineSpacingExtra="8dp"-->
+        <!--            android:textSize="18sp"-->
+        <!--            android:textColor="@color/white"-->
+        <!--            app:layout_constraintEnd_toEndOf="@id/second_guideline"-->
+        <!--            app:layout_constraintStart_toStartOf="@id/first_guideline"-->
+        <!--            app:layout_constraintTop_toTopOf="@id/tv_fourth_number"-->
+        <!--            app:layout_constraintBottom_toBottomOf="@id/tv_fourth_number" />-->
+
+        <!--        <androidx.constraintlayout.widget.Guideline-->
+        <!--            android:id="@+id/first_guideline"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            app:layout_constraintGuide_percent="0.1"-->
+        <!--            android:orientation="vertical"/>-->
+
+        <!--        <androidx.constraintlayout.widget.Guideline-->
+        <!--            android:id="@+id/second_guideline"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:orientation="vertical"-->
+        <!--            app:layout_constraintGuide_percent="0.9"/>-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

@@ -19,7 +19,7 @@
             android:paddingVertical="16dp"
             android:text="Konsep Fungsi"
             android:textColor="@color/black"
-            android:textSize="24sp"
+            android:textSize="20sp"
             android:textStyle="bold"
             app:fontFamily="@font/montserrat"
             app:layout_constraintStart_toStartOf="parent"
@@ -33,7 +33,7 @@
             android:lineSpacingExtra="8dp"
             android:text="Fungsi merupakan sekumpulan perintah yang dapat menerima masukan (input) program dan memberikan hasil keluaran (output) berupa nilai ataupun sebuah hasil operasi."
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_header_function_concept"
@@ -48,7 +48,7 @@
             android:paddingVertical="16dp"
             android:text="Berikut ini gambar yang akan mengilustrasikan keberadaan dan cara kerja fungsi dalam sebuah program."
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_first_text"
@@ -70,7 +70,7 @@
             android:layout_height="wrap_content"
             android:text="Gambar 3.1 Ilustrasi Cara Kerja Fungsi"
             android:textColor="@color/black"
-            android:textSize="14sp"
+            android:textSize="12sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -83,7 +83,7 @@
             android:gravity="center_horizontal"
             android:text="Sumber: Budi Raharjo (2013:192)"
             android:textColor="@color/black"
-            android:textSize="14sp"
+            android:textSize="12sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -98,7 +98,7 @@
             android:paddingVertical="16dp"
             android:text="Fungsi memiliki karakteristik sebagai berikut :"
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_link_first_image"
@@ -120,7 +120,7 @@
                 android:lineSpacingExtra="8dp"
                 android:text="1."
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
@@ -129,7 +129,7 @@
                 android:paddingHorizontal="16dp"
                 android:text="Fungsi memiliki tipe data seperti suatu variabel. Fungsi dapat menentukan tipe nilai yang dikembalikan."
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -149,7 +149,7 @@
                 android:lineSpacingExtra="8dp"
                 android:text="2."
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
@@ -158,7 +158,7 @@
                 android:paddingHorizontal="16dp"
                 android:text="Memiliki nama."
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -178,7 +178,7 @@
                 android:lineSpacingExtra="8dp"
                 android:text="3."
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
@@ -187,7 +187,7 @@
                 android:paddingHorizontal="16dp"
                 android:text="Memiliki parameter (bisa 0 atau lebih)."
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -207,7 +207,7 @@
                 android:lineSpacingExtra="8dp"
                 android:text="4."
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
@@ -216,7 +216,7 @@
                 android:paddingHorizontal="16dp"
                 android:text="Memiliki badan fungsi."
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -236,7 +236,7 @@
                 android:lineSpacingExtra="8dp"
                 android:text="5."
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
@@ -245,7 +245,7 @@
                 android:paddingHorizontal="16dp"
                 android:text="Nilai kembali dimasukkan ke nama fungsi itu sendiri dan suatu fungsi dapat menjadi bagian dari suatu ekspresi yang Panjang."
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
         </LinearLayout>
 
         <com.google.android.material.button.MaterialButton

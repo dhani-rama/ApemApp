@@ -70,5 +70,10 @@
     <string name="time_compilatiion">Waktu Kompilasi :</string>
     <string name="result_compilation">Hasil Kompilasi</string>
     <string name="looping">Perulangan</string>
+    <string name="instruction">Petunjuk Penggunaan</string>
+    <string name="developer_profile">Profil Pengembang</string>
+    <string name="looping_material_access">Akses materi perulangan</string>
+    <string name="function_material_access">Akses materi fungsi</string>
+    <string name="array_material_access">Akses materi array</string>
 
 </resources>

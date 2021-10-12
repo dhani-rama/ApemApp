@@ -19,7 +19,7 @@
             android:paddingVertical="16dp"
             android:text="File Header"
             android:textColor="@color/black"
-            android:textSize="24sp"
+            android:textSize="20sp"
             android:textStyle="bold"
             app:fontFamily="@font/montserrat"
             app:layout_constraintStart_toStartOf="parent"
@@ -33,7 +33,7 @@
             android:lineSpacingExtra="8dp"
             android:text="Berikut ini merupakan file header yang digunakan dalam bahasa pemrograman C++ yaitu :"
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_header_function_variable"
@@ -56,7 +56,7 @@
                 android:lineSpacingExtra="8dp"
                 android:text="1."
                 android:textColor="@color/black"
-                android:textSize="20sp"
+                android:textSize="14sp"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -72,7 +72,7 @@
                     android:paddingHorizontal="16dp"
                     android:text="Stdlib.h"
                     android:textColor="@color/black"
-                    android:textSize="20sp"
+                    android:textSize="16sp"
                     android:textStyle="bold" />
 
                 <com.google.android.material.textview.MaterialTextView
@@ -82,7 +82,7 @@
                     android:lineSpacingExtra="8dp"
                     android:text="File header stdlib.h digunakan untuk merepresentasikan beberapa fungsi umum untuk manajemen memori dinamis, menjalin komunikasi dengan perangkat sekitar, membuat bilangan secara random, dan lain sebagainya."
                     android:textColor="@color/black"
-                    android:textSize="18sp" />
+                    android:textSize="14sp" />
 
             </LinearLayout>
 
@@ -105,7 +105,7 @@
                 android:lineSpacingExtra="8dp"
                 android:text="2."
                 android:textColor="@color/black"
-                android:textSize="20sp"
+                android:textSize="14sp"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -121,7 +121,7 @@
                     android:paddingHorizontal="16dp"
                     android:text="Iostream"
                     android:textColor="@color/black"
-                    android:textSize="20sp"
+                    android:textSize="16sp"
                     android:textStyle="bold" />
 
                 <com.google.android.material.textview.MaterialTextView
@@ -131,7 +131,7 @@
                     android:lineSpacingExtra="8dp"
                     android:text="File header iostream diikuti dengan penulisan perintah using namespace std; dimana memiliki perintah umum seperti cout untuk output dan cin untuk input."
                     android:textColor="@color/black"
-                    android:textSize="18sp" />
+                    android:textSize="14sp" />
             </LinearLayout>
         </LinearLayout>
 
@@ -152,7 +152,7 @@
                 android:lineSpacingExtra="8dp"
                 android:text="3."
                 android:textColor="@color/black"
-                android:textSize="20sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -168,7 +168,7 @@
                     android:paddingHorizontal="16dp"
                     android:text="Stdio.h"
                     android:textColor="@color/black"
-                    android:textSize="20sp"
+                    android:textSize="16sp"
                     android:textStyle="bold" />
 
                 <com.google.android.material.textview.MaterialTextView
@@ -178,7 +178,7 @@
                     android:lineSpacingExtra="8dp"
                     android:text="File header stdio.h digunakan sebagai standar input dan output. Contoh perintah yang ada pada file header stdio.h seperti scanf, gets, printf, puts, putchar."
                     android:textColor="@color/black"
-                    android:textSize="18sp" />
+                    android:textSize="14sp" />
             </LinearLayout>
         </LinearLayout>
 
@@ -199,7 +199,7 @@
                 android:lineSpacingExtra="8dp"
                 android:text="4."
                 android:textColor="@color/black"
-                android:textSize="20sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -215,7 +215,7 @@
                     android:paddingHorizontal="16dp"
                     android:text="Conio.h"
                     android:textColor="@color/black"
-                    android:textSize="20sp"
+                    android:textSize="14sp"
                     android:textStyle="bold" />
 
                 <com.google.android.material.textview.MaterialTextView
@@ -225,7 +225,7 @@
                     android:lineSpacingExtra="8dp"
                     android:text="File header conio.h digunakan untuk membuat teks antar muka pengguna. Contoh perintah yang ada pada file header conio.h seperti getchar, getch, getche, clrscr()."
                     android:textColor="@color/black"
-                    android:textSize="18sp" />
+                    android:textSize="14sp" />
             </LinearLayout>
         </LinearLayout>
 
@@ -246,7 +246,7 @@
                 android:lineSpacingExtra="8dp"
                 android:text="5."
                 android:textColor="@color/black"
-                android:textSize="20sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -262,7 +262,7 @@
                     android:paddingHorizontal="16dp"
                     android:text="Math.h"
                     android:textColor="@color/black"
-                    android:textSize="20sp"
+                    android:textSize="14sp"
                     android:textStyle="bold" />
 
                 <com.google.android.material.textview.MaterialTextView
@@ -272,7 +272,7 @@
                     android:lineSpacingExtra="8dp"
                     android:text="File header math.h digunakan untuk menjalankan fungsi yang berhubungan dengan matematika. Contoh perintah yang ada pada file header math.h yaitu sqrt(), po(), log10(), sin()."
                     android:textColor="@color/black"
-                    android:textSize="18sp" />
+                    android:textSize="14sp" />
             </LinearLayout>
         </LinearLayout>
 
@@ -293,7 +293,7 @@
                 android:lineSpacingExtra="8dp"
                 android:text="6."
                 android:textColor="@color/black"
-                android:textSize="20sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -309,7 +309,7 @@
                     android:paddingHorizontal="16dp"
                     android:text="String.h"
                     android:textColor="@color/black"
-                    android:textSize="20sp"
+                    android:textSize="14sp"
                     android:textStyle="bold" />
 
                 <com.google.android.material.textview.MaterialTextView
@@ -319,7 +319,7 @@
                     android:lineSpacingExtra="8dp"
                     android:text="File header ini digunakan untuk memanipulasi string dan array. Contoh perintah yang ada pada file header string.h yaitu strcpy(), strlen(), strcat()."
                     android:textColor="@color/black"
-                    android:textSize="18sp" />
+                    android:textSize="14sp" />
             </LinearLayout>
         </LinearLayout>
 

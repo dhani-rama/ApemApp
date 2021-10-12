@@ -19,7 +19,7 @@
             android:paddingVertical="16dp"
             android:text="Perulangan Do-While"
             android:textColor="@color/black"
-            android:textSize="24sp"
+            android:textSize="20sp"
             android:textStyle="bold"
             app:fontFamily="@font/montserrat"
             app:layout_constraintStart_toStartOf="parent"
@@ -41,7 +41,7 @@
                 android:lineSpacingExtra="8dp"
                 android:text="1."
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tv_first_text"
@@ -51,7 +51,7 @@
                 android:paddingHorizontal="16dp"
                 android:text="Bagian inialisasi variabel pada format penulisan perulangan do-while diisi dengan variabel bertipe data integer. Contoh : int i = 0."
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -71,7 +71,7 @@
                 android:lineSpacingExtra="8dp"
                 android:text="2."
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
@@ -80,7 +80,7 @@
                 android:paddingHorizontal="16dp"
                 android:text="Bagian terminasi pada format penulisan perulangan do-while diisi dengan kondisi untuk berhenti pada proses perulangan. Contoh : i &lt; 5."
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -100,7 +100,7 @@
                 android:lineSpacingExtra="8dp"
                 android:text="3."
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
@@ -109,7 +109,7 @@
                 android:paddingHorizontal="16dp"
                 android:text="Bagian iterasi pada format penulisan perulangan do-while diisi dengan kondisi pertambahan atau pengurangan pada variabel yang dijadikan indeks perulangan. Contoh : i++."
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -129,7 +129,7 @@
                 android:lineSpacingExtra="8dp"
                 android:text="4."
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
@@ -138,7 +138,7 @@
                 android:paddingHorizontal="16dp"
                 android:text="Bagian statement yang diulang pada format penulisan perulangan do-while diisi dengan statement yang akan diulang. Contoh : cout&lt;&lt;”Saya senang belajar pemrograman dasar”."
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
         </LinearLayout>
 
         <com.google.android.material.textview.MaterialTextView
@@ -146,10 +146,10 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:lineSpacingExtra="8dp"
-            android:paddingVertical="16dp"
+            android:paddingVertical="8dp"
             android:text="Sehingga apabila divisualisasikan ke dalam teks editor akan menjadi seperti gambar berikut."
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/layout_fourth_number" />
@@ -160,6 +160,7 @@
             android:layout_width="match_parent"
             android:layout_height="170dp"
             android:src="@drawable/img_fourth_while"
+            android:layout_marginTop="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_second_text" />
@@ -170,7 +171,7 @@
             android:layout_height="wrap_content"
             android:text="Gambar 1.8. Contoh Program Perulangan Do-While"
             android:textColor="@color/black"
-            android:textSize="14sp"
+            android:textSize="12sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -190,14 +191,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:lineSpacingExtra="8dp"
-            android:paddingVertical="16dp"
+            android:paddingVertical="8dp"
             android:text="Berikut ini contoh video yang menunjukkan program perulangan dengan menggunakan struktur perulangan do-while."
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="14sp"
+            android:layout_marginTop="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_info_second_image" />
-
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_back"

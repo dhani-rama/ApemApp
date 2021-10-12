@@ -294,7 +294,7 @@
                     android:elevation="4dp"
                     android:focusable="true"
                     android:paddingVertical="16dp"
-                    android:text="Akses materi array"
+                    android:text="@string/array_material_access"
                     android:textColor="@color/white"
                     android:textStyle="bold"
                     android:visibility="invisible"
