@@ -80,6 +80,8 @@ class HomeFragment : Fragment() {
             startActivity(Intent(this.requireActivity(), LoopingCompetenceActivity::class.java))
         }
 
+
+
         homeBinding.cardArray.setOnClickListener {
             startActivity(Intent(this.requireActivity(), ArrayCompetenceActivity::class.java))
         }
