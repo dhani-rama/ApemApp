@@ -69,31 +69,9 @@ class ProfileFragment : Fragment() {
             pictPhoto()
         }
 
-//        settingsBinding.btnAlarm.setOnClickListener {
-//            startActivity(Intent(this.requireActivity(), AlarmActivity::class.java))
-//            activity?.finish()
-//        }
-
         settingsBinding.btnEditProfile.setOnClickListener {
             startActivity(Intent(this.requireActivity(), UpdateProfileActivity::class.java))
         }
-
-//        settingsBinding.btnEditPassword.setOnClickListener {
-//            startActivity(Intent(this.requireActivity(), UpdatePasswordActivity::class.java))
-//        }
-
-//        settingsBinding.btnProfilDeveloper.setOnClickListener {
-//            startActivity(Intent(this.requireActivity(), DeveloperProfileActivity::class.java))
-//        }
-
-//        settingsBinding.btnInstructionUsed.setOnClickListener {
-//            Toasty.info(this.requireActivity(), "Belum Aku Coding Sayang :)", Toast.LENGTH_LONG)
-//                .show()
-//        }
-
-//        settingsBinding.btnUploadImage.setOnClickListener {
-//            startActivity(Intent(this.requireActivity(), TestingUploadImageActivity::class.java))
-//        }
 
         settingsBinding.btnLogout.setOnClickListener {
 
@@ -131,6 +109,31 @@ class ProfileFragment : Fragment() {
             //show dialog
             mDialog.show()
         }
+
+//        settingsBinding.btnAlarm.setOnClickListener {
+//            startActivity(Intent(this.requireActivity(), AlarmActivity::class.java))
+//            activity?.finish()
+//        }
+
+
+//        settingsBinding.btnEditPassword.setOnClickListener {
+//            startActivity(Intent(this.requireActivity(), UpdatePasswordActivity::class.java))
+//        }
+
+//        settingsBinding.btnProfilDeveloper.setOnClickListener {
+//            startActivity(Intent(this.requireActivity(), DeveloperProfileActivity::class.java))
+//        }
+
+//        settingsBinding.btnInstructionUsed.setOnClickListener {
+//            Toasty.info(this.requireActivity(), "Belum Aku Coding Sayang :)", Toast.LENGTH_LONG)
+//                .show()
+//        }
+
+//        settingsBinding.btnUploadImage.setOnClickListener {
+//            startActivity(Intent(this.requireActivity(), TestingUploadImageActivity::class.java))
+//        }
+
+
     }
 
     private fun pictPhoto() {

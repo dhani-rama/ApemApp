@@ -10,7 +10,6 @@ import id.research.apemapp.databinding.ItemDictionaryBinding
 import id.research.apemapp.models.DictionaryItemEntity
 import id.research.apemapp.objects.Constants
 import java.util.*
-import kotlin.collections.ArrayList
 
 class DictionaryListAdapter : RecyclerView.Adapter<DictionaryListAdapter.listWordHolderView>(),
     Filterable {
@@ -52,6 +51,7 @@ class DictionaryListAdapter : RecyclerView.Adapter<DictionaryListAdapter.listWor
                 tvWord.text = wordItem.word
                 tvMeaning.text = wordItem.meaning
 
+
                 itemView.setOnClickListener {
                     val intent = Intent(itemView.context, DictionaryDetailListActivity::class.java)
                         .apply {
@@ -77,8 +77,8 @@ class DictionaryListAdapter : RecyclerView.Adapter<DictionaryListAdapter.listWor
                     val resultList = ArrayList<DictionaryItemEntity>()
 
                     for (row in listWordFilter) {
-                        if (row.word.toLowerCase(Locale.getDefault()).contains(
-                                charSearch.toLowerCase(
+                        if (row.word.lowercase(Locale.getDefault()).contains(
+                                charSearch.lowercase(
                                     Locale.getDefault()
                                 )
                             )
